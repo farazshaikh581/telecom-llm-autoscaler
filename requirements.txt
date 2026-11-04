@@ -1,8 +1,7 @@
-# Analysis and figures
+# Analysis
 numpy==2.5.3
 pandas==3.0.6
 scipy==1.18.1
-matplotlib==3.11.2
 PyYAML==6.0.3
 requests==2.34.2
 # RL agents (rl/); CPU build: --index-url https://download.pytorch.org/whl/cpu

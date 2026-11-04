@@ -15,10 +15,9 @@ Two frozen 27B LLMs (TelecomGPT-R1 and its base model Qwen3.5-27B, each in three
 | `serving/` | Model versions and vLLM launch commands |
 | `config/` | Harness settings and trace scaling |
 | `data/traces/` | Scaled request-rate shapes derived from the public traces, and the per-run traces |
-| `tools/` | Trace preparation, statistics, faithfulness checks, number and figure generation |
+| `tools/` | Trace preparation, statistics, faithfulness checks, and the numbers quoted in the paper |
 | `results/runs/` | One folder per run (below) |
 | `results/analysis/` | Tables the paper reports, produced by `tools/` |
-| `paper/figures/` | Scripts that draw the figures of the paper |
 | `docs/` | Dated design log (`decisions.md`), analysis plan, calibration, testbed and traces |
 
 ## Runs
@@ -36,9 +35,9 @@ Each folder in `results/runs/` holds one 75-minute run (15 minutes of warm-up, 6
 | `events.jsonl` | Run events: preflight checks, resets, faults |
 | `gpu.csv`, `host_power.csv` | GPU power every 1 s, host power every 5 s |
 
-Run names give the test: `test2_` main matrix, `hl_` 25% more load, `ns_` unseen service, `ho_` history listed newest first, `ab_` step-by-step prompt, `pa_` alternative prompt wording, `xb_` budget-aware RL variant (exploratory). The others are calibration, tuning and development runs. Runs repeated after a testbed fault are listed with the reason in `results/invalid_runs.json`. Per-request logs (`requests.csv.gz`, about 25 MB per run) are included only for the runs the simulator and the SLOs are fitted on (`fp_`, `slo_`, `warm_`, `tune_` and `pilot_qwen35_dev0`). The harness reduces each run's per-request log to `summary.json` and `timeline.csv` at its end (`harness/analyze_run.py`), and the paper's tables and figures are computed from these files and `decisions.jsonl`.
+Run names give the test: `test2_` main matrix, `hl_` 25% more load, `ns_` unseen service, `ho_` history listed newest first, `ab_` step-by-step prompt, `pa_` alternative prompt wording, `xb_` budget-aware RL variant (exploratory). The others are calibration, tuning and development runs. Runs repeated after a testbed fault are listed with the reason in `results/invalid_runs.json`. Per-request logs (`requests.csv.gz`, about 25 MB per run) are included only for the runs the simulator and the SLOs are fitted on (`fp_`, `slo_`, `warm_`, `tune_` and `pilot_qwen35_dev0`). The harness reduces each run's per-request log to `summary.json` and `timeline.csv` at its end (`harness/analyze_run.py`), and the results of the paper are computed from these files and `decisions.jsonl`.
 
-## Reproducing the tables and figures
+## Reproducing the tables
 
 The analysis needs only the run folders, not a cluster. It takes about a minute.
 
@@ -47,7 +46,7 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 sh tools/reproduce.sh
 ```
 
-The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py`. Tables go to `results/analysis/` and figures to `paper/figures/`, and the script lists any table that differs from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
+The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), and `tools/slo_sensitivity.py` (SLO factor 2, 3, 5). Tables go to `results/analysis/`, and the script lists any that differs from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
 
 ## Not used in the paper
 

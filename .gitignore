@@ -10,9 +10,5 @@ results/failed/
 results/runs/*/requests.csv.gz
 results/runs/failed_*/
 
-# Figures are drawn by the scripts in paper/figures/ and not kept in git
-paper/figures/*.pdf
-paper/figures/*.png
-paper/figures/*.svg
-paper/figures/*.drawio
-paper/figures/assets/
+# The paper and its figures are not kept in git
+paper/
