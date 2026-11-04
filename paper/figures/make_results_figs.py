@@ -106,7 +106,7 @@ def fig_levels():
     for ax, t in zip(axes, ("(a)", "(b)")):
         ax.text(0.018, 0.965, t, transform=ax.transAxes, ha="left", va="top", fontsize=8)
     axes[1].set_yticks(range(0, 21, 3))
-    fig.savefig(OUT / "fig2_levels.pdf", bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(OUT / "fig2_levels.pdf", bbox_inches="tight", pad_inches=0.02, metadata={"CreationDate": None})
     fig.savefig(OUT / "fig2_levels.png", dpi=300, bbox_inches="tight", pad_inches=0.02)
     return nom, hl
 
@@ -146,7 +146,7 @@ def fig_timeline(day=1, rep=2, svc="graph-bfs", slo=203):
     axes[1].legend(handles=[Patch(facecolor=C["red"], alpha=0.25, label="P95 over the SLO")], loc="upper right",
                    handlelength=1.2, borderpad=0.3, fontsize=6.5)
     fig.align_ylabels(axes)
-    fig.savefig(OUT / "fig3_timeline.pdf", bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(OUT / "fig3_timeline.pdf", bbox_inches="tight", pad_inches=0.02, metadata={"CreationDate": None})
     fig.savefig(OUT / "fig3_timeline.png", dpi=300, bbox_inches="tight", pad_inches=0.02)
 
 
@@ -194,7 +194,7 @@ def fig_history():
              handletextpad=0.3, borderpad=0.3, fontsize=6.5)
     for ax, t, xo in ((a, "(a)", -0.42), (b, "(b)", -0.1)):
         ax.text(xo, 1.2, t, transform=ax.transAxes, ha="left", va="center", fontsize=8)
-    fig.savefig(OUT / "fig4_history.pdf", bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(OUT / "fig4_history.pdf", bbox_inches="tight", pad_inches=0.02, metadata={"CreationDate": None})
     fig.savefig(OUT / "fig4_history.png", dpi=300, bbox_inches="tight", pad_inches=0.02)
 
 
