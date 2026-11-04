@@ -1,6 +1,6 @@
 # telecom-llm-autoscaler
 
-Code and data for the paper "Auditing LLM Autoscalers: Robustness to Workload Shift and Faithfulness of Their Reasoning" (F. Shaikh, G. Reali, M. Femminella, University of Perugia).
+Code and data for the paper "Auditing LLM Autoscalers: Robustness Under Workload Shift, Faithfulness of Reasoning and Prompt Layout" (F. Shaikh, G. Reali, M. Femminella, University of Perugia).
 
 Two frozen 27B LLMs (TelecomGPT-R1 and its base model Qwen3.5-27B, each in three prompt modes) scale four services on a shared Kubernetes cluster, against three rule-based autoscalers (HPA, KEDA, predictive HPA) and three RL agents (AWARE, FIRM, LSTM-DDQN). The study tests them on held-out days of production traces, under 25% more load and with a service no controller had seen, and checks the written reasoning of the LLMs against the prompt of each call.
 
