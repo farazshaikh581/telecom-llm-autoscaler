@@ -23,7 +23,7 @@ Two frozen 27B LLMs (TelecomGPT-R1 and its base model Qwen3.5-27B, each in three
 
 ## Runs
 
-Each folder in `results/runs/` holds one 75-minute run (15 minutes of warm-up, 60 scored):
+Each folder in `results/runs/` holds one 75-minute run (15 minutes of warm-up, 60 scored). `docs/data.md` gives every field.
 
 | File | Content |
 |---|---|
