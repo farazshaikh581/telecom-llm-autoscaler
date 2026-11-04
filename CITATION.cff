@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
-title: "Auditing LLM Autoscalers: Robustness to Workload Shift and Faithfulness of Their Reasoning: Code, traces and run data"
+title: "Auditing LLM Autoscalers: Robustness to Workload Shift and Faithfulness of Their Reasoning (code, traces and run data)"
 authors:
   - family-names: Shaikh
     given-names: Faraz
