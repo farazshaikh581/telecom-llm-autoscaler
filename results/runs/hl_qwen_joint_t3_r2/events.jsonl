@@ -1,0 +1,44 @@
+{"epoch":1793025950.2,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1793025950.42,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793025951.38,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 4, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1793025988.36,"msg":"hotel data reset: 81324 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793025992.32,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1793026022.57,"msg":"run started: llm:port=8002,mode=joint on data/traces/runs/test_3.csv.gz, 4500 s"}
+{"epoch":1793026205.11,"msg":"k=3 t=183 decide 2.1 s, scaled {'graph-bfs': 2}"}
+{"epoch":1793026265.23,"msg":"k=4 t=243 decide 2.1 s, scaled {'teastore-webui': 3, 'thumbnailer': 5, 'hotel-reservation': 3}"}
+{"epoch":1793026325.28,"msg":"k=5 t=303 decide 2.2 s, scaled {'teastore-webui': 4, 'thumbnailer': 6, 'graph-bfs': 3, 'hotel-reservation': 4}"}
+{"epoch":1793026385.34,"msg":"k=6 t=363 decide 2.3 s, scaled {'teastore-webui': 5, 'thumbnailer': 7}"}
+{"epoch":1793026445.32,"msg":"k=7 t=423 decide 2.3 s, scaled {'thumbnailer': 6}"}
+{"epoch":1793026505.33,"msg":"k=8 t=483 decide 2.3 s, scaled {'thumbnailer': 7, 'graph-bfs': 4, 'hotel-reservation': 5}"}
+{"epoch":1793026565.34,"msg":"k=9 t=543 decide 2.3 s, scaled {'teastore-webui': 6, 'thumbnailer': 8, 'hotel-reservation': 6}"}
+{"epoch":1793026625.35,"msg":"k=10 t=603 decide 2.3 s, scaled {'thumbnailer': 7}"}
+{"epoch":1793026685.35,"msg":"k=11 t=663 decide 2.3 s, scaled {'teastore-webui': 8, 'thumbnailer': 6}"}
+{"epoch":1793026805.34,"msg":"k=13 t=783 decide 2.3 s, scaled {'thumbnailer': 7}"}
+{"epoch":1793026865.38,"msg":"k=14 t=843 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1793026925.36,"msg":"k=15 t=903 decide 2.3 s, scaled {'thumbnailer': 6}"}
+{"epoch":1793027045.34,"msg":"k=17 t=1023 decide 2.3 s, scaled {'graph-bfs': 6}"}
+{"epoch":1793027105.35,"msg":"k=18 t=1083 decide 2.3 s, scaled {'teastore-webui': 5, 'thumbnailer': 4, 'hotel-reservation': 4}"}
+{"epoch":1793027225.38,"msg":"k=20 t=1203 decide 2.3 s, scaled {'graph-bfs': 12}"}
+{"epoch":1793027285.33,"msg":"k=21 t=1263 decide 2.3 s, scaled {'graph-bfs': 6}"}
+{"epoch":1793027345.34,"msg":"k=22 t=1323 decide 2.3 s, scaled {'graph-bfs': 12}"}
+{"epoch":1793027405.38,"msg":"k=23 t=1383 decide 2.3 s, scaled {'hotel-reservation': 6}"}
+{"epoch":1793027465.35,"msg":"k=24 t=1443 decide 2.3 s, scaled {'hotel-reservation': 4}"}
+{"epoch":1793027525.34,"msg":"k=25 t=1503 decide 2.3 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793027585.34,"msg":"k=26 t=1563 decide 2.3 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793027645.3,"msg":"k=27 t=1623 decide 2.3 s, scaled {'thumbnailer': 4, 'graph-bfs': 6}"}
+{"epoch":1793027705.36,"msg":"k=28 t=1683 decide 2.3 s, scaled {'graph-bfs': 12}"}
+{"epoch":1793027885.32,"msg":"k=31 t=1863 decide 2.3 s, scaled {'thumbnailer': 3, 'graph-bfs': 6}"}
+{"epoch":1793028845.31,"msg":"k=47 t=2823 decide 2.3 s, scaled {'thumbnailer': 4, 'graph-bfs': 5}"}
+{"epoch":1793029685.37,"msg":"k=61 t=3663 decide 2.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793029745.3,"msg":"k=62 t=3723 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1793029865.37,"msg":"k=64 t=3843 decide 2.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793029925.32,"msg":"k=65 t=3903 decide 2.3 s, scaled {'thumbnailer': 5, 'graph-bfs': 4}"}
+{"epoch":1793029985.3,"msg":"k=66 t=3963 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1793030045.31,"msg":"k=67 t=4023 decide 2.3 s, scaled {'thumbnailer': 5}"}
+{"epoch":1793030285.27,"msg":"k=71 t=4263 decide 2.3 s, scaled {'thumbnailer': 6}"}
+{"epoch":1793030405.3,"msg":"k=73 t=4383 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1793030465.27,"msg":"trace finished"}
+{"epoch":1793030523.24,"msg":"recorder stopped"}
+{"epoch":1793030523.46,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

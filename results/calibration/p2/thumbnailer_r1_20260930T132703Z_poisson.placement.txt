@@ -1,0 +1,5 @@
+compression-6646795cb8-dsxw6   w3     Running
+imgrec-6f9b7f5d77-d9z6w        w0     Running
+load-data-q84t4                control   Succeeded
+minio-98b78488-9lcmd           control   Running
+thumbnailer-64c855875c-lrqr8   w3     Running

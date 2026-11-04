@@ -1,0 +1,11 @@
+{"epoch":1792785534.54,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792785534.76,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792785535.75,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 3, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792785573.59,"msg":"hotel data reset: 75836 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792785577.62,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792785608.29,"msg":"run started: keda:util=0.8 on data/traces/runs/test_0.csv.gz, 4500 s"}
+{"epoch":1792790048.26,"msg":"trace finished"}
+{"epoch":1792790109.05,"msg":"recorder stopped"}
+{"epoch":1792790109.27,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

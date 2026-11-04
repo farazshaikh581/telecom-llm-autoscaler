@@ -1,0 +1,5 @@
+compression-586dd549b-fnfgk   worker11    Running
+imgrec-8475ff95c-5d4mz        worker13    Running
+load-data-8g2cd               control   Succeeded
+minio-98b78488-fqw48          control   Running
+thumbnailer-d6ffd56f-bfqx4    worker14    Running

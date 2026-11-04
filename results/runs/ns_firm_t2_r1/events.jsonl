@@ -1,0 +1,46 @@
+{"epoch":1793344311.3,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1793344311.52,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793344312.48,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 2, 'image-recognition': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1793344350.32,"msg":"hotel data reset: 65805 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793344354.3,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1793344386.75,"msg":"run started: firm:ckpt=rl/checkpoints/firm_ft.pt on data/traces/runs_imgrec/test_2.csv.gz, 4500 s"}
+{"epoch":1793344444.99,"msg":"k=1 t=61 decide 0.0 s, scaled {'thumbnailer': 1, 'hotel-reservation': 1, 'image-recognition': 1}"}
+{"registry_removed":1}
+{"epoch":1793344565.01,"msg":"k=3 t=181 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793344685.03,"msg":"k=5 t=301 decide 0.0 s, scaled {'thumbnailer': 3, 'hotel-reservation': 2}"}
+{"epoch":1793344805.02,"msg":"k=7 t=421 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793344865.01,"msg":"k=8 t=481 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793344925.02,"msg":"k=9 t=541 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1793344985.11,"msg":"k=10 t=601 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1793345045.04,"msg":"k=11 t=661 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793345105.07,"msg":"k=12 t=721 decide 0.0 s, scaled {'image-recognition': 2}"}
+{"epoch":1793345165.03,"msg":"k=13 t=781 decide 0.0 s, scaled {'thumbnailer': 2, 'image-recognition': 3}"}
+{"epoch":1793345224.99,"msg":"k=14 t=841 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793345285.02,"msg":"k=15 t=901 decide 0.0 s, scaled {'image-recognition': 2}"}
+{"epoch":1793345345.01,"msg":"k=16 t=961 decide 0.0 s, scaled {'image-recognition': 1}"}
+{"epoch":1793345405.01,"msg":"k=17 t=1021 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1793345944.99,"msg":"k=26 t=1561 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1793347025.01,"msg":"k=44 t=2641 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 1}"}
+{"epoch":1793347085.01,"msg":"k=45 t=2701 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1793347145.01,"msg":"k=46 t=2761 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793347445.01,"msg":"k=51 t=3061 decide 0.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1793347504.99,"msg":"k=52 t=3121 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793347685.07,"msg":"k=55 t=3301 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1793347745.05,"msg":"k=56 t=3361 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 1}"}
+{"epoch":1793347865.0,"msg":"k=58 t=3481 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1793347925.0,"msg":"k=59 t=3541 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793348105.01,"msg":"k=62 t=3721 decide 0.0 s, scaled {'image-recognition': 2}"}
+{"epoch":1793348165.02,"msg":"k=63 t=3781 decide 0.0 s, scaled {'thumbnailer': 3, 'image-recognition': 3}"}
+{"epoch":1793348225.09,"msg":"k=64 t=3841 decide 0.0 s, scaled {'thumbnailer': 2, 'image-recognition': 2}"}
+{"epoch":1793348285.0,"msg":"k=65 t=3901 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793348525.01,"msg":"k=69 t=4141 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1793348585.04,"msg":"k=70 t=4201 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793348645.02,"msg":"k=71 t=4261 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1793348705.02,"msg":"k=72 t=4321 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1793348765.02,"msg":"k=73 t=4381 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1793348825.02,"msg":"k=74 t=4441 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 3, 'image-recognition': 1}"}
+{"epoch":1793348825.02,"msg":"trace finished"}
+{"epoch":1793348885.25,"msg":"recorder stopped"}
+{"epoch":1793348885.47,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

@@ -1,0 +1,158 @@
+{
+ "name": "test2_phpa_t4_r1",
+ "controller": "phpa:target=70,lookahead=60,history=12",
+ "trace": "data/traces/runs/test_4.csv.gz",
+ "scored_s": [
+  900,
+  4500
+ ],
+ "entries": {
+  "graph-bfs": {
+   "requests": 90546,
+   "error_rate": 8e-05,
+   "latency_ms": {
+    "avg": 45.3,
+    "p50": 38.35,
+    "p75": 47.3,
+    "p90": 67.71,
+    "p95": 82.06,
+    "p99": 123.95,
+    "max": 348.19
+   },
+   "slo_ms": 203,
+   "attainment": {
+    "k2": 0.99296,
+    "k3": 0.99905,
+    "k5": 0.9999
+   },
+   "violation_rate": {
+    "k2": 0.0,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 60
+  },
+  "hotel": {
+   "requests": 2378077,
+   "error_rate": 0.0,
+   "latency_ms": {
+    "avg": 5.32,
+    "p50": 3.03,
+    "p75": 7.49,
+    "p90": 12.52,
+    "p95": 15.92,
+    "p99": 23.89,
+    "max": 594.03
+   },
+   "slo_ms": 54,
+   "attainment": {
+    "k2": 0.99846,
+    "k3": 0.99973,
+    "k5": 0.99996
+   },
+   "violation_rate": {
+    "k2": 0.0,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 60
+  },
+  "teastore": {
+   "requests": 365700,
+   "error_rate": 0.0,
+   "latency_ms": {
+    "avg": 28.61,
+    "p50": 17.67,
+    "p75": 25.42,
+    "p90": 36.77,
+    "p95": 50.02,
+    "p99": 250.88,
+    "max": 9832.03
+   },
+   "slo_ms": 171,
+   "attainment": {
+    "k2": 0.98105,
+    "k3": 0.98581,
+    "k5": 0.99113
+   },
+   "violation_rate": {
+    "k2": 0.1,
+    "k3": 0.0667,
+    "k5": 0.05
+   },
+   "intervals": 60
+  },
+  "thumbnailer": {
+   "requests": 281543,
+   "error_rate": 1e-05,
+   "latency_ms": {
+    "avg": 18.94,
+    "p50": 15.94,
+    "p75": 21.4,
+    "p90": 30.15,
+    "p95": 37.13,
+    "p99": 55.77,
+    "max": 174.88
+   },
+   "slo_ms": 105,
+   "attainment": {
+    "k2": 0.99665,
+    "k3": 0.99961,
+    "k5": 0.99999
+   },
+   "violation_rate": {
+    "k2": 0.0,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 60
+  }
+ },
+ "overall": {
+  "violation_rate_k3": 0.0167,
+  "attainment_k3_mean": 0.99605,
+  "jain_attainment_k3": 0.99996,
+  "error_rate": 0.0
+ },
+ "cost": {
+  "replica_seconds": 59345.0,
+  "requested_vcpu_hours": 8.242,
+  "mean_ready_total": 16.48,
+  "max_ready_total": 18,
+  "mean_ready": {
+   "teastore-webui": 4.36,
+   "thumbnailer": 3.89,
+   "graph-bfs": 4.06,
+   "hotel-reservation": 4.18
+  },
+  "share_time_pending": 0.6236,
+  "actual_cpu_mean_cores": 3.641
+ },
+ "stability": {
+  "scaling_actions_per_hour": 64.0,
+  "reversals_per_hour": 18.0
+ },
+ "energy": {
+  "gpu_wh": 169.62,
+  "gpu0_wh": 84.16,
+  "gpu1_wh": 85.46,
+  "host_pkg_total_wh": 203.04,
+  "host_intel-rapl_0_wh": 109.44,
+  "host_intel-rapl_1_wh": 93.61
+ },
+ "health": {
+  "control_stall_max_s": 0.0,
+  "control_stalls_2s": 0,
+  "control_stalls_2s_warmup": 0,
+  "harness_failure": false
+ },
+ "decisions": {
+  "count": 74,
+  "decide_s_mean": 0.0,
+  "decide_s_p95": 0.0,
+  "decide_s_max": 0.0,
+  "late_ticks": 0,
+  "invalid": 0,
+  "llm_calls": 0
+ }
+}

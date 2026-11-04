@@ -1,0 +1,24 @@
+{"epoch":1792173518.53,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792173518.75,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792173519.72,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 2, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792173557.66,"msg":"hotel data reset: 60260 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792173561.56,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792173591.79,"msg":"run started: llm:port=8002,mode=joint,ablate=domain on data/traces/runs/test_0.csv.gz, 4500 s"}
+{"epoch":1792173774.22,"msg":"k=3 t=183 decide 2.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792173894.25,"msg":"k=5 t=303 decide 2.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792174194.27,"msg":"k=10 t=603 decide 2.0 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792174314.24,"msg":"k=12 t=723 decide 2.0 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792174674.21,"msg":"k=18 t=1083 decide 2.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 3}"}
+{"epoch":1792174914.23,"msg":"k=22 t=1323 decide 2.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 2}"}
+{"epoch":1792175634.19,"msg":"k=34 t=2043 decide 2.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792175694.22,"msg":"k=35 t=2103 decide 2.0 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792175754.23,"msg":"k=36 t=2163 decide 2.0 s, scaled {'graph-bfs': 5}"}
+{"epoch":1792176054.21,"msg":"k=41 t=2463 decide 2.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792176114.23,"msg":"k=42 t=2523 decide 2.0 s, scaled {'graph-bfs': 6}"}
+{"epoch":1792177434.23,"msg":"k=64 t=3843 decide 2.0 s, scaled {'thumbnailer': 4, 'graph-bfs': 5}"}
+{"epoch":1792177614.28,"msg":"k=67 t=4023 decide 2.0 s, scaled {'thumbnailer': 5, 'graph-bfs': 4}"}
+{"epoch":1792178034.15,"msg":"trace finished"}
+{"epoch":1792178092.45,"msg":"recorder stopped"}
+{"epoch":1792178092.68,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

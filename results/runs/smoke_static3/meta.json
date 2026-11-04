@@ -1,0 +1,132 @@
+{
+ "name": "smoke_static3",
+ "controller": "static",
+ "controller_info": {
+  "kind": "static",
+  "params": {}
+ },
+ "trace": "data/traces/runs/dev_0.csv.gz",
+ "trace_meta": {
+  "run": "dev_0",
+  "wikipedia_day": "2025-07-16",
+  "huawei_day": "day_015",
+  "huawei_hour": 21,
+  "alibaba_day": 3,
+  "k_copies_per_app_peak": 8.0,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.33,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 83.96,
+   "imgrec": 23.99,
+   "compression": 8.0,
+   "hotel": 1713.52
+  }
+ },
+ "seed": 1,
+ "duration_s": 900,
+ "scale": 1.0,
+ "start_replicas": {
+  "teastore-webui": 4,
+  "thumbnailer": 3,
+  "compression": 3,
+  "imgrec": 3,
+  "hotel-frontend": 2,
+  "hotel-search": 2,
+  "hotel-reservation": 4,
+  "hotel-rate": 2
+ },
+ "start_epoch": 1790330718.3202214,
+ "git_commit": "4566d37",
+ "harness_uncommitted_changes": true,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "copies_available": 24,
+  "cpu_request_m": 500,
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "compression": {
+    "ns": "sebs",
+    "svc": "compression",
+    "port": 8080
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "svc": "imgrec",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "compression": {
+    "ns": "sebs",
+    "deploy": "compression",
+    "entry": "compression"
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "deploy": "imgrec",
+    "entry": "imgrec"
+   },
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel"
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel"
+   }
+  }
+ }
+}

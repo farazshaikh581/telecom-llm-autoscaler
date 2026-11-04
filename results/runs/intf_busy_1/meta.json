@@ -1,0 +1,123 @@
+{
+ "name": "intf_busy_1",
+ "controller": "static:teastore-webui=3,thumbnailer=3,graph-bfs=3,hotel-reservation=5",
+ "controller_info": {
+  "kind": "static",
+  "params": {
+   "teastore-webui": "3",
+   "thumbnailer": "3",
+   "graph-bfs": "3",
+   "hotel-reservation": "5"
+  }
+ },
+ "trace": "data/traces/interference_50pct.csv.gz",
+ "trace_meta": null,
+ "seed": 1,
+ "duration_s": 900,
+ "scale": 1.0,
+ "arrivals": "even",
+ "start_replicas": {
+  "teastore-webui": 2,
+  "thumbnailer": 2,
+  "graph-bfs": 2,
+  "hotel-reservation": 3
+ },
+ "fixed_replicas": {
+  "hotel-frontend": 2,
+  "hotel-search": 2,
+  "hotel-rate": 2
+ },
+ "start_epoch": 1791289024.6429906,
+ "git_commit": "3b3905f",
+ "harness_uncommitted_changes": true,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "workers": 4,
+  "worker_vcpus": 4,
+  "copies_available": 24,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "cpu_request_m": 500,
+  "host_swap_limit_mib": 64,
+  "calibration_dir": "results/calibration/p2",
+  "base_run": "fp_newdesign_20261001",
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "svc": "graph-bfs",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "deploy": "graph-bfs",
+    "entry": "graph-bfs"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   }
+  },
+  "fixed": {
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel",
+    "copies": 2
+   }
+  }
+ }
+}

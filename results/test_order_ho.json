@@ -1,0 +1,112 @@
+[
+ {
+  "day": 0,
+  "seed": 1,
+  "runs": [
+   {
+    "name": "ho_qwen_joint_t0",
+    "controller": "llm:port=8002,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_tgpt_joint_t0",
+    "controller": "llm:port=8001,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_tgpt_oracl_t0",
+    "controller": "llm:port=8001,mode=oracl,order=newest"
+   },
+   {
+    "name": "ho_qwen_oracl_t0",
+    "controller": "llm:port=8002,mode=oracl,order=newest"
+   }
+  ]
+ },
+ {
+  "day": 1,
+  "seed": 2,
+  "runs": [
+   {
+    "name": "ho_tgpt_joint_t1",
+    "controller": "llm:port=8001,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_oracl_t1",
+    "controller": "llm:port=8002,mode=oracl,order=newest"
+   },
+   {
+    "name": "ho_qwen_joint_t1",
+    "controller": "llm:port=8002,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_tgpt_oracl_t1",
+    "controller": "llm:port=8001,mode=oracl,order=newest"
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "seed": 1,
+  "runs": [
+   {
+    "name": "ho_tgpt_joint_t2",
+    "controller": "llm:port=8001,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_joint_t2",
+    "controller": "llm:port=8002,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_oracl_t2",
+    "controller": "llm:port=8002,mode=oracl,order=newest"
+   },
+   {
+    "name": "ho_tgpt_oracl_t2",
+    "controller": "llm:port=8001,mode=oracl,order=newest"
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "seed": 2,
+  "runs": [
+   {
+    "name": "ho_tgpt_joint_t3",
+    "controller": "llm:port=8001,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_joint_t3",
+    "controller": "llm:port=8002,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_tgpt_oracl_t3",
+    "controller": "llm:port=8001,mode=oracl,order=newest"
+   },
+   {
+    "name": "ho_qwen_oracl_t3",
+    "controller": "llm:port=8002,mode=oracl,order=newest"
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "seed": 1,
+  "runs": [
+   {
+    "name": "ho_tgpt_oracl_t4",
+    "controller": "llm:port=8001,mode=oracl,order=newest"
+   },
+   {
+    "name": "ho_tgpt_joint_t4",
+    "controller": "llm:port=8001,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_joint_t4",
+    "controller": "llm:port=8002,mode=joint,order=newest"
+   },
+   {
+    "name": "ho_qwen_oracl_t4",
+    "controller": "llm:port=8002,mode=oracl,order=newest"
+   }
+  ]
+ }
+]

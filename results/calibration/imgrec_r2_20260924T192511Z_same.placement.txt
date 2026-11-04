@@ -1,0 +1,3 @@
+imgrec-6bd55fb96b-2mdpn   worker13
+imgrec-6bd55fb96b-gp922   worker13
+imgrec-6f56b97cd4-lx4l6   worker14

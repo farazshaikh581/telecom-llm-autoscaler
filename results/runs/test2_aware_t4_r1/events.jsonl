@@ -1,0 +1,25 @@
+{"epoch":1792106888.01,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792106888.23,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792106889.3,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"epoch":1792106899.13,"msg":"hotel data reset: 65570 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"registry_removed":1}
+{"epoch":1792106903.1,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":1}
+{"epoch":1792106934.37,"msg":"run started: aware:ckpt=rl/checkpoints/aware_ft.pt on data/traces/runs/test_4.csv.gz, 4500 s"}
+{"epoch":1792107053.83,"msg":"k=2 t=121 decide 0.1 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792107293.89,"msg":"k=6 t=361 decide 0.1 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792107713.85,"msg":"k=13 t=781 decide 0.1 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792107773.88,"msg":"k=14 t=841 decide 0.1 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792107833.84,"msg":"k=15 t=901 decide 0.1 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792108073.89,"msg":"k=19 t=1141 decide 0.1 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792108193.9,"msg":"k=21 t=1261 decide 0.1 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792110773.87,"msg":"k=64 t=3841 decide 0.1 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792110833.87,"msg":"k=65 t=3901 decide 0.1 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792111073.9,"msg":"k=69 t=4141 decide 0.1 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792111253.9,"msg":"k=72 t=4321 decide 0.1 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792111313.87,"msg":"k=73 t=4381 decide 0.1 s, scaled {'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1792111373.87,"msg":"k=74 t=4441 decide 0.1 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792111373.87,"msg":"trace finished"}
+{"epoch":1792111433.99,"msg":"recorder stopped"}
+{"epoch":1792111434.21,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

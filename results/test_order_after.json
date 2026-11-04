@@ -1,0 +1,482 @@
+[
+ {
+  "day": 0,
+  "layout": "A",
+  "runs": [
+   {
+    "name": "ab_qwen_cot_t0",
+    "controller": "llm:port=8002,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_domain_t0",
+    "controller": "llm:port=8002,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_domain_t0",
+    "controller": "llm:port=8001,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "pa_tgpt_joint_t0",
+    "controller": "llm:port=8001,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "hl_keda_t0",
+    "controller": "keda:util=0.8",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_firm_t0",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_qwen_joint_t0",
+    "controller": "llm:port=8002,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_qwen_joint_t0",
+    "controller": "llm:port=8002,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_history_t0",
+    "controller": "llm:port=8001,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_history_t0",
+    "controller": "llm:port=8002,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_cot_t0",
+    "controller": "llm:port=8001,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_tgpt_joint_t0",
+    "controller": "llm:port=8001,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_ours_t0",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_zeroshot_t0",
+    "controller": "llm:port=8001,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "hl_hpa70_t0",
+    "controller": "hpa:target=70",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_phpa_t0",
+    "controller": "phpa:target=70,lookahead=60,history=12",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_zeroshot_t0",
+    "controller": "llm:port=8002,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "hl_aware_t0",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+    "args": "--scale 1.25"
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "layout": "A",
+  "runs": [
+   {
+    "name": "hl_hpa70_t2",
+    "controller": "hpa:target=70",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_history_t2",
+    "controller": "llm:port=8001,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_domain_t2",
+    "controller": "llm:port=8002,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "hl_keda_t2",
+    "controller": "keda:util=0.8",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_cot_t2",
+    "controller": "llm:port=8001,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_qwen_joint_t2",
+    "controller": "llm:port=8002,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_ours_t2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_history_t2",
+    "controller": "llm:port=8002,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "hl_aware_t2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_tgpt_joint_t2",
+    "controller": "llm:port=8001,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "hl_tgpt_joint_t2",
+    "controller": "llm:port=8001,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_zeroshot_t2",
+    "controller": "llm:port=8002,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_cot_t2",
+    "controller": "llm:port=8002,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_domain_t2",
+    "controller": "llm:port=8001,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "hl_firm_t2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_phpa_t2",
+    "controller": "phpa:target=70,lookahead=60,history=12",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_qwen_joint_t2",
+    "controller": "llm:port=8002,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_zeroshot_t2",
+    "controller": "llm:port=8001,mode=joint,ablate=zeroshot",
+    "args": ""
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "layout": "A",
+  "runs": [
+   {
+    "name": "ab_tgpt_cot_t4",
+    "controller": "llm:port=8001,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_firm_t4",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_zeroshot_t4",
+    "controller": "llm:port=8001,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "hl_qwen_joint_t4",
+    "controller": "llm:port=8002,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_tgpt_joint_t4",
+    "controller": "llm:port=8001,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_tgpt_joint_t4",
+    "controller": "llm:port=8001,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "hl_phpa_t4",
+    "controller": "phpa:target=70,lookahead=60,history=12",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_hpa70_t4",
+    "controller": "hpa:target=70",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_aware_t4",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_keda_t4",
+    "controller": "keda:util=0.8",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_qwen_joint_t4",
+    "controller": "llm:port=8002,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_history_t4",
+    "controller": "llm:port=8002,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_cot_t4",
+    "controller": "llm:port=8002,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_history_t4",
+    "controller": "llm:port=8001,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_domain_t4",
+    "controller": "llm:port=8002,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_zeroshot_t4",
+    "controller": "llm:port=8002,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "hl_ours_t4",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_domain_t4",
+    "controller": "llm:port=8001,mode=joint,ablate=domain",
+    "args": ""
+   }
+  ]
+ },
+ {
+  "day": 1,
+  "layout": "B",
+  "runs": [
+   {
+    "name": "ab_qwen_history_t1",
+    "controller": "llm:port=8002,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_domain_t1",
+    "controller": "llm:port=8002,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "hl_qwen_joint_t1",
+    "controller": "llm:port=8002,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_zeroshot_t1",
+    "controller": "llm:port=8002,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_history_t1",
+    "controller": "llm:port=8001,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "hl_aware_t1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_hpa70_t1",
+    "controller": "hpa:target=70",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_tgpt_joint_t1",
+    "controller": "llm:port=8001,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_tgpt_joint_t1",
+    "controller": "llm:port=8001,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_cot_t1",
+    "controller": "llm:port=8001,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_zeroshot_t1",
+    "controller": "llm:port=8001,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_cot_t1",
+    "controller": "llm:port=8002,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_keda_t1",
+    "controller": "keda:util=0.8",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_qwen_joint_t1",
+    "controller": "llm:port=8002,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "hl_firm_t1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_ours_t1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_phpa_t1",
+    "controller": "phpa:target=70,lookahead=60,history=12",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_domain_t1",
+    "controller": "llm:port=8001,mode=joint,ablate=domain",
+    "args": ""
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "layout": "B",
+  "runs": [
+   {
+    "name": "ab_qwen_zeroshot_t3",
+    "controller": "llm:port=8002,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "hl_firm_t3",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_tgpt_joint_t3",
+    "controller": "llm:port=8001,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_qwen_joint_t3",
+    "controller": "llm:port=8002,mode=joint",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_history_t3",
+    "controller": "llm:port=8001,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_cot_t3",
+    "controller": "llm:port=8001,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_aware_t3",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "hl_ours_t3",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_history_t3",
+    "controller": "llm:port=8002,mode=joint,ablate=history",
+    "args": ""
+   },
+   {
+    "name": "ab_tgpt_domain_t3",
+    "controller": "llm:port=8001,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "hl_keda_t3",
+    "controller": "keda:util=0.8",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_tgpt_zeroshot_t3",
+    "controller": "llm:port=8001,mode=joint,ablate=zeroshot",
+    "args": ""
+   },
+   {
+    "name": "ab_qwen_cot_t3",
+    "controller": "llm:port=8002,mode=joint,ablate=cot",
+    "args": ""
+   },
+   {
+    "name": "hl_hpa70_t3",
+    "controller": "hpa:target=70",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "pa_tgpt_joint_t3",
+    "controller": "llm:port=8001,mode=joint,prompt=alt",
+    "args": ""
+   },
+   {
+    "name": "hl_phpa_t3",
+    "controller": "phpa:target=70,lookahead=60,history=12",
+    "args": "--scale 1.25"
+   },
+   {
+    "name": "ab_qwen_domain_t3",
+    "controller": "llm:port=8002,mode=joint,ablate=domain",
+    "args": ""
+   },
+   {
+    "name": "pa_qwen_joint_t3",
+    "controller": "llm:port=8002,mode=joint,prompt=alt",
+    "args": ""
+   }
+  ]
+ }
+]

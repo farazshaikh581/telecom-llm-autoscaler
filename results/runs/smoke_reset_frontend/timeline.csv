@@ -1,0 +1,6 @@
+minute,compression_rps,hotel_rps,imgrec_rps,teastore_rps,thumbnailer_rps,compression_error_share,hotel_error_share,imgrec_error_share,teastore_error_share,thumbnailer_error_share,compression_p95_all_ms,hotel_p95_all_ms,imgrec_p95_all_ms,teastore_p95_all_ms,thumbnailer_p95_all_ms,compression_p95_ok_ms,hotel_p95_ok_ms,imgrec_p95_ok_ms,teastore_p95_ok_ms,thumbnailer_p95_ok_ms,ready_teastore-webui,ready_thumbnailer,ready_compression,ready_imgrec,ready_hotel-frontend,ready_hotel-search,ready_hotel-reservation,ready_hotel-rate
+0,0.37,208.58,0.9,55.9,2.88,0.0,0.0,0.0,0.0,0.0,907.5,7.4,169.2,17.0,86.1,907.5,7.4,169.2,17.0,86.1,2.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0
+1,0.65,332.98,1.37,86.78,5.05,0.0,0.0,0.0,0.0,0.0,633.5,9.4,226.1,19.0,95.5,633.5,9.4,226.1,19.0,95.5,2.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0
+2,0.62,448.95,1.6,120.93,6.78,0.0,0.0,0.0,0.0,0.0,829.9,11.6,265.2,20.8,117.9,829.9,11.6,265.2,20.8,117.9,2.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0
+3,0.97,569.42,2.22,156.95,7.9,0.0,0.0,0.0,0.0,0.0,1103.0,16.3,314.5,25.8,132.7,1103.0,16.3,314.5,25.8,132.7,2.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0
+4,1.18,695.82,2.95,190.1,9.85,0.0,0.0,0.0,0.0,0.0,1387.5,39.8,313.7,32.1,152.8,1387.5,39.8,313.7,32.1,152.8,2.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0

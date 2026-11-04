@@ -1,0 +1,202 @@
+[
+ {
+  "name": "test_aware_t4",
+  "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_aware_t2",
+  "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_ours_t0",
+  "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_telecomgpt_t1",
+  "controller": "llm:port=8001,mode=joint",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_firm_t2",
+  "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_telecomgpt_t3",
+  "controller": "llm:port=8001,mode=joint",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_hpa_default_t4",
+  "controller": "hpa:target=70",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_firm_t0",
+  "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_keda_t3",
+  "controller": "keda:util=0.7",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_hpa_default_t1",
+  "controller": "hpa:target=70",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_phpa_t1",
+  "controller": "phpa:target=80,lookahead=120,history=6",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_phpa_t3",
+  "controller": "phpa:target=80,lookahead=120,history=6",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_phpa_t2",
+  "controller": "phpa:target=80,lookahead=120,history=6",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_hpa_tuned_t0",
+  "controller": "hpa:target=80",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_aware_t3",
+  "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_keda_t1",
+  "controller": "keda:util=0.7",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_hpa_tuned_t3",
+  "controller": "hpa:target=80",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_keda_t2",
+  "controller": "keda:util=0.7",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_telecomgpt_t0",
+  "controller": "llm:port=8001,mode=joint",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_keda_t0",
+  "controller": "keda:util=0.7",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_phpa_t0",
+  "controller": "phpa:target=80,lookahead=120,history=6",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_aware_t1",
+  "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_firm_t4",
+  "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_ours_t4",
+  "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_ours_t3",
+  "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_hpa_tuned_t4",
+  "controller": "hpa:target=80",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_hpa_default_t3",
+  "controller": "hpa:target=70",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_hpa_default_t2",
+  "controller": "hpa:target=70",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_phpa_t4",
+  "controller": "phpa:target=80,lookahead=120,history=6",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_hpa_default_t0",
+  "controller": "hpa:target=70",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_telecomgpt_t4",
+  "controller": "llm:port=8001,mode=joint",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_firm_t3",
+  "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "trace": "test_3"
+ },
+ {
+  "name": "test_ours_t1",
+  "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_firm_t1",
+  "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_keda_t4",
+  "controller": "keda:util=0.7",
+  "trace": "test_4"
+ },
+ {
+  "name": "test_hpa_tuned_t1",
+  "controller": "hpa:target=80",
+  "trace": "test_1"
+ },
+ {
+  "name": "test_telecomgpt_t2",
+  "controller": "llm:port=8001,mode=joint",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_ours_t2",
+  "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+  "trace": "test_2"
+ },
+ {
+  "name": "test_aware_t0",
+  "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "trace": "test_0"
+ },
+ {
+  "name": "test_hpa_tuned_t2",
+  "controller": "hpa:target=80",
+  "trace": "test_2"
+ }
+]

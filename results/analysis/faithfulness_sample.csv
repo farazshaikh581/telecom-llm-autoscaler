@@ -1,0 +1,31 @@
+numbers,unsupported,present_numbers,latest,latest_approx,stale,stale_oldest,stale_previous,present_unsupported,breach_claims,breach_wrong,within_claims,within_wrong,pending_claims,pending_wrong,root_types,root_supported,root_named,root_no_input,said,did,judged,agree,consistent,next_breach,corpus,model,day,rep,run,k,apps,any_stale
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,,teastore-webui:keep,0,0,,False,oracl,tgpt,2,2,test2_tgpt_oracl_t2_r2,61,teastore,False
+4,0,3,0,0,2,2,0,1,0,0,2,0,0,0,,,,,,teastore-webui:up;thumbnailer:up;graph-bfs:down;hotel-reservation:down,0,0,,False,cot,qwen,0,1,ab_qwen_cot_t0,18,"graph-bfs,hotel,teastore,thumbnailer",True
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,,thumbnailer:keep,0,0,,,oracl,tgpt,4,2,test2_tgpt_oracl_t4_r2,74,thumbnailer,False
+12,0,7,6,0,0,0,0,1,0,0,2,0,0,0,none,1.0,1.0,0.0,thumbnailer:keep,thumbnailer:keep,1,1,True,False,oracl_newest,qwen,3,2,ho_qwen_oracl_t3,15,thumbnailer,False
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,teastore-webui:keep,teastore-webui:keep,1,1,True,False,oracl,tgpt,3,2,test2_tgpt_oracl_t3_r2,55,teastore,False
+3,0,1,0,0,0,0,0,1,0,0,1,0,0,0,load surge,0.0,1.0,0.0,,hotel-reservation:up,0,0,,False,oracl,qwen,4,1,test2_qwen_oracl_t4_r1,17,hotel,False
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,,teastore-webui:keep,0,0,,False,oracl,tgpt,1,1,test2_tgpt_oracl_t1_r1,24,teastore,False
+0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,none,1.0,1.0,0.0,,thumbnailer:keep,0,0,,False,oracl_newest,tgpt,1,2,ho_tgpt_oracl_t1,47,thumbnailer,False
+4,0,1,0,0,1,1,0,0,0,0,2,0,0,0,none,1.0,1.0,0.0,thumbnailer:keep,thumbnailer:keep,1,1,True,False,oracl,qwen,0,1,test2_qwen_oracl_t0_r1,20,thumbnailer,True
+7,2,3,0,0,1,1,0,2,0,0,1,0,0,0,none,1.0,1.0,0.0,,graph-bfs:keep,0,0,,False,oracl,qwen,0,1,test2_qwen_oracl_t0_r1,18,graph-bfs,True
+9,1,2,1,0,0,0,0,1,0,0,1,0,0,0,load surge,1.0,1.0,0.0,thumbnailer:keep,thumbnailer:keep,1,1,True,False,oracl,qwen,4,1,test2_qwen_oracl_t4_r1,40,thumbnailer,False
+0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,none,1.0,1.0,0.0,,hotel-reservation:keep,0,0,,False,oracl,tgpt,1,2,test2_tgpt_oracl_t1_r2,63,hotel,False
+11,0,2,1,0,0,0,0,1,0,0,1,0,0,0,,,,,,teastore-webui:down,0,0,,False,oracl_newest,qwen,1,2,ho_qwen_oracl_t1,14,teastore,False
+8,0,0,0,0,0,0,0,0,0,0,3,0,0,0,,,,,teastore-webui:up;thumbnailer:keep;graph-bfs:keep;hotel-reservation:keep,teastore-webui:up;thumbnailer:keep;graph-bfs:keep;hotel-reservation:keep,4,4,True,True,cot,tgpt,0,1,ab_tgpt_cot_t0,10,"graph-bfs,hotel,teastore,thumbnailer",False
+8,2,3,0,0,0,0,0,3,0,0,1,0,0,0,none,1.0,1.0,0.0,graph-bfs:keep,graph-bfs:keep,1,1,True,False,oracl,qwen,0,1,test2_qwen_oracl_t0_r1,54,graph-bfs,False
+10,2,3,2,0,0,0,0,1,0,0,1,0,0,0,none,1.0,1.0,0.0,hotel-reservation:keep,hotel-reservation:keep,1,1,True,False,oracl,qwen,4,2,test2_qwen_oracl_t4_r2,7,hotel,False
+8,1,0,0,0,0,0,0,0,0,0,1,0,0,0,load surge,0.0,1.0,0.0,,graph-bfs:up,0,0,,False,oracl,qwen,4,2,test2_qwen_oracl_t4_r2,24,graph-bfs,False
+9,2,3,1,0,0,0,0,2,0,0,1,0,0,0,,,,,,teastore-webui:keep,0,0,,False,oracl_newest,qwen,2,1,ho_qwen_oracl_t2,73,teastore,False
+6,1,0,0,0,0,0,0,0,0,0,1,0,0,0,load surge,1.0,1.0,0.0,thumbnailer:keep,thumbnailer:keep,1,1,True,False,oracl_newest,qwen,3,2,ho_qwen_oracl_t3,61,thumbnailer,False
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,,graph-bfs:keep,0,0,,False,oracl,tgpt,0,2,test2_tgpt_oracl_t0_r2,68,graph-bfs,False
+16,0,0,0,0,0,0,0,0,0,0,3,0,0,0,,,,,teastore-webui:down;thumbnailer:keep;hotel-reservation:keep,teastore-webui:down;thumbnailer:keep;graph-bfs:keep;hotel-reservation:keep,3,3,True,False,cot,tgpt,1,1,ab_tgpt_cot_t1,35,"graph-bfs,hotel,teastore,thumbnailer",False
+9,0,0,0,0,0,0,0,0,1,0,3,0,0,0,,,,,thumbnailer:keep;graph-bfs:keep;hotel-reservation:keep,teastore-webui:up;thumbnailer:keep;graph-bfs:keep;hotel-reservation:keep,3,3,True,False,cot,tgpt,1,1,ab_tgpt_cot_t1,50,"graph-bfs,hotel,teastore,thumbnailer",False
+1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,none,1.0,1.0,0.0,,hotel-reservation:keep,0,0,,False,oracl,tgpt,2,1,test2_tgpt_oracl_t2_r1,63,hotel,False
+5,0,2,1,0,0,0,0,1,0,0,1,0,0,0,,,,,,teastore-webui:keep,0,0,,False,oracl_newest,qwen,2,1,ho_qwen_oracl_t2,21,teastore,False
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,none,1.0,1.0,0.0,,hotel-reservation:keep,0,0,,False,oracl,tgpt,3,2,test2_tgpt_oracl_t3_r2,29,hotel,False
+2,0,1,1,0,0,0,0,0,2,0,0,0,0,0,,,,,,teastore-webui:keep;thumbnailer:keep;graph-bfs:down;hotel-reservation:down,0,0,,True,cot,qwen,2,1,ab_qwen_cot_t2,9,"graph-bfs,hotel,teastore,thumbnailer",False
+7,1,3,1,1,0,0,0,1,0,0,1,0,0,0,none,1.0,1.0,0.0,,hotel-reservation:keep,0,0,,False,oracl,qwen,2,1,test2_qwen_oracl_t2_r1,45,hotel,False
+8,3,1,0,0,0,0,0,1,0,0,1,0,0,0,cpu,0.0,1.0,0.0,,hotel-reservation:up,0,0,,False,oracl,qwen,4,2,test2_qwen_oracl_t4_r2,40,hotel,False
+8,0,4,0,1,2,2,0,1,0,0,1,0,0,0,none,1.0,1.0,0.0,graph-bfs:keep,graph-bfs:down,1,0,False,False,oracl,qwen,0,2,test2_qwen_oracl_t0_r2,27,graph-bfs,True
+6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,,,,,,teastore-webui:keep;thumbnailer:up;graph-bfs:keep;hotel-reservation:keep,0,0,,False,cot,qwen,4,1,ab_qwen_cot_t4,36,"graph-bfs,hotel,teastore,thumbnailer",False

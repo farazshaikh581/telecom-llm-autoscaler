@@ -1,0 +1,25 @@
+{"epoch":1792298241.12,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792298241.33,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792298242.32,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792298280.35,"msg":"hotel data reset: 65797 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792298284.24,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792298314.47,"msg":"run started: llm:port=8001,mode=joint on data/traces/runs/test_2.csv.gz, 4500 s"}
+{"epoch":1792298497.19,"msg":"k=3 t=183 decide 2.2 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792298617.22,"msg":"k=5 t=303 decide 2.3 s, scaled {'thumbnailer': 4, 'hotel-reservation': 3}"}
+{"epoch":1792298677.29,"msg":"k=6 t=363 decide 2.3 s, scaled {'teastore-webui': 3}"}
+{"epoch":1792298737.25,"msg":"k=7 t=423 decide 2.3 s, scaled {'teastore-webui': 4}"}
+{"epoch":1792298797.25,"msg":"k=8 t=483 decide 2.3 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792299097.3,"msg":"k=13 t=783 decide 2.3 s, scaled {'teastore-webui': 6, 'thumbnailer': 6}"}
+{"epoch":1792299157.28,"msg":"k=14 t=843 decide 2.3 s, scaled {'thumbnailer': 7, 'graph-bfs': 3}"}
+{"epoch":1792299217.28,"msg":"k=15 t=903 decide 2.3 s, scaled {'teastore-webui': 4, 'thumbnailer': 5}"}
+{"epoch":1792299277.28,"msg":"k=16 t=963 decide 2.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792299457.26,"msg":"k=19 t=1143 decide 2.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792299517.29,"msg":"k=20 t=1203 decide 2.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792299577.26,"msg":"k=21 t=1263 decide 2.3 s, scaled {'teastore-webui': 4, 'graph-bfs': 4}"}
+{"epoch":1792299817.28,"msg":"k=25 t=1503 decide 2.3 s, scaled {'teastore-webui': 8, 'graph-bfs': 6}"}
+{"epoch":1792299937.27,"msg":"k=27 t=1623 decide 2.3 s, scaled {'teastore-webui': 4}"}
+{"epoch":1792302757.2,"msg":"trace finished"}
+{"epoch":1792302815.13,"msg":"recorder stopped"}
+{"epoch":1792302815.36,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

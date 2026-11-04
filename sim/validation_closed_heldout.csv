@@ -1,0 +1,5 @@
+run,target,real_viol,sim_viol,sim_viol_range,real_copies,sim_copies
+tune_hpa_t50_dev2,50,0.12,0.101,0.100-0.103,23.98,23.992
+tune_hpa_t60_dev2,60,0.143,0.117,0.110-0.127,23.71,23.987
+tune_hpa_t70_dev2,70,0.123,0.102,0.100-0.107,23.72,23.659
+tune_hpa_t80_dev2,80,0.127,0.111,0.107-0.117,22.88,22.798

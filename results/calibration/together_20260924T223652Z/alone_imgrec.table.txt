@@ -1,0 +1,5 @@
+step  offered  served   err%      avg      p50      p75      p90      p95      p99      max  dropped
+   0     1.35    1.16    0.0    121.4    118.6    121.1    124.7    144.3    162.3    166.3        0
+   1     2.70    2.90    0.0    138.3    119.5    125.5    201.0    237.6    288.0    302.0        0
+   2     3.60    3.32    0.0    141.1    120.6    153.4    210.3    226.7    290.8    325.3        0
+summary: results/calibration/together_20260924T223652Z/alone_imgrec.summary.json

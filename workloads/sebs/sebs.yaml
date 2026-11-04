@@ -1,0 +1,116 @@
+# SeBS serverless functions as plain Deployments, plus MinIO storage.
+# Since 2026-10-01: thumbnailer and graph-bfs (edge latency class); compression and image
+# recognition removed (their manifests are in git history, commit 7d6ffdb).
+# Storage credentials come from Secret "minio-creds" (created by deploy.sh, never in git).
+#
+# Placement: MinIO on the control node (storage is an external service in real FaaS,
+# like S3). Functions on the workers (the part that is scaled).
+# MinIO: bitnamilegacy image (official minio/minio images were withdrawn in 2025 and the
+# project is archived); SeBS's local mode uses MinIO, so this stays closest to SeBS.
+apiVersion: v1
+kind: Namespace
+metadata: {name: sebs}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: minio, namespace: sebs}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: minio}}
+  template:
+    metadata: {labels: {app: minio}}
+    spec:
+      nodeSelector: {node.kubernetes.io/microk8s-controlplane: microk8s-controlplane}
+      tolerations: [{key: node-role.kubernetes.io/control-plane, operator: Exists, effect: NoSchedule}]
+      containers:
+      - name: minio
+        image: bitnamilegacy/minio:2025.7.23-debian-12-r5
+        env:
+        - {name: MINIO_ROOT_USER, valueFrom: {secretKeyRef: {name: minio-creds, key: user}}}
+        - {name: MINIO_ROOT_PASSWORD, valueFrom: {secretKeyRef: {name: minio-creds, key: password}}}
+        - {name: MINIO_DEFAULT_BUCKETS, value: sebs-benchmarks}
+        ports: [{containerPort: 9000}]
+        volumeMounts: [{name: data, mountPath: /bitnami/minio/data}]
+        readinessProbe: {httpGet: {path: /minio/health/ready, port: 9000}, periodSeconds: 5}
+      # Deletes function outputs older than 1 minute, every 30 s. Without this,
+      # uploaded thumbnails and zip archives would fill the disk under load.
+      - name: output-cleaner
+        image: bitnamilegacy/minio-client:2025.7.21-debian-12-r3
+        env:
+        - {name: U, valueFrom: {secretKeyRef: {name: minio-creds, key: user}}}
+        - {name: P, valueFrom: {secretKeyRef: {name: minio-creds, key: password}}}
+        command: ["sh", "-c"]
+        args:
+        - |
+          until mc alias set s http://localhost:9000 "$U" "$P" >/dev/null 2>&1; do sleep 5; done
+          while true; do
+            for p in 210.thumbnailer-0-output 311.compression-0-output; do
+              mc rm --recursive --force --older-than 1m "s/sebs-benchmarks/$p/" >/dev/null 2>&1 || true
+            done
+            sleep 30
+          done
+      volumes: [{name: data, emptyDir: {}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: minio, namespace: sebs}
+spec:
+  selector: {app: minio}
+  ports: [{port: 9000, targetPort: 9000}]
+---
+# Functions. One gunicorn worker per replica = one request at a time (FaaS concurrency 1).
+# CPU request is a placeholder until load calibration; memory follows SeBS's config.json.
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: thumbnailer, namespace: sebs, labels: {scaled: "true"}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: thumbnailer}}
+  template:
+    metadata: {labels: {app: thumbnailer}}
+    spec:
+      nodeSelector: {node.kubernetes.io/microk8s-worker: microk8s-worker}
+      # Copies spread evenly over workers (same rule for every scaled service, see docs/decisions.md)
+      topologySpreadConstraints: [{maxSkew: 1, topologyKey: kubernetes.io/hostname, whenUnsatisfiable: DoNotSchedule,
+        nodeTaintsPolicy: Honor, labelSelector: {matchLabels: {app: thumbnailer}}}]
+      containers:
+      - name: fn
+        image: localhost:32000/sebs-thumbnailer:v3
+        ports: [{containerPort: 8080}]
+        env:
+        - {name: MINIO_ADDRESS, value: "minio.sebs:9000"}
+        - {name: MINIO_ACCESS_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: user}}}
+        - {name: MINIO_SECRET_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: password}}}
+        resources: {requests: {cpu: 500m, memory: 256Mi}, limits: {cpu: "1", memory: 256Mi}}
+        readinessProbe: {tcpSocket: {port: 8080}, periodSeconds: 5}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: graph-bfs, namespace: sebs, labels: {scaled: "true"}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: graph-bfs}}
+  template:
+    metadata: {labels: {app: graph-bfs}}
+    spec:
+      nodeSelector: {node.kubernetes.io/microk8s-worker: microk8s-worker}
+      # Copies spread evenly over workers (same rule for every scaled service, see docs/decisions.md)
+      topologySpreadConstraints: [{maxSkew: 1, topologyKey: kubernetes.io/hostname, whenUnsatisfiable: DoNotSchedule,
+        nodeTaintsPolicy: Honor, labelSelector: {matchLabels: {app: graph-bfs}}}]
+      containers:
+      - name: fn
+        image: localhost:32000/sebs-graph-bfs:v3
+        ports: [{containerPort: 8080}]
+        # no storage: the function generates its graph in memory (SeBS 503.graph-bfs; memory 512 MB in SeBS's config)
+        resources: {requests: {cpu: 500m, memory: 512Mi}, limits: {cpu: "1", memory: 512Mi}}
+        readinessProbe: {tcpSocket: {port: 8080}, periodSeconds: 5}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: thumbnailer, namespace: sebs}
+spec: {selector: {app: thumbnailer}, ports: [{port: 8080, targetPort: 8080}]}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: graph-bfs, namespace: sebs}
+spec: {selector: {app: graph-bfs}, ports: [{port: 8080, targetPort: 8080}]}

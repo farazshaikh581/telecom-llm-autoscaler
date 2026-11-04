@@ -1,0 +1,8 @@
+teastore-auth-79b5f4d7d6-2kr56          worker12   Running
+teastore-db-5b6b97b46d-5g87c            worker12   Running
+teastore-image-b4f9f88fb-nb67s          worker12   Running
+teastore-persistence-5878f9544b-z6wmt   worker14   Running
+teastore-recommender-85677cb56b-2ssbz   worker12   Running
+teastore-registry-984887475-7jzdz       worker12   Running
+teastore-webui-558677465b-42fvr         worker12   Running
+teastore-webui-558677465b-tb4js         worker14   Running

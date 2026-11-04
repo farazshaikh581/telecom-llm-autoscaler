@@ -1,0 +1,109 @@
+{
+ "model": "Qwen/Qwen3.5-27B-FP8",
+ "thinking": true,
+ "system": "You are the autoscaler for a Kubernetes cluster that runs several applications at once.\nEvery 60 seconds you set the replica count of each scaled service.\nCluster: 4 worker nodes, 16 vCPU in total. Each replica requests 0.5 CPU and may use up to 1 CPU.\nReplicas per service: 1 to 12. The sum of all replicas should stay within 24 unless an SLO is at risk.\nGoal: keep every application's P95 latency below its SLO with as few replicas as possible, and avoid oscillation.\nServices of the hotel application share one end-to-end SLO. A new replica takes about 2 s to start; the imgrec service's first request on a new replica takes about 1.2 s longer (model load).\nReply only with the JSON object requested.",
+ "prompts": {
+  "quiet": "Scenario time: now. Last 5 intervals (60 s each, oldest first) per service:\n- teastore-webui (app teastore, SLO P95 39 ms): 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1\n- thumbnailer (app thumbnailer, SLO P95 200 ms): 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1\n- compression (app compression, SLO P95 1300 ms): 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1\n- imgrec (app imgrec, SLO P95 400 ms): 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1\n- hotel-frontend (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-search (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-reservation (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-rate (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\nChoose the replica count for every service for the next interval.",
+  "teastore_rising": "Scenario time: now. Last 5 intervals (60 s each, oldest first) per service:\n- teastore-webui (app teastore, SLO P95 39 ms): 80.0 req/s, P95 13 ms, CPU 24%, replicas 2 | 107.5 req/s, P95 13 ms, CPU 32%, replicas 2 | 135.0 req/s, P95 13 ms, CPU 40%, replicas 2 | 162.5 req/s, P95 13 ms, CPU 49%, replicas 2 | 190.0 req/s, P95 15 ms, CPU 57%, replicas 2\n- thumbnailer (app thumbnailer, SLO P95 200 ms): 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1\n- compression (app compression, SLO P95 1300 ms): 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1\n- imgrec (app imgrec, SLO P95 400 ms): 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1\n- hotel-frontend (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-search (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-reservation (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-rate (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\nChoose the replica count for every service for the next interval.",
+  "function_burst": "Scenario time: now. Last 5 intervals (60 s each, oldest first) per service:\n- teastore-webui (app teastore, SLO P95 39 ms): 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1\n- thumbnailer (app thumbnailer, SLO P95 200 ms): 4.0 req/s, P95 67 ms, CPU 14%, replicas 2 | 8.5 req/s, P95 67 ms, CPU 31%, replicas 2 | 13.0 req/s, P95 67 ms, CPU 47%, replicas 2 | 17.5 req/s, P95 97 ms, CPU 63%, replicas 2 | 22.0 req/s, P95 293 ms, CPU 79%, replicas 2\n- compression (app compression, SLO P95 1300 ms): 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1\n- imgrec (app imgrec, SLO P95 400 ms): 1.5 req/s, P95 133 ms, CPU 15%, replicas 2 | 3.1 req/s, P95 133 ms, CPU 31%, replicas 2 | 4.8 req/s, P95 134 ms, CPU 48%, replicas 2 | 6.4 req/s, P95 201 ms, CPU 64%, replicas 2 | 8.0 req/s, P95 634 ms, CPU 80%, replicas 2\n- hotel-frontend (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-search (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-reservation (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\n- hotel-rate (app hotel, SLO P95 27 ms): 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1 | 150.0 req/s, P95 9 ms, CPU 27%, replicas 1\nChoose the replica count for every service for the next interval.",
+  "hotel_near_knee": "Scenario time: now. Last 5 intervals (60 s each, oldest first) per service:\n- teastore-webui (app teastore, SLO P95 39 ms): 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1 | 45.0 req/s, P95 13 ms, CPU 27%, replicas 1\n- thumbnailer (app thumbnailer, SLO P95 200 ms): 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1 | 3.8 req/s, P95 67 ms, CPU 27%, replicas 1\n- compression (app compression, SLO P95 1300 ms): 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1 | 0.3 req/s, P95 433 ms, CPU 27%, replicas 1\n- imgrec (app imgrec, SLO P95 400 ms): 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1 | 1.3 req/s, P95 133 ms, CPU 27%, replicas 1\n- hotel-frontend (app hotel, SLO P95 27 ms): 300.0 req/s, P95 9 ms, CPU 27%, replicas 2 | 365.0 req/s, P95 9 ms, CPU 33%, replicas 2 | 430.0 req/s, P95 9 ms, CPU 39%, replicas 2 | 495.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 560.0 req/s, P95 9 ms, CPU 50%, replicas 2\n- hotel-search (app hotel, SLO P95 27 ms): 300.0 req/s, P95 9 ms, CPU 27%, replicas 2 | 365.0 req/s, P95 9 ms, CPU 33%, replicas 2 | 430.0 req/s, P95 9 ms, CPU 39%, replicas 2 | 495.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 560.0 req/s, P95 9 ms, CPU 50%, replicas 2\n- hotel-reservation (app hotel, SLO P95 27 ms): 300.0 req/s, P95 9 ms, CPU 27%, replicas 2 | 365.0 req/s, P95 9 ms, CPU 33%, replicas 2 | 430.0 req/s, P95 9 ms, CPU 39%, replicas 2 | 495.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 560.0 req/s, P95 9 ms, CPU 50%, replicas 2\n- hotel-rate (app hotel, SLO P95 27 ms): 300.0 req/s, P95 9 ms, CPU 27%, replicas 2 | 365.0 req/s, P95 9 ms, CPU 33%, replicas 2 | 430.0 req/s, P95 9 ms, CPU 39%, replicas 2 | 495.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 560.0 req/s, P95 9 ms, CPU 50%, replicas 2\nChoose the replica count for every service for the next interval.",
+  "cluster_peak": "Scenario time: now. Last 5 intervals (60 s each, oldest first) per service:\n- teastore-webui (app teastore, SLO P95 39 ms): 150.0 req/s, P95 13 ms, CPU 45%, replicas 2 | 207.5 req/s, P95 18 ms, CPU 62%, replicas 2 | 265.0 req/s, P95 59 ms, CPU 80%, replicas 2 | 322.5 req/s, P95 357 ms, CPU 97%, replicas 2 | 380.0 req/s, P95 624 ms, CPU 100%, replicas 2\n- thumbnailer (app thumbnailer, SLO P95 200 ms): 10.0 req/s, P95 67 ms, CPU 36%, replicas 2 | 15.0 req/s, P95 73 ms, CPU 54%, replicas 2 | 20.0 req/s, P95 163 ms, CPU 72%, replicas 2 | 25.0 req/s, P95 1400 ms, CPU 90%, replicas 2 | 30.0 req/s, P95 2680 ms, CPU 100%, replicas 2\n- compression (app compression, SLO P95 1300 ms): 1.0 req/s, P95 433 ms, CPU 41%, replicas 2 | 1.5 req/s, P95 589 ms, CPU 61%, replicas 2 | 2.0 req/s, P95 2492 ms, CPU 82%, replicas 2 | 2.5 req/s, P95 14472 ms, CPU 100%, replicas 2 | 3.0 req/s, P95 26290 ms, CPU 100%, replicas 2\n- imgrec (app imgrec, SLO P95 400 ms): 3.0 req/s, P95 133 ms, CPU 30%, replicas 2 | 4.8 req/s, P95 134 ms, CPU 48%, replicas 2 | 6.5 req/s, P95 214 ms, CPU 65%, replicas 2 | 8.2 req/s, P95 828 ms, CPU 82%, replicas 2 | 10.0 req/s, P95 4117 ms, CPU 100%, replicas 2\n- hotel-frontend (app hotel, SLO P95 27 ms): 500.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 600.0 req/s, P95 10 ms, CPU 54%, replicas 2 | 700.0 req/s, P95 13 ms, CPU 63%, replicas 2 | 800.0 req/s, P95 22 ms, CPU 72%, replicas 2 | 900.0 req/s, P95 47 ms, CPU 81%, replicas 2\n- hotel-search (app hotel, SLO P95 27 ms): 500.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 600.0 req/s, P95 10 ms, CPU 54%, replicas 2 | 700.0 req/s, P95 13 ms, CPU 63%, replicas 2 | 800.0 req/s, P95 22 ms, CPU 72%, replicas 2 | 900.0 req/s, P95 47 ms, CPU 81%, replicas 2\n- hotel-reservation (app hotel, SLO P95 27 ms): 500.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 600.0 req/s, P95 10 ms, CPU 54%, replicas 2 | 700.0 req/s, P95 13 ms, CPU 63%, replicas 2 | 800.0 req/s, P95 22 ms, CPU 72%, replicas 2 | 900.0 req/s, P95 47 ms, CPU 81%, replicas 2\n- hotel-rate (app hotel, SLO P95 27 ms): 500.0 req/s, P95 9 ms, CPU 45%, replicas 2 | 600.0 req/s, P95 10 ms, CPU 54%, replicas 2 | 700.0 req/s, P95 13 ms, CPU 63%, replicas 2 | 800.0 req/s, P95 22 ms, CPU 72%, replicas 2 | 900.0 req/s, P95 47 ms, CPU 81%, replicas 2\nChoose the replica count for every service for the next interval."
+ },
+ "results": [
+  {
+   "scenario": "quiet",
+   "rep": 0,
+   "seconds": 204.39,
+   "prompt_tokens": 1373,
+   "completion_tokens": 5141,
+   "finish": "stop",
+   "valid": true,
+   "decision": {
+    "teastore-webui": 1,
+    "thumbnailer": 1,
+    "compression": 1,
+    "imgrec": 1,
+    "hotel-frontend": 1,
+    "hotel-search": 1,
+    "hotel-reservation": 1,
+    "hotel-rate": 1
+   }
+  },
+  {
+   "scenario": "teastore_rising",
+   "rep": 0,
+   "seconds": 214.57,
+   "prompt_tokens": 1377,
+   "completion_tokens": 5396,
+   "finish": "stop",
+   "valid": true,
+   "decision": {
+    "teastore-webui": 2,
+    "thumbnailer": 1,
+    "compression": 1,
+    "imgrec": 1,
+    "hotel-frontend": 1,
+    "hotel-search": 1,
+    "hotel-reservation": 1,
+    "hotel-rate": 1
+   }
+  },
+  {
+   "scenario": "function_burst",
+   "rep": 0,
+   "seconds": 197.44,
+   "prompt_tokens": 1377,
+   "completion_tokens": 4967,
+   "finish": "stop",
+   "valid": true,
+   "decision": {
+    "teastore-webui": 1,
+    "thumbnailer": 3,
+    "compression": 1,
+    "imgrec": 3,
+    "hotel-frontend": 1,
+    "hotel-search": 1,
+    "hotel-reservation": 1,
+    "hotel-rate": 1
+   }
+  },
+  {
+   "scenario": "hotel_near_knee",
+   "rep": 0,
+   "seconds": 220.86,
+   "prompt_tokens": 1373,
+   "completion_tokens": 5553,
+   "finish": "stop",
+   "valid": true,
+   "decision": {
+    "teastore-webui": 1,
+    "thumbnailer": 1,
+    "compression": 1,
+    "imgrec": 1,
+    "hotel-frontend": 2,
+    "hotel-search": 2,
+    "hotel-reservation": 2,
+    "hotel-rate": 2
+   }
+  },
+  {
+   "scenario": "cluster_peak",
+   "rep": 0,
+   "seconds": 214.57,
+   "prompt_tokens": 1418,
+   "completion_tokens": 5395,
+   "finish": "stop",
+   "valid": true,
+   "decision": {
+    "teastore-webui": 4,
+    "thumbnailer": 4,
+    "compression": 4,
+    "imgrec": 4,
+    "hotel-frontend": 4,
+    "hotel-search": 4,
+    "hotel-reservation": 4,
+    "hotel-rate": 4
+   }
+  }
+ ]
+}

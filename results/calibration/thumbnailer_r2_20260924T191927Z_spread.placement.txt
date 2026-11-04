@@ -1,0 +1,3 @@
+thumbnailer-576d767559-qtlnn   worker14
+thumbnailer-576d767559-z9zr8   worker12
+thumbnailer-64b6984cd8-stsrp   worker11

@@ -1,0 +1,6 @@
+step  offered  served   err%      avg      p50      p75      p90      p95      p99      max  dropped
+   0   300.00  305.48    0.0      4.3      2.2      6.1     10.5     13.4     19.2     41.4        0
+   1   350.00  357.00    0.0      4.5      2.2      6.2     11.2     14.3     21.6     49.0        0
+   2   400.00  410.52    0.0      4.8      2.3      6.7     12.0     15.3     23.3     52.4        0
+   3   450.00  456.94    0.0      5.3      2.5      7.3     13.2     17.2     27.2     65.7        0
+summary: results/calibration/p2/together_20261001T180032Z/together_hotel.summary.json

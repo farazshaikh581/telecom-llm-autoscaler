@@ -1,0 +1,67 @@
+# One-off Job: upload SeBS input data (spcl/serverless-benchmarks-data at a pinned
+# commit) into MinIO, with the same bucket layout SeBS's input.py files produce.
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: load-data, namespace: sebs}
+data:
+  load.py: |
+    import json, os, urllib.request
+    from minio import Minio
+
+    COMMIT = "523644ddee690ea5bedc1201406744380dc47848"
+    RAW = f"https://raw.githubusercontent.com/spcl/serverless-benchmarks-data/{COMMIT}/"
+    BUCKET = "sebs-benchmarks"
+    client = Minio(os.environ["MINIO_ADDRESS"], os.environ["MINIO_ACCESS_KEY"],
+                   os.environ["MINIO_SECRET_KEY"], secure=False)
+    if not client.bucket_exists(BUCKET):
+        client.make_bucket(BUCKET)
+
+    tree = json.load(urllib.request.urlopen(
+        f"https://api.github.com/repos/spcl/serverless-benchmarks-data/git/trees/{COMMIT}?recursive=1"))["tree"]
+    paths = [e["path"] for e in tree if e["type"] == "blob"]
+
+    def put(src, key):
+        data = urllib.request.urlopen(RAW + src).read()
+        with open("/tmp/f", "wb") as f:
+            f.write(data)
+        client.fput_object(BUCKET, key, "/tmp/f")
+        print(f"{len(data)/1e6:7.2f} MB  {key}", flush=True)
+
+    # 210.thumbnailer: every jpg, key = file name
+    for p in paths:
+        if p.startswith("200.multimedia/210.thumbnailer/") and p.endswith(".jpg"):
+            put(p, "210.thumbnailer-0-input/" + p.rsplit("/", 1)[1])
+    # 311.compression: the acmart-master tree, key = acmart-master/<relative path>
+    base = "300.utilities/311.compression/"
+    for p in paths:
+        if p.startswith(base + "acmart-master/"):
+            put(p, "311.compression-0-input/" + p[len(base):])
+    # 411.image-recognition: model under input 0, images under input 1
+    put("400.inference/411.image-recognition/model/resnet50-19c8e357.pth",
+        "411.image-recognition-0-input/resnet50-19c8e357.pth")
+    base = "400.inference/411.image-recognition/fake-resnet/"
+    for p in paths:
+        if p.startswith(base) and not p.endswith(".txt"):
+            put(p, "411.image-recognition-1-input/" + p[len(base):])
+    print("done")
+---
+apiVersion: batch/v1
+kind: Job
+metadata: {name: load-data, namespace: sebs}
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector: {node.kubernetes.io/microk8s-controlplane: microk8s-controlplane}
+      tolerations: [{key: node-role.kubernetes.io/control-plane, operator: Exists, effect: NoSchedule}]
+      containers:
+      - name: load
+        image: localhost:32000/sebs-thumbnailer:v3
+        command: ["python", "/script/load.py"]
+        env:
+        - {name: MINIO_ADDRESS, value: "minio.sebs:9000"}
+        - {name: MINIO_ACCESS_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: user}}}
+        - {name: MINIO_SECRET_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: password}}}
+        volumeMounts: [{name: script, mountPath: /script}]
+      volumes: [{name: script, configMap: {name: load-data}}]

@@ -1,0 +1,54 @@
+# Experiment harness settings (harness/). SLOs and per-copy capacities come from
+# config/trace_scaling.yaml; decisions behind these values are in docs/decisions.md.
+
+interval_s: 60          # every controller decides every 60 s
+warmup_s: 900           # not scored
+scored_s: 3600
+# Cluster size: the one place it is set (docs/testbed_4w.md lists what reads it)
+workers: 4              # worker nodes
+worker_vcpus: 4         # per worker (2 cores with hyperthreads)
+copies_available: 24    # 0.5-CPU copies that fit on the workers (measured: 6 per worker)
+min_replicas: 1
+max_replicas: 12        # per service, for every controller
+cpu_request_m: 500
+host_swap_limit_mib: 64    # preflight waits for a host swap reset at or above this; 64 = reset before every run (2026-10-01, docs/cluster.md)
+
+# Measurements the simulator is built from (sim/params.py). Phase 1 (4-worker testbed, closed
+# 2026-09-27) used results/calibration and results/runs/slo_shared_base_even.
+calibration_dir: results/calibration/p2
+base_run: fp_newdesign_20261001   # shared base run: all apps, scaled 3/3/3/5 + fixed hotel tiers 2/2/2, evenly spaced arrivals, 15 min
+
+loadgen:
+  listen: 127.0.0.1:9901
+  max_inflight: 3000    # per entry; beyond it arrivals are dropped and counted
+  seed: 1               # same seed for every controller: identical requests
+  ramp_s: 300           # warm-up ramp: 20% -> 100% of the trace over the first 5 min (not scored)
+
+recorder:
+  fast_s: 5             # load generator stats, replicas, pod states
+  metrics_s: 15         # metrics-server pod CPU and memory (its own resolution)
+  gpu_ms: 1000
+  host_power_s: 5
+
+# User-facing entries: where load enters and where the SLO is measured.
+# Since 2026-10-01 (docs/decisions.md): edge latency class; image recognition and compression removed,
+# graph-bfs added; 4 scaled services.
+entries:
+  teastore:    {ns: teastore, svc: teastore-webui, port: 8080}
+  thumbnailer: {ns: sebs, svc: thumbnailer, port: 8080}
+  graph-bfs:   {ns: sebs, svc: graph-bfs, port: 8080}
+  hotel:       {ns: hotel, svc: frontend, port: 5000}
+
+# The scaled services, by the name controllers see.
+services:
+  teastore-webui:    {ns: teastore, deploy: teastore-webui, entry: teastore}
+  thumbnailer:       {ns: sebs, deploy: thumbnailer, entry: thumbnailer}
+  graph-bfs:         {ns: sebs, deploy: graph-bfs, entry: graph-bfs}
+  hotel-reservation: {ns: hotel, deploy: reservation, entry: hotel}
+
+# Services of the applications that are not scaled: the harness sets these copies at every reset and
+# no controller sees them. They take room on the workers (copies_available counts them).
+fixed:
+  hotel-frontend: {ns: hotel, deploy: frontend, entry: hotel, copies: 2}
+  hotel-search:   {ns: hotel, deploy: search, entry: hotel, copies: 2}
+  hotel-rate:     {ns: hotel, deploy: rate, entry: hotel, copies: 2}

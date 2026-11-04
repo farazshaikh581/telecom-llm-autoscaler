@@ -1,0 +1,31 @@
+# New-service shift (docs/decisions.md 2026-10-28): SeBS 411.image-recognition (ResNet-50 on CPU), as deployed
+# until 2026-10-01 (git history of sebs.yaml). Not part of the main design; apply on its own:
+#   kubectl apply -f workloads/sebs/imgrec.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: imgrec, namespace: sebs, labels: {scaled: "true"}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: imgrec}}
+  template:
+    metadata: {labels: {app: imgrec}}
+    spec:
+      nodeSelector: {node.kubernetes.io/microk8s-worker: microk8s-worker}
+      # Copies spread evenly over workers (same rule for every scaled service, see docs/decisions.md)
+      topologySpreadConstraints: [{maxSkew: 1, topologyKey: kubernetes.io/hostname, whenUnsatisfiable: DoNotSchedule,
+        nodeTaintsPolicy: Honor, labelSelector: {matchLabels: {app: imgrec}}}]
+      containers:
+      - name: fn
+        image: localhost:32000/sebs-imgrec:v3
+        ports: [{containerPort: 8080}]
+        env:
+        - {name: MINIO_ADDRESS, value: "minio.sebs:9000"}
+        - {name: MINIO_ACCESS_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: user}}}
+        - {name: MINIO_SECRET_KEY, valueFrom: {secretKeyRef: {name: minio-creds, key: password}}}
+        resources: {requests: {cpu: 500m, memory: 768Mi}, limits: {cpu: "1", memory: 768Mi}}
+        readinessProbe: {tcpSocket: {port: 8080}, periodSeconds: 5}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: imgrec, namespace: sebs}
+spec: {selector: {app: imgrec}, ports: [{port: 8080, targetPort: 8080}]}

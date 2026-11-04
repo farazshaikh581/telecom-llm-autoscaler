@@ -1,0 +1,187 @@
+{
+ "name": "smoke2_oracl",
+ "controller": "llm:port=8001,mode=oracl",
+ "trace": "data/traces/runs/dev_0.csv.gz",
+ "scored_s": [
+  60,
+  900
+ ],
+ "entries": {
+  "compression": {
+   "requests": 989,
+   "error_rate": 0.00101,
+   "latency_ms": {
+    "avg": 867.03,
+    "p50": 690.52,
+    "p75": 950.24,
+    "p90": 1402.6,
+    "p95": 1822.0,
+    "p99": 2800.75,
+    "max": 3396.11
+   },
+   "slo_ms": 2787,
+   "attainment": {
+    "k2": 0.95046,
+    "k3": 0.98787,
+    "k5": 0.99899
+   },
+   "violation_rate": {
+    "k2": 0.2857,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 14
+  },
+  "hotel": {
+   "requests": 570041,
+   "error_rate": 0.0,
+   "latency_ms": {
+    "avg": 9.1,
+    "p50": 5.12,
+    "p75": 11.61,
+    "p90": 20.88,
+    "p95": 28.92,
+    "p99": 54.79,
+    "max": 393.76
+   },
+   "slo_ms": 54,
+   "attainment": {
+    "k2": 0.96983,
+    "k3": 0.98942,
+    "k5": 0.99746
+   },
+   "violation_rate": {
+    "k2": 0.2857,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 14
+  },
+  "imgrec": {
+   "requests": 2370,
+   "error_rate": 0.0,
+   "latency_ms": {
+    "avg": 249.85,
+    "p50": 210.26,
+    "p75": 275.52,
+    "p90": 380.05,
+    "p95": 462.92,
+    "p99": 653.63,
+    "max": 2395.76
+   },
+   "slo_ms": 759,
+   "attainment": {
+    "k2": 0.96709,
+    "k3": 0.9962,
+    "k5": 0.99873
+   },
+   "violation_rate": {
+    "k2": 0.1429,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 14
+  },
+  "teastore": {
+   "requests": 145931,
+   "error_rate": 1e-05,
+   "latency_ms": {
+    "avg": 200.16,
+    "p50": 32.74,
+    "p75": 90.32,
+    "p90": 432.25,
+    "p95": 1125.04,
+    "p99": 2872.15,
+    "max": 14465.09
+   },
+   "slo_ms": 195,
+   "attainment": {
+    "k2": 0.79636,
+    "k3": 0.83524,
+    "k5": 0.88
+   },
+   "violation_rate": {
+    "k2": 0.5714,
+    "k3": 0.5,
+    "k5": 0.5
+   },
+   "intervals": 14
+  },
+  "thumbnailer": {
+   "requests": 8200,
+   "error_rate": 0.0,
+   "latency_ms": {
+    "avg": 97.78,
+    "p50": 80.1,
+    "p75": 109.02,
+    "p90": 163.93,
+    "p95": 214.14,
+    "p99": 407.56,
+    "max": 1133.29
+   },
+   "slo_ms": 367,
+   "attainment": {
+    "k2": 0.96695,
+    "k3": 0.98695,
+    "k5": 0.99561
+   },
+   "violation_rate": {
+    "k2": 0.2143,
+    "k3": 0.0,
+    "k5": 0.0
+   },
+   "intervals": 14
+  }
+ },
+ "overall": {
+  "violation_rate_k3": 0.1,
+  "attainment_k3_mean": 0.95914,
+  "jain_attainment_k3": 0.99583,
+  "error_rate": 1e-05
+ },
+ "cost": {
+  "replica_seconds": 15655.0,
+  "requested_vcpu_hours": 2.174,
+  "mean_ready_total": 18.64,
+  "max_ready_total": 24,
+  "mean_ready": {
+   "teastore-webui": 4.01,
+   "thumbnailer": 2.39,
+   "compression": 2.47,
+   "imgrec": 2.35,
+   "hotel-frontend": 1.48,
+   "hotel-search": 1.48,
+   "hotel-reservation": 3.27,
+   "hotel-rate": 1.19
+  },
+  "share_time_pending": 0.2024,
+  "actual_cpu_mean_cores": 5.718
+ },
+ "stability": {
+  "scaling_actions_per_hour": 120.0,
+  "reversals_per_hour": 42.86
+ },
+ "energy": {
+  "gpu_wh": 38.53,
+  "gpu0_wh": 30.64,
+  "gpu1_wh": 7.89,
+  "host_pkg_total_wh": 46.18,
+  "host_intel-rapl_0_wh": 25.69,
+  "host_intel-rapl_1_wh": 20.48
+ },
+ "decisions": {
+  "count": 14,
+  "decide_s_mean": 15.422,
+  "decide_s_p95": 18.845,
+  "decide_s_max": 19.725,
+  "late_ticks": 0,
+  "invalid": 0,
+  "llm_calls": 70
+ },
+ "health": {
+  "control_stall_max_s": 0.0,
+  "control_stalls_2s": 0,
+  "control_stalls_2s_warmup": 0,
+  "harness_failure": false
+ }
+}

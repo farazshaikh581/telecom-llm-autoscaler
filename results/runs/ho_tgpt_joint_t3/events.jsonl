@@ -1,0 +1,23 @@
+{"epoch":1793097115.95,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1793097116.17,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793097117.16,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 3, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":3}
+{"epoch":1793097155.01,"msg":"hotel data reset: 18199 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793097155.53,"msg":"ready after 0 s; settling 30 s"}
+{"epoch":1793097185.76,"msg":"run started: llm:port=8001,mode=joint,order=newest on data/traces/runs/test_3.csv.gz, 4500 s"}
+{"registry_removed":2}
+{"epoch":1793097488.56,"msg":"k=5 t=303 decide 2.3 s, scaled {'teastore-webui': 2, 'graph-bfs': 2}"}
+{"epoch":1793097548.56,"msg":"k=6 t=363 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1793097608.57,"msg":"k=7 t=423 decide 2.3 s, scaled {'teastore-webui': 3}"}
+{"epoch":1793097668.59,"msg":"k=8 t=483 decide 2.3 s, scaled {'teastore-webui': 4}"}
+{"epoch":1793097728.56,"msg":"k=9 t=543 decide 2.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1793097788.66,"msg":"k=10 t=603 decide 2.4 s, scaled {'teastore-webui': 12, 'thumbnailer': 6}"}
+{"epoch":1793097848.65,"msg":"k=11 t=663 decide 2.4 s, scaled {'hotel-reservation': 4}"}
+{"epoch":1793097908.66,"msg":"k=12 t=723 decide 2.4 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793098148.6,"msg":"k=16 t=963 decide 2.3 s, scaled {'teastore-webui': 9, 'thumbnailer': 5, 'hotel-reservation': 2}"}
+{"epoch":1793098268.57,"msg":"k=18 t=1083 decide 2.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1793100968.6,"msg":"k=63 t=3783 decide 2.3 s, scaled {'graph-bfs': 2}"}
+{"epoch":1793101448.55,"msg":"k=71 t=4263 decide 2.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793101628.53,"msg":"trace finished"}
+{"epoch":1793101698.77,"msg":"recorder stopped"}
+{"epoch":1793101698.99,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

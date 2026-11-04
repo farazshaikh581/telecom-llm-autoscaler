@@ -1,0 +1,15 @@
+{"epoch":1793048272.14,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1793048272.36,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793048273.34,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 2, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"epoch":1793048283.26,"msg":"hotel data reset: 60260 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793048283.81,"msg":"ready after 0 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1793048314.03,"msg":"run started: llm:port=8001,mode=oracl,order=newest on data/traces/runs/test_0.csv.gz, 4500 s"}
+{"epoch":1793048566.35,"msg":"k=4 t=253 decide 11.9 s, scaled {'graph-bfs': 3}"}
+{"epoch":1793048689.97,"msg":"k=6 t=376 decide 15.4 s, scaled {'thumbnailer': 4}"}
+{"epoch":1793048747.73,"msg":"k=7 t=434 decide 13.1 s, scaled {'thumbnailer': 5}"}
+{"epoch":1793048807.47,"msg":"k=8 t=494 decide 12.9 s, scaled {'thumbnailer': 6}"}
+{"epoch":1793050666.84,"msg":"k=39 t=2353 decide 12.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1793052764.59,"msg":"trace finished"}
+{"epoch":1793052814.71,"msg":"recorder stopped"}
+{"epoch":1793052814.93,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

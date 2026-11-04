@@ -1,0 +1,45 @@
+{"epoch":1792386411.85,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792386412.07,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792386413.04,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792386449.96,"msg":"hotel data reset: 82023 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792386453.98,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792386484.22,"msg":"run started: llm:port=8002,mode=joint,prompt=alt on data/traces/runs/test_4.csv.gz, 4500 s"}
+{"epoch":1792386726.84,"msg":"k=4 t=243 decide 2.1 s, scaled {'teastore-webui': 2}"}
+{"epoch":1792386786.94,"msg":"k=5 t=303 decide 2.2 s, scaled {'teastore-webui': 3, 'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1792386847.02,"msg":"k=6 t=363 decide 2.3 s, scaled {'teastore-webui': 4, 'thumbnailer': 4, 'graph-bfs': 3, 'hotel-reservation': 3}"}
+{"epoch":1792386906.97,"msg":"k=7 t=423 decide 2.3 s, scaled {'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1792387087.01,"msg":"k=10 t=603 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792387147.0,"msg":"k=11 t=663 decide 2.3 s, scaled {'teastore-webui': 6, 'graph-bfs': 3}"}
+{"epoch":1792387206.99,"msg":"k=12 t=723 decide 2.3 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792387266.99,"msg":"k=13 t=783 decide 2.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792387326.95,"msg":"k=14 t=843 decide 2.3 s, scaled {'teastore-webui': 4}"}
+{"epoch":1792387387.0,"msg":"k=15 t=903 decide 2.3 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792387446.97,"msg":"k=16 t=963 decide 2.3 s, scaled {'teastore-webui': 6, 'thumbnailer': 4}"}
+{"epoch":1792387506.99,"msg":"k=17 t=1023 decide 2.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792387626.99,"msg":"k=19 t=1143 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1792387686.97,"msg":"k=20 t=1203 decide 2.3 s, scaled {'thumbnailer': 2, 'graph-bfs': 6}"}
+{"epoch":1792387746.98,"msg":"k=21 t=1263 decide 2.3 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792387806.97,"msg":"k=22 t=1323 decide 2.3 s, scaled {'teastore-webui': 7, 'thumbnailer': 2, 'graph-bfs': 4}"}
+{"epoch":1792387866.95,"msg":"k=23 t=1383 decide 2.3 s, scaled {'graph-bfs': 6}"}
+{"epoch":1792387926.99,"msg":"k=24 t=1443 decide 2.3 s, scaled {'teastore-webui': 6, 'graph-bfs': 4}"}
+{"epoch":1792387986.95,"msg":"k=25 t=1503 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1792388046.98,"msg":"k=26 t=1563 decide 2.3 s, scaled {'graph-bfs': 6}"}
+{"epoch":1792388166.96,"msg":"k=28 t=1683 decide 2.3 s, scaled {'teastore-webui': 7, 'graph-bfs': 4}"}
+{"epoch":1792388226.96,"msg":"k=29 t=1743 decide 2.3 s, scaled {'teastore-webui': 6, 'graph-bfs': 5}"}
+{"epoch":1792388286.98,"msg":"k=30 t=1803 decide 2.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792388346.94,"msg":"k=31 t=1863 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1792388406.95,"msg":"k=32 t=1923 decide 2.3 s, scaled {'graph-bfs': 6}"}
+{"epoch":1792388466.99,"msg":"k=33 t=1983 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1792388526.98,"msg":"k=34 t=2043 decide 2.3 s, scaled {'teastore-webui': 7, 'graph-bfs': 4}"}
+{"epoch":1792388586.95,"msg":"k=35 t=2103 decide 2.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792389366.97,"msg":"k=48 t=2883 decide 2.3 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792390327.0,"msg":"k=64 t=3843 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792390686.98,"msg":"k=70 t=4203 decide 2.3 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792390747.01,"msg":"k=71 t=4263 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792390807.04,"msg":"k=72 t=4323 decide 2.3 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792390926.97,"msg":"k=74 t=4443 decide 2.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792390926.97,"msg":"trace finished"}
+{"epoch":1792390984.89,"msg":"recorder stopped"}
+{"epoch":1792390985.11,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

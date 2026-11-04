@@ -1,0 +1,5 @@
+step  offered  served   err%      avg      p50      p75      p90      p95      p99      max  dropped
+   0     0.33    0.28    0.0    545.9    507.3    517.7    657.8    792.3    905.1    933.3        0
+   1     0.66    0.52    0.0    619.4    565.8    623.5    831.3    865.4    931.8    950.7        0
+   2     0.88    0.98    0.0    946.4    764.5   1101.7   1537.8   1910.3   2284.0   2421.8        0
+summary: results/calibration/p2/together_20260930T142105Z/together_compression.summary.json

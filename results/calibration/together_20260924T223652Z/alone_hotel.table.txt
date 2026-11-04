@@ -1,0 +1,5 @@
+step  offered  served   err%      avg      p50      p75      p90      p95      p99      max  dropped
+   0   150.00  149.74    0.0      3.2      1.8      4.7      7.6      9.4     12.4     16.5        0
+   1   300.00  304.50    0.0      3.2      1.8      4.8      7.6      9.7     12.9     19.2        0
+   2   400.00  398.98    0.0      3.4      1.8      4.9      8.1     10.1     13.9     51.1        0
+summary: results/calibration/together_20260924T223652Z/alone_hotel.summary.json

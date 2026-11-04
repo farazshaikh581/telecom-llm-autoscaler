@@ -1,0 +1,3 @@
+thumbnailer-64b6984cd8-477c2   worker13
+thumbnailer-64bcbdf74-kg54j    worker13
+thumbnailer-64bcbdf74-rtbs6    worker13

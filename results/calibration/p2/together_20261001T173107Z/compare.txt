@@ -1,0 +1,20 @@
+== teastore (rates 45.0,90.0,120.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0  45.00       14.1        0.0          18.9           0.0
+      1  90.00       15.0        0.0          21.1           0.0
+      2 120.00       15.9        0.0          24.8           0.0
+== thumbnailer (rates 18.0,36.0,48.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0  18.00       15.1        0.0          19.9           0.0
+      1  36.00       18.2        0.0          30.0           0.0
+      2  48.00       24.2        0.0          53.6           0.0
+== graph-bfs (rates 8.4,16.8,22.4 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0   8.40       38.6        0.0          45.5           0.0
+      1  16.80       53.3        0.0         106.4           0.0
+      2  22.40       75.0        0.0         138.8           0.0
+== hotel (rates 150.0,300.0,400.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0 150.00        9.7        0.0          11.6           0.0
+      1 300.00       11.4        0.0          13.1           0.0
+      2 400.00       12.4        0.0          15.4           0.0

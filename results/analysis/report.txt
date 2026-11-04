@@ -1,0 +1,197 @@
+== main matrix means
+                   n   viol  copies  actions_h  reversals_h  decide_s  gpu_wh  host_wh
+hpa70            10   2.46   13.82       33.9          8.6      0.00  165.88   192.41
+keda             10   2.38    8.46       15.7          6.1      0.00  166.36   191.59
+phpa             10   1.83   16.15       52.9         11.4      0.00  161.24   200.21
+aware            10   3.04   10.55       12.8          4.8      0.42  161.28   191.19
+firm             10  16.38    6.18       22.3         15.0      0.02  165.80   190.91
+ours             10   6.25   15.40       26.3          8.0      0.02  166.59   192.64
+tgpt_joint       10   4.08   15.42       29.4         22.9      2.26  173.45   192.72
+tgpt_perservice  10   2.29   15.79       17.4         12.2      0.86  168.57   192.11
+tgpt_oracl       10   2.67   16.00       47.4         39.3     12.13  202.33   193.97
+qwen_joint       10   1.63   17.19       17.4         10.3      2.25  173.43   192.59
+qwen_perservice  10   1.92   17.22       16.5         12.5      1.25  170.86   192.43
+qwen_oracl       10   4.62   16.36       98.0         78.4     23.16  242.74   193.35
+
+== Friedman
+    kpi  blocks  chi2        p
+  viol      10  46.4 2.78e-06
+copies      10  85.5 1.24e-13
+
+== comparisons
+       family    kpi               a               b  n   diff  ci_lo  ci_hi    p  p_holm  called
+  1 vs HPA70   viol            keda           hpa70 10  -0.09  -0.96   0.71 0.80    1.00   False
+  1 vs HPA70 copies            keda           hpa70 10  -5.36  -5.64  -5.04 0.00    0.02    True
+  1 vs HPA70   viol            phpa           hpa70 10  -0.63  -1.63   0.50 0.17    1.00   False
+  1 vs HPA70 copies            phpa           hpa70 10   2.33   1.75   2.85 0.00    0.02    True
+  1 vs HPA70   viol           aware           hpa70 10   0.58  -1.42   2.75 0.70    1.00   False
+  1 vs HPA70 copies           aware           hpa70 10  -3.27  -3.66  -2.77 0.00    0.02    True
+  1 vs HPA70   viol            firm           hpa70 10  13.91   8.00  21.17 0.00    0.02    True
+  1 vs HPA70 copies            firm           hpa70 10  -7.64  -8.29  -7.01 0.00    0.02    True
+  1 vs HPA70   viol            ours           hpa70 10   3.79   0.33   7.25 0.08    0.67   False
+  1 vs HPA70 copies            ours           hpa70 10   1.57  -0.73   3.05 0.16    0.16   False
+  1 vs HPA70   viol      tgpt_joint           hpa70 10   1.62  -0.21   3.62 0.11    0.77   False
+  1 vs HPA70 copies      tgpt_joint           hpa70 10   1.59   0.67   2.38 0.01    0.03    True
+  1 vs HPA70   viol tgpt_perservice           hpa70 10  -0.17  -1.71   2.20 0.24    1.00   False
+  1 vs HPA70 copies tgpt_perservice           hpa70 10   1.97   0.28   3.24 0.02    0.04    True
+  1 vs HPA70   viol      tgpt_oracl           hpa70 10   0.21  -1.96   2.62 1.00    1.00   False
+  1 vs HPA70 copies      tgpt_oracl           hpa70 10   2.17   0.58   3.29 0.01    0.04    True
+  1 vs HPA70   viol      qwen_joint           hpa70 10  -0.83  -1.42   0.12 0.07    0.65   False
+  1 vs HPA70 copies      qwen_joint           hpa70 10   3.37   2.83   3.84 0.00    0.02    True
+  1 vs HPA70   viol qwen_perservice           hpa70 10  -0.54  -1.80   0.62 0.37    1.00   False
+  1 vs HPA70 copies qwen_perservice           hpa70 10   3.40   2.93   3.75 0.00    0.02    True
+  1 vs HPA70   viol      qwen_oracl           hpa70 10   2.16   0.46   4.08 0.06    0.64   False
+  1 vs HPA70 copies      qwen_oracl           hpa70 10   2.53   1.90   3.08 0.00    0.02    True
+      2 LLMs   viol      tgpt_joint      qwen_joint 10   2.46   0.83   4.25 0.01    0.09   False
+      2 LLMs copies      tgpt_joint      qwen_joint 10  -1.78  -2.87  -0.77 0.01    0.09   False
+      2 LLMs   viol tgpt_perservice qwen_perservice 10   0.38  -1.58   2.96 0.92    1.00   False
+      2 LLMs copies tgpt_perservice qwen_perservice 10  -1.43  -2.90  -0.34 0.01    0.11   False
+      2 LLMs   viol      tgpt_oracl      qwen_oracl 10  -1.96  -4.46   1.54 0.34    1.00   False
+      2 LLMs copies      tgpt_oracl      qwen_oracl 10  -0.36  -1.85   0.81 0.77    1.00   False
+      2 LLMs   viol      tgpt_joint tgpt_perservice 10   1.79  -0.42   3.91 0.04    0.31   False
+      2 LLMs copies      tgpt_joint tgpt_perservice 10  -0.37  -1.31   1.06 0.19    0.97   False
+      2 LLMs   viol      tgpt_joint      tgpt_oracl 10   1.42  -1.21   3.62 0.28    1.00   False
+      2 LLMs copies      tgpt_joint      tgpt_oracl 10  -0.58  -1.86   0.85 0.32    1.00   False
+      2 LLMs   viol tgpt_perservice      tgpt_oracl 10  -0.38  -3.75   3.08 0.91    1.00   False
+      2 LLMs copies tgpt_perservice      tgpt_oracl 10  -0.21  -2.18   1.50 0.92    1.00   False
+      2 LLMs   viol      qwen_joint qwen_perservice 10  -0.29  -1.50   0.92 0.79    1.00   False
+      2 LLMs copies      qwen_joint qwen_perservice 10  -0.03  -0.33   0.29 0.94    1.00   False
+      2 LLMs   viol      qwen_joint      qwen_oracl 10  -3.00  -5.00  -1.16 0.01    0.05   False
+      2 LLMs copies      qwen_joint      qwen_oracl 10   0.84   0.13   1.58 0.04    0.22   False
+      2 LLMs   viol qwen_perservice      qwen_oracl 10  -2.71  -5.29  -0.13 0.05    0.32   False
+      2 LLMs copies qwen_perservice      qwen_oracl 10   0.86   0.09   1.77 0.03    0.19   False
+3 ours vs RL   viol            ours           aware 10   3.21  -1.55   7.25 0.11    0.11   False
+3 ours vs RL copies            ours           aware 10   4.85   2.52   6.23 0.00    0.00    True
+3 ours vs RL   viol            ours            firm 10 -10.12 -16.83  -4.42 0.00    0.00    True
+3 ours vs RL copies            ours            firm 10   9.21   6.39  11.15 0.00    0.00    True
+
+== robustness (5 pairs, effect sizes)
+                     check    kpi  n  mean_a  mean_b  diff  ci_lo  ci_hi
+     +25% hpa70 vs normal   viol  5    8.00    2.67  5.33   3.50   7.24
+     +25% hpa70 vs normal copies  5   16.15   13.89  2.27   2.04   2.50
+      +25% keda vs normal   viol  5    7.25    2.25  5.00   2.50   7.59
+      +25% keda vs normal copies  5   10.53    8.44  2.09   1.64   2.43
+      +25% phpa vs normal   viol  5    5.75    2.59  3.16   1.58   4.58
+      +25% phpa vs normal copies  5   17.53   16.22  1.31   1.10   1.60
+     +25% aware vs normal   viol  5    3.08    3.25 -0.17  -1.09   0.84
+     +25% aware vs normal copies  5   14.69   10.29  4.40   3.99   4.93
+      +25% firm vs normal   viol  5   19.34   18.59  0.75  -7.08   8.25
+      +25% firm vs normal copies  5    8.21    6.21  2.00   1.61   2.35
+      +25% ours vs normal   viol  5   12.42    6.25  6.17   1.66  11.83
+      +25% ours vs normal copies  5   16.61   15.30  1.31   0.25   2.67
++25% tgpt_joint vs normal   viol  5    3.42    4.67 -1.25  -2.25  -0.25
++25% tgpt_joint vs normal copies  5   16.83   16.06  0.76  -0.31   1.74
++25% qwen_joint vs normal   viol  5    4.00    2.00  2.00  -0.42   4.66
++25% qwen_joint vs normal copies  5   17.06   16.78  0.28  -0.52   1.07
+       +25% keda vs HPA70   viol  5    7.25    8.00 -0.75  -3.08   2.08
+       +25% keda vs HPA70 copies  5   10.53   16.15 -5.63  -6.13  -5.24
+       +25% phpa vs HPA70   viol  5    5.75    8.00 -2.25  -3.42  -0.83
+       +25% phpa vs HPA70 copies  5   17.53   16.15  1.38   0.97   1.80
+      +25% aware vs HPA70   viol  5    3.08    8.00 -4.92  -5.91  -4.00
+      +25% aware vs HPA70 copies  5   14.69   16.15 -1.46  -1.84  -1.07
+       +25% firm vs HPA70   viol  5   19.34    8.00 11.34   8.34  14.33
+       +25% firm vs HPA70 copies  5    8.21   16.15 -7.94  -8.25  -7.70
+       +25% ours vs HPA70   viol  5   12.42    8.00  4.42  -1.50   8.83
+       +25% ours vs HPA70 copies  5   16.61   16.15  0.45  -0.99   1.59
+ +25% tgpt_joint vs HPA70   viol  5    3.42    8.00 -4.58  -6.66  -2.50
+ +25% tgpt_joint vs HPA70 copies  5   16.83   16.15  0.67  -0.44   1.72
+ +25% qwen_joint vs HPA70   viol  5    4.00    8.00 -4.00  -7.83  -0.17
+ +25% qwen_joint vs HPA70 copies  5   17.06   16.15  0.90  -0.43   2.04
+ tgpt reworded vs default   viol  5    3.17    4.67 -1.50  -4.75   1.58
+ tgpt reworded vs default copies  5   15.63   16.06 -0.43  -0.95   0.06
+ tgpt zeroshot vs default   viol  5    1.50    4.67 -3.16  -4.66  -1.67
+ tgpt zeroshot vs default copies  5   15.69   16.06 -0.37  -3.20   2.32
+  tgpt history vs default   viol  5    1.50    4.67 -3.16  -4.75  -2.08
+  tgpt history vs default copies  5   15.80   16.06 -0.26  -3.10   2.15
+   tgpt domain vs default   viol  5    4.25    4.67 -0.42  -2.42   1.67
+   tgpt domain vs default copies  5   16.58   16.06  0.51  -2.63   2.56
+      tgpt cot vs default   viol  5    3.83    4.67 -0.83  -2.17   0.50
+      tgpt cot vs default copies  5   16.84   16.06  0.78  -0.42   1.71
+ qwen reworded vs default   viol  5    1.42    2.00 -0.59  -1.00  -0.09
+ qwen reworded vs default copies  5   17.43   16.78  0.65  -0.11   1.46
+ qwen zeroshot vs default   viol  5    2.25    2.00  0.25  -1.50   2.00
+ qwen zeroshot vs default copies  5   16.28   16.78 -0.50  -1.54   0.64
+  qwen history vs default   viol  5    1.00    2.00 -1.00  -1.75  -0.34
+  qwen history vs default copies  5   15.26   16.78 -1.53  -2.04  -1.01
+   qwen domain vs default   viol  5    1.25    2.00 -0.75  -1.42  -0.08
+   qwen domain vs default copies  5   16.11   16.78 -0.68  -2.14   0.53
+      qwen cot vs default   viol  5    8.83    2.00  6.83   3.42   9.99
+      qwen cot vs default copies  5   16.20   16.78 -0.58  -1.25  -0.00
+        budget r1 vs ours   viol  5    1.25    6.25 -5.00  -9.00  -1.00
+        budget r1 vs ours copies  5   10.70   15.30 -4.60  -5.99  -2.34
+       budget r1 vs hpa70   viol  5    1.25    2.67 -1.42  -2.17  -0.92
+       budget r1 vs hpa70 copies  5   10.70   13.89 -3.19  -3.59  -2.85
+        budget r1 vs keda   viol  5    1.25    2.25 -1.00  -1.17  -0.84
+        budget r1 vs keda copies  5   10.70    8.44  2.26   1.87   2.62
+        budget r2 vs ours   viol  5    1.42    6.25 -4.83  -8.83  -0.84
+        budget r2 vs ours copies  5   10.73   15.50 -4.77  -6.21  -2.36
+       budget r2 vs hpa70   viol  5    1.42    2.25 -0.83  -1.75  -0.09
+       budget r2 vs hpa70 copies  5   10.73   13.76 -3.03  -3.37  -2.82
+        budget r2 vs keda   viol  5    1.42    2.50 -1.08  -1.83  -0.08
+        budget r2 vs keda copies  5   10.73    8.49  2.24   1.91   2.57
+      budget +25% vs ours   viol  5    6.34   12.42 -6.08 -10.41  -1.17
+      budget +25% vs ours copies  5   13.94   16.61 -2.67  -3.89  -1.21
+     budget +25% vs hpa70   viol  5    6.34    8.00 -1.66  -3.66   1.33
+     budget +25% vs hpa70 copies  5   13.94   16.15 -2.22  -2.36  -2.08
+      budget +25% vs keda   viol  5    6.34    7.25 -0.91  -2.58   0.76
+      budget +25% vs keda copies  5   13.94   10.53  3.41   3.10   3.90
+     budget +25% vs aware   viol  5    6.34    3.08  3.25   1.09   5.67
+     budget +25% vs aware copies  5   13.94   14.69 -0.76  -1.21  -0.31
+
+== +25% load means (10 pairs)
+              n   viol  copies  actions_h  reversals_h
+hpa70       10   8.29   15.95       33.8          7.8
+keda        10   6.83   10.54       18.5          5.3
+phpa        10   8.29   17.44       48.2          7.7
+aware       10   3.75   14.70       21.5          6.7
+firm        10  18.88    8.24       27.3         17.9
+ours        10  16.46   16.91       31.6         10.2
+tgpt_joint  10   6.87   16.96       26.9         19.2
+qwen_joint  10   4.21   17.39       20.5         10.1
+budget      10   7.00   14.14       35.6          8.2
+
+== +25% load Friedman
+    kpi  blocks  chi2        p
+  viol      10  40.8    9e-07
+copies      10    61 9.38e-11
+
+== +25% load comparisons
+                  family    kpi          a                 b  n  diff  ci_lo  ci_hi    p  p_holm  called
+            H1 vs HPA70   viol       keda             hpa70 10 -1.46  -4.96   1.42 0.43    0.94   False
+            H1 vs HPA70 copies       keda             hpa70 10 -5.40  -5.77  -5.13 0.00    0.01    True
+            H1 vs HPA70   viol       phpa             hpa70 10  0.00  -2.08   3.00 0.56    0.94   False
+            H1 vs HPA70 copies       phpa             hpa70 10  1.49   1.20   1.79 0.00    0.01    True
+            H1 vs HPA70   viol      aware             hpa70 10 -4.54  -8.46  -1.42 0.01    0.06   False
+            H1 vs HPA70 copies      aware             hpa70 10 -1.25  -1.74  -0.79 0.00    0.01    True
+            H1 vs HPA70   viol       firm             hpa70 10 10.59   6.92  13.96 0.00    0.01    True
+            H1 vs HPA70 copies       firm             hpa70 10 -7.71  -8.07  -7.29 0.00    0.01    True
+            H1 vs HPA70   viol       ours             hpa70 10  8.17   2.09  14.20 0.01    0.07   False
+            H1 vs HPA70 copies       ours             hpa70 10  0.97  -0.07   1.75 0.06    0.06   False
+            H1 vs HPA70   viol tgpt_joint             hpa70 10 -1.42  -4.17   1.33 0.31    0.94   False
+            H1 vs HPA70 copies tgpt_joint             hpa70 10  1.01   0.14   1.76 0.03    0.05   False
+            H1 vs HPA70   viol qwen_joint             hpa70 10 -4.09  -7.79  -0.84 0.03    0.11   False
+            H1 vs HPA70 copies qwen_joint             hpa70 10  1.45   0.38   2.19 0.01    0.04    True
+      H2 +25% vs normal   viol      hpa70      normal_hpa70 10  5.83   3.33   9.08 0.00    0.03    True
+      H2 +25% vs normal copies      hpa70      normal_hpa70 10  2.12   1.67   2.44 0.00    0.02    True
+      H2 +25% vs normal   viol       keda       normal_keda 10  4.46   2.12   6.79 0.00    0.03    True
+      H2 +25% vs normal copies       keda       normal_keda 10  2.08   1.66   2.40 0.00    0.02    True
+      H2 +25% vs normal   viol       phpa       normal_phpa 10  6.46   3.54  10.66 0.00    0.02    True
+      H2 +25% vs normal copies       phpa       normal_phpa 10  1.29   1.04   1.56 0.00    0.02    True
+      H2 +25% vs normal   viol      aware      normal_aware 10  0.71  -0.46   1.83 0.19    0.50   False
+      H2 +25% vs normal copies      aware      normal_aware 10  4.15   3.55   4.86 0.00    0.02    True
+      H2 +25% vs normal   viol       firm       normal_firm 10  2.50  -3.67   8.50 0.38    0.50   False
+      H2 +25% vs normal copies       firm       normal_firm 10  2.05   1.70   2.44 0.00    0.02    True
+      H2 +25% vs normal   viol       ours       normal_ours 10 10.21   5.41  15.21 0.00    0.03    True
+      H2 +25% vs normal copies       ours       normal_ours 10  1.52   0.25   3.32 0.01    0.03    True
+      H2 +25% vs normal   viol tgpt_joint normal_tgpt_joint 10  2.79  -0.25   7.67 0.17    0.50   False
+      H2 +25% vs normal copies tgpt_joint normal_tgpt_joint 10  1.54   0.33   2.97 0.01    0.03    True
+      H2 +25% vs normal   viol qwen_joint normal_qwen_joint 10  2.58   0.91   4.37 0.02    0.08   False
+      H2 +25% vs normal copies qwen_joint normal_qwen_joint 10  0.20  -0.28   0.71 0.56    0.56   False
+H3 budget (exploratory)   viol     budget             hpa70 10 -1.29  -4.33   1.50 0.43    0.86   False
+H3 budget (exploratory) copies     budget             hpa70 10 -1.80  -2.13  -1.37 0.00    0.01    True
+H3 budget (exploratory)   viol     budget              ours 10 -9.46 -14.54  -4.75 0.00    0.02    True
+H3 budget (exploratory) copies     budget              ours 10 -2.77  -3.62  -1.77 0.00    0.01    True
+H3 budget (exploratory)   viol     budget              keda 10  0.17  -2.04   2.08 0.74    0.86   False
+H3 budget (exploratory) copies     budget              keda 10  3.60   3.22   4.08 0.00    0.01    True
+H3 budget (exploratory)   viol     budget             aware 10  3.25   0.83   5.62 0.02    0.06   False
+H3 budget (exploratory) copies     budget             aware 10 -0.55  -1.08   0.03 0.04    0.04   False

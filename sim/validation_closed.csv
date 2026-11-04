@@ -1,0 +1,5 @@
+run,target,real_viol,sim_viol,sim_viol_range,real_copies,sim_copies
+pilot3_hpa_dev0,70,0.2,0.115,0.104-0.121,17.98,17.987
+pilot3_hpa_dev1,70,0.067,0.058,0.050-0.062,16.92,15.958
+tune3_hpa_t60_dev2,60,0.117,0.119,0.108-0.129,17.97,17.991
+tune3_hpa_t70_dev2,70,0.125,0.11,0.108-0.112,17.88,17.905

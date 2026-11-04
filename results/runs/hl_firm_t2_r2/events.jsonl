@@ -1,0 +1,47 @@
+{"epoch":1792841551.79,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792841552.0,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792841552.99,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792841590.95,"msg":"hotel data reset: 82494 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792841594.93,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792841627.44,"msg":"run started: firm:ckpt=rl/checkpoints/firm_ft.pt on data/traces/runs/test_2.csv.gz, 4500 s"}
+{"epoch":1792841685.64,"msg":"k=1 t=61 decide 0.0 s, scaled {'teastore-webui': 1, 'thumbnailer': 2, 'hotel-reservation': 1}"}
+{"registry_removed":1}
+{"epoch":1792841745.67,"msg":"k=2 t=121 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792841805.64,"msg":"k=3 t=181 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792841925.64,"msg":"k=5 t=301 decide 0.0 s, scaled {'thumbnailer': 3, 'hotel-reservation': 2}"}
+{"epoch":1792841985.66,"msg":"k=6 t=361 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792842045.64,"msg":"k=7 t=421 decide 0.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1792842105.67,"msg":"k=8 t=481 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792842225.67,"msg":"k=10 t=601 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792842405.65,"msg":"k=13 t=781 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 3}"}
+{"epoch":1792842465.67,"msg":"k=14 t=841 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792842525.63,"msg":"k=15 t=901 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 4}"}
+{"epoch":1792842705.66,"msg":"k=18 t=1081 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792843185.64,"msg":"k=26 t=1561 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792843245.65,"msg":"k=27 t=1621 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792843785.63,"msg":"k=36 t=2161 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792843905.63,"msg":"k=38 t=2281 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792843965.64,"msg":"k=39 t=2341 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792844145.62,"msg":"k=42 t=2521 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792844205.63,"msg":"k=43 t=2581 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792844385.65,"msg":"k=46 t=2761 decide 0.0 s, scaled {'graph-bfs': 1}"}
+{"epoch":1792844505.64,"msg":"k=48 t=2881 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792844565.66,"msg":"k=49 t=2941 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792844625.65,"msg":"k=50 t=3001 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792844685.67,"msg":"k=51 t=3061 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792844805.64,"msg":"k=53 t=3181 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792845105.62,"msg":"k=58 t=3481 decide 0.0 s, scaled {'graph-bfs': 1}"}
+{"epoch":1792845345.66,"msg":"k=62 t=3721 decide 0.0 s, scaled {'teastore-webui': 2}"}
+{"epoch":1792845405.67,"msg":"k=63 t=3781 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792845525.67,"msg":"k=65 t=3901 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792845585.66,"msg":"k=66 t=3961 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792845645.68,"msg":"k=67 t=4021 decide 0.0 s, scaled {'thumbnailer': 4, 'graph-bfs': 2}"}
+{"epoch":1792845825.63,"msg":"k=70 t=4201 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792845885.64,"msg":"k=71 t=4261 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792845945.7,"msg":"k=72 t=4321 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792846065.69,"msg":"k=74 t=4441 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 3}"}
+{"epoch":1792846065.69,"msg":"trace finished"}
+{"epoch":1792846125.82,"msg":"recorder stopped"}
+{"epoch":1792846126.05,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

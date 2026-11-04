@@ -1,0 +1,156 @@
+{
+ "name": "ns_qwen_joint_t4_r2",
+ "controller": "llm:port=8002,mode=joint",
+ "controller_info": {
+  "kind": "llm",
+  "params": {
+   "port": "8002",
+   "mode": "joint"
+  },
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "system": "You are the autoscaler for a Kubernetes cluster that runs several applications at once.\nEvery 60 seconds you set the replica count of each scaled service.\nCluster: 4 worker nodes, 16 vCPU in total. Each replica requests 0.5 CPU and may use up to 1 CPU.\nReplicas per service: 1 to 12. The sum of the scaled services' replicas should stay within 18 unless an SLO is at risk (the applications' other services use 6 more replicas, fixed).\nGoal: keep every application's P95 latency below its SLO with as few replicas as possible, and avoid oscillation.\nA new replica of most services is ready in about 2 s; one of teastore-webui needs about 25 s, then about a minute of Java warm-up. hotel-reservation is the hotel application's scaled service; its SLO is the hotel application's end-to-end latency.\nimage-recognition is a serverless function that classifies images with a ResNet-50 model on CPU (one request at a time per replica, about 110 ms each); a new replica is ready in about 2 s, and its first request then takes about 2 s while it loads the model.\nReply only with the JSON object requested."
+ },
+ "trace": "data/traces/runs_imgrec/test_4.csv.gz",
+ "trace_meta": {
+  "run": "test_4",
+  "wikipedia_day": "2025-09-23",
+  "huawei_day": "day_230",
+  "huawei_window": "previous day's last 6 h + the day, 24x",
+  "alibaba_day": 11,
+  "k_copies_per_app_peak": 11.8,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 23.66,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 707.85,
+   "graph-bfs": 259.55,
+   "hotel": 2528.0
+  },
+  "load_scale": 0.28,
+  "peak_rps_scaled": {
+   "teastore": 126.0,
+   "thumbnailer": 198.2,
+   "graph-bfs": 72.67,
+   "hotel": 707.84
+  }
+ },
+ "seed": 2,
+ "duration_s": 4500,
+ "scale": 1.0,
+ "arrivals": "poisson",
+ "start_replicas": {
+  "teastore-webui": 1,
+  "thumbnailer": 2,
+  "graph-bfs": 1,
+  "hotel-reservation": 2,
+  "image-recognition": 2
+ },
+ "fixed_replicas": {
+  "hotel-frontend": 2,
+  "hotel-search": 2,
+  "hotel-rate": 2
+ },
+ "start_epoch": 1793558553.524913,
+ "git_commit": "5164b35",
+ "harness_uncommitted_changes": true,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "workers": 4,
+  "worker_vcpus": 4,
+  "copies_available": 24,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "cpu_request_m": 500,
+  "host_swap_limit_mib": 64,
+  "calibration_dir": "results/calibration/p2",
+  "base_run": "fp_newdesign_20261001",
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "svc": "graph-bfs",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "svc": "imgrec",
+    "port": 8080
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "deploy": "graph-bfs",
+    "entry": "graph-bfs"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   },
+   "image-recognition": {
+    "ns": "sebs",
+    "deploy": "imgrec",
+    "entry": "imgrec"
+   }
+  },
+  "fixed": {
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel",
+    "copies": 2
+   }
+  }
+ }
+}

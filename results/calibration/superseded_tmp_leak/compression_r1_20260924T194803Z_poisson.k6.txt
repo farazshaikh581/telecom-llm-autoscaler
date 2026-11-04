@@ -1,0 +1,44 @@
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:51Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": read tcp <ip>-><ip>: read: connection reset by peer"
+time="2026-09-24T19:51:52Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:52Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:52Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:52Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:53Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:57Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:57Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:57Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:58Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:58Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:59Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:59Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:59Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:59Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T19:51:59Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+
+
+  █ TOTAL RESULTS 
+
+    HTTP
+    http_req_duration..............: avg=1.2s     p(50)=857.07ms p(95)=3.08s    p(99)=3.79s
+      { expected_response:true }...: avg=1.24s    p(50)=885.36ms p(95)=3.15s    p(99)=3.8s 
+    http_req_failed................: 5.26%  22 out of 418
+    http_reqs......................: 418    1.228603/s
+
+    EXECUTION
+    iteration_duration.............: avg=123.98ms p(50)=60.77µs  p(95)=896.95ms p(99)=2.69s
+    iterations.....................: 4063   11.942142/s
+    vus............................: 1      min=0         max=9 
+    vus_max........................: 40     min=40        max=40
+
+    NETWORK
+    data_received..................: 222 kB 653 B/s
+    data_sent......................: 109 kB 320 B/s
+
+
+

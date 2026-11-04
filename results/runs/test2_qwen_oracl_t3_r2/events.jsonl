@@ -1,0 +1,85 @@
+{"epoch":1792005053.12,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792005053.35,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792005054.34,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 3, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792005091.66,"msg":"hotel data reset: 65084 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792005095.54,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1792005125.78,"msg":"run started: llm:port=8002,mode=oracl on data/traces/runs/test_3.csv.gz, 4500 s"}
+{"epoch":1792005265.21,"msg":"k=2 t=140 decide 19.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792005328.27,"msg":"k=3 t=203 decide 22.0 s, scaled {'teastore-webui': 2, 'hotel-reservation': 4}"}
+{"epoch":1792005391.14,"msg":"k=4 t=266 decide 24.9 s, scaled {'teastore-webui': 4, 'thumbnailer': 5, 'hotel-reservation': 6}"}
+{"epoch":1792005449.01,"msg":"k=5 t=323 decide 22.7 s, scaled {'teastore-webui': 12, 'thumbnailer': 7, 'graph-bfs': 3, 'hotel-reservation': 8}"}
+{"epoch":1792005570.7,"msg":"k=7 t=445 decide 24.4 s, scaled {'hotel-reservation': 6}"}
+{"epoch":1792005628.93,"msg":"k=8 t=503 decide 22.6 s, scaled {'thumbnailer': 3, 'graph-bfs': 4}"}
+{"epoch":1792005693.33,"msg":"k=9 t=568 decide 27.0 s, scaled {'teastore-webui': 5, 'thumbnailer': 6}"}
+{"epoch":1792005753.53,"msg":"k=10 t=628 decide 27.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792005809.88,"msg":"k=11 t=684 decide 23.6 s, scaled {'teastore-webui': 12, 'thumbnailer': 5, 'graph-bfs': 2}"}
+{"epoch":1792005871.9,"msg":"k=12 t=746 decide 25.6 s, scaled {'teastore-webui': 5, 'graph-bfs': 3}"}
+{"epoch":1792005928.49,"msg":"k=13 t=803 decide 22.2 s, scaled {'thumbnailer': 7, 'hotel-reservation': 5}"}
+{"registry_removed":1}
+{"epoch":1792005998.49,"msg":"k=14 t=873 decide 32.2 s, scaled {'teastore-webui': 12, 'thumbnailer': 2, 'graph-bfs': 12}"}
+{"epoch":1792006051.86,"msg":"k=15 t=926 decide 25.6 s, scaled {'teastore-webui': 5, 'thumbnailer': 4, 'hotel-reservation': 6}"}
+{"epoch":1792006110.44,"msg":"k=16 t=985 decide 24.2 s, scaled {'hotel-reservation': 5}"}
+{"registry_removed":1}
+{"epoch":1792006230.96,"msg":"k=18 t=1105 decide 24.7 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792006291.5,"msg":"k=19 t=1166 decide 25.2 s, scaled {'teastore-webui': 4, 'thumbnailer': 5, 'hotel-reservation': 4}"}
+{"registry_removed":1}
+{"epoch":1792006351.22,"msg":"k=20 t=1226 decide 24.9 s, scaled {'teastore-webui': 5, 'thumbnailer': 2}"}
+{"epoch":1792006411.08,"msg":"k=21 t=1286 decide 24.8 s, scaled {'thumbnailer': 3, 'hotel-reservation': 5}"}
+{"epoch":1792006467.97,"msg":"k=22 t=1342 decide 21.7 s, scaled {'thumbnailer': 2, 'hotel-reservation': 3}"}
+{"registry_removed":1}
+{"registry_removed":1}
+{"epoch":1792006533.3,"msg":"k=23 t=1408 decide 27.0 s, scaled {'teastore-webui': 4, 'hotel-reservation': 5}"}
+{"epoch":1792006591.43,"msg":"k=24 t=1466 decide 25.1 s, scaled {'thumbnailer': 3, 'hotel-reservation': 4}"}
+{"registry_removed":1}
+{"epoch":1792006650.19,"msg":"k=25 t=1525 decide 23.9 s, scaled {'hotel-reservation': 3}"}
+{"registry_removed":1}
+{"epoch":1792006718.75,"msg":"k=26 t=1593 decide 32.5 s, scaled {'teastore-webui': 5, 'thumbnailer': 2, 'graph-bfs': 3}"}
+{"epoch":1792006766.8,"msg":"k=27 t=1641 decide 20.5 s, scaled {'thumbnailer': 3, 'graph-bfs': 12, 'hotel-reservation': 5}"}
+{"epoch":1792006830.58,"msg":"k=28 t=1705 decide 24.3 s, scaled {'thumbnailer': 2, 'hotel-reservation': 2}"}
+{"registry_removed":3}
+{"epoch":1792006894.3,"msg":"k=29 t=1769 decide 28.0 s, scaled {'teastore-webui': 4, 'hotel-reservation': 3}"}
+{"epoch":1792007010.73,"msg":"k=31 t=1885 decide 24.5 s, scaled {'thumbnailer': 1, 'graph-bfs': 3, 'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1792007068.52,"msg":"k=32 t=1943 decide 22.3 s, scaled {'teastore-webui': 5, 'thumbnailer': 2, 'graph-bfs': 5, 'hotel-reservation': 4}"}
+{"epoch":1792007131.3,"msg":"k=33 t=2006 decide 25.0 s, scaled {'thumbnailer': 4, 'graph-bfs': 3, 'hotel-reservation': 5}"}
+{"epoch":1792007188.85,"msg":"k=34 t=2063 decide 22.6 s, scaled {'thumbnailer': 3, 'graph-bfs': 8, 'hotel-reservation': 3}"}
+{"registry_removed":2}
+{"epoch":1792007253.96,"msg":"k=35 t=2128 decide 27.7 s, scaled {'teastore-webui': 3, 'thumbnailer': 2, 'graph-bfs': 12}"}
+{"epoch":1792007314.57,"msg":"k=36 t=2189 decide 28.3 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792007368.32,"msg":"k=37 t=2243 decide 22.1 s, scaled {'teastore-webui': 4, 'thumbnailer': 4, 'graph-bfs': 4, 'hotel-reservation': 4}"}
+{"epoch":1792007430.46,"msg":"k=38 t=2305 decide 24.2 s, scaled {'teastore-webui': 5, 'graph-bfs': 6}"}
+{"epoch":1792007489.94,"msg":"k=39 t=2364 decide 23.7 s, scaled {'thumbnailer': 2, 'graph-bfs': 3, 'hotel-reservation': 3}"}
+{"registry_removed":1}
+{"epoch":1792007558.39,"msg":"k=40 t=2433 decide 32.1 s, scaled {'thumbnailer': 3, 'graph-bfs': 8}"}
+{"epoch":1792007610.82,"msg":"k=41 t=2485 decide 24.5 s, scaled {'teastore-webui': 4, 'thumbnailer': 5, 'graph-bfs': 4, 'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1792007668.35,"msg":"k=42 t=2543 decide 22.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 3, 'hotel-reservation': 3}"}
+{"epoch":1792007728.36,"msg":"k=43 t=2603 decide 22.1 s, scaled {'thumbnailer': 4, 'graph-bfs': 5, 'hotel-reservation': 4}"}
+{"epoch":1792007792.35,"msg":"k=44 t=2667 decide 26.1 s, scaled {'teastore-webui': 5, 'graph-bfs': 3}"}
+{"epoch":1792007849.8,"msg":"k=45 t=2724 decide 23.5 s, scaled {'thumbnailer': 2, 'hotel-reservation': 3}"}
+{"registry_removed":1}
+{"epoch":1792007909.11,"msg":"k=46 t=2784 decide 22.8 s, scaled {'teastore-webui': 6, 'thumbnailer': 4}"}
+{"epoch":1792008089.28,"msg":"k=49 t=2964 decide 23.0 s, scaled {'hotel-reservation': 4}"}
+{"epoch":1792008209.14,"msg":"k=51 t=3084 decide 22.9 s, scaled {'teastore-webui': 5, 'graph-bfs': 4, 'hotel-reservation': 3}"}
+{"epoch":1792008327.67,"msg":"k=53 t=3202 decide 21.4 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792008388.4,"msg":"k=54 t=3263 decide 22.1 s, scaled {'thumbnailer': 3, 'graph-bfs': 3}"}
+{"epoch":1792008447.82,"msg":"k=55 t=3322 decide 21.6 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792008509.05,"msg":"k=56 t=3384 decide 22.8 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792008568.71,"msg":"k=57 t=3443 decide 22.4 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792008747.35,"msg":"k=60 t=3622 decide 21.1 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792008806.3,"msg":"k=61 t=3681 decide 20.1 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792008927.08,"msg":"k=63 t=3802 decide 20.8 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792009110.25,"msg":"k=66 t=3985 decide 23.9 s, scaled {'teastore-webui': 4, 'thumbnailer': 5}"}
+{"epoch":1792009165.85,"msg":"k=67 t=4040 decide 19.6 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792009224.67,"msg":"k=68 t=4099 decide 18.4 s, scaled {'hotel-reservation': 4}"}
+{"epoch":1792009289.33,"msg":"k=69 t=4164 decide 23.1 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792009348.91,"msg":"k=70 t=4223 decide 22.7 s, scaled {'teastore-webui': 4, 'thumbnailer': 4}"}
+{"epoch":1792009409.04,"msg":"k=71 t=4284 decide 22.7 s, scaled {'teastore-webui': 6, 'graph-bfs': 4}"}
+{"epoch":1792009468.75,"msg":"k=72 t=4343 decide 22.4 s, scaled {'teastore-webui': 4, 'thumbnailer': 5}"}
+{"epoch":1792009529.19,"msg":"k=73 t=4404 decide 22.9 s, scaled {'teastore-webui': 6, 'graph-bfs': 6}"}
+{"epoch":1792009590.76,"msg":"k=74 t=4465 decide 24.5 s, scaled {'thumbnailer': 4, 'graph-bfs': 12}"}
+{"epoch":1792009590.76,"msg":"trace finished"}
+{"epoch":1792009626.51,"msg":"recorder stopped"}
+{"epoch":1792009626.73,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

@@ -1,0 +1,223 @@
+diff --git a/hotelReservation/cmd/attractions/db.go b/hotelReservation/cmd/attractions/db.go
+index 7d1da8c..d240d08 100644
+--- a/hotelReservation/cmd/attractions/db.go
++++ b/hotelReservation/cmd/attractions/db.go
+@@ -4,6 +4,7 @@ import (
+ 	"context"
+ 	"fmt"
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -71,21 +72,30 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collectionH := client.Database("attractions-db").Collection("hotels")
+-	_, err = collectionH.InsertMany(context.TODO(), newPoints)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collectionH.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collectionH.InsertMany(context.TODO(), newPoints)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+ 	log.Info().Msg("Successfully inserted test data into museum DB")
+ 
+ 	collectionR := client.Database("attractions-db").Collection("restaurants")
+-	_, err = collectionR.InsertMany(context.TODO(), newRestaurants)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collectionR.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collectionR.InsertMany(context.TODO(), newRestaurants)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+ 	log.Info().Msg("Successfully inserted test data into restaurant DB")
+ 
+ 	collectionM := client.Database("attractions-db").Collection("museums")
+-	_, err = collectionM.InsertMany(context.TODO(), newMuseums)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collectionM.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collectionM.InsertMany(context.TODO(), newMuseums)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/geo/db.go b/hotelReservation/cmd/geo/db.go
+index 9822082..4f297b2 100644
+--- a/hotelReservation/cmd/geo/db.go
++++ b/hotelReservation/cmd/geo/db.go
+@@ -6,6 +6,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -47,7 +48,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("geo-db").Collection("geo")
+-	_, err = collection.InsertMany(context.TODO(), newPoints)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newPoints)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/profile/db.go b/hotelReservation/cmd/profile/db.go
+index 1dee70a..2958987 100644
+--- a/hotelReservation/cmd/profile/db.go
++++ b/hotelReservation/cmd/profile/db.go
+@@ -6,6 +6,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -170,7 +171,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("profile-db").Collection("hotels")
+-	_, err = collection.InsertMany(context.TODO(), newProfiles)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newProfiles)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/rate/db.go b/hotelReservation/cmd/rate/db.go
+index 0b50603..cba982e 100644
+--- a/hotelReservation/cmd/rate/db.go
++++ b/hotelReservation/cmd/rate/db.go
+@@ -6,6 +6,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -130,7 +131,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("rate-db").Collection("inventory")
+-	_, err = collection.InsertMany(context.TODO(), newRatePlans)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newRatePlans)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/recommendation/db.go b/hotelReservation/cmd/recommendation/db.go
+index fbd3425..4fbcfba 100644
+--- a/hotelReservation/cmd/recommendation/db.go
++++ b/hotelReservation/cmd/recommendation/db.go
+@@ -6,6 +6,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -74,7 +75,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("recommendation-db").Collection("recommendation")
+-	_, err = collection.InsertMany(context.TODO(), newHotels)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newHotels)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/reservation/db.go b/hotelReservation/cmd/reservation/db.go
+index 9483e84..60c1e97 100644
+--- a/hotelReservation/cmd/reservation/db.go
++++ b/hotelReservation/cmd/reservation/db.go
+@@ -6,6 +6,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -66,12 +67,18 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	resCollection := database.Collection("reservation")
+ 	numCollection := database.Collection("number")
+ 
+-	_, err = resCollection.InsertMany(context.TODO(), newReservations)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := resCollection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = resCollection.InsertMany(context.TODO(), newReservations)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+ 
+-	_, err = numCollection.InsertMany(context.TODO(), newNumbers)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := numCollection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = numCollection.InsertMany(context.TODO(), newNumbers)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/review/db.go b/hotelReservation/cmd/review/db.go
+index 918da43..d025a72 100644
+--- a/hotelReservation/cmd/review/db.go
++++ b/hotelReservation/cmd/review/db.go
+@@ -4,6 +4,7 @@ import (
+ 	"context"
+ 	"fmt"
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -92,7 +93,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("review-db").Collection("reviews")
+-	_, err = collection.InsertMany(context.TODO(), newReviews)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newReviews)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}
+diff --git a/hotelReservation/cmd/user/db.go b/hotelReservation/cmd/user/db.go
+index 6840d54..d983a4c 100644
+--- a/hotelReservation/cmd/user/db.go
++++ b/hotelReservation/cmd/user/db.go
+@@ -7,6 +7,7 @@ import (
+ 	"strconv"
+ 
+ 	"github.com/rs/zerolog/log"
++	"go.mongodb.org/mongo-driver/bson"
+ 	"go.mongodb.org/mongo-driver/mongo"
+ 	"go.mongodb.org/mongo-driver/mongo/options"
+ )
+@@ -47,7 +48,10 @@ func initializeDatabase(url string) (*mongo.Client, func()) {
+ 	log.Info().Msg("Successfully connected to MongoDB")
+ 
+ 	collection := client.Database("user-db").Collection("user")
+-	_, err = collection.InsertMany(context.TODO(), newUsers)
++	// seed once: skip when the collection already holds data (every copy used to insert it again)
++	if n, _ := collection.CountDocuments(context.TODO(), bson.D{}); n == 0 {
++		_, err = collection.InsertMany(context.TODO(), newUsers)
++	}
+ 	if err != nil {
+ 		log.Fatal().Msg(err.Error())
+ 	}

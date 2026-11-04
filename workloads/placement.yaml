@@ -1,0 +1,19 @@
+# Where each fixed (unscaled) pod runs, by worker role (w0..w3 = workers in sorted name order).
+# Pinned since 2026-09-30 so every run, and the simulator, see the same layout; before that the
+# scheduler placed them anew after every restart. Applied by tools/pin_fixed_pods.py.
+# Balanced on CPU used in the shared base run (fp_post_clone_20260930b, millicores in comments)
+# and on CPU requests (hotel fixed pods request 100m each, TeaStore's none), which set how many
+# scaled copies still fit on each worker. Databases, consul and teastore-db stayed where they were
+# when this was set, so no data had to move.
+label: llm-autoscaler/slot
+w0:   # ~565 m, 400m requested
+  teastore: [teastore-persistence]                                         # 543
+  hotel: [mongodb-geo, mongodb-rate, mongodb-reservation, mongodb-user]    # ~22
+w1:   # ~500 m, 400m requested
+  teastore: [teastore-image, teastore-db]                                  # 428, 23
+  hotel: [mongodb-profile, mongodb-recommendation, memcached-rate, jaeger] # 8, 37, 0
+w2:   # ~383 m, 400m requested
+  hotel: [profile, geo, consul, memcached-profile]                         # 199, 145, 12, 27
+w3:   # ~468 m, 300m requested
+  teastore: [teastore-auth, teastore-recommender, teastore-registry]       # 120, 95, 8
+  hotel: [memcached-reserve, recommendation, user]                         # 155, 86, 4

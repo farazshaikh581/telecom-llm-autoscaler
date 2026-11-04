@@ -1,0 +1,40 @@
+# SD-Core 5G control plane (omec-project/sdcore-helm-charts v4.1.1, chart 5g-control-plane).
+# Changes from chart defaults, and why:
+#  - all pods on worker nodes only (the control node hosts the LLMs)
+#  - sctplb on: gNB connections land on a load balancer that fans out to every AMF replica
+#  - enableDBStore on AMF and SMF: UE context lives in MongoDB, any replica can serve any UE
+#  - no Kafka, metricfunc, or upf-adapter (not needed for control-plane scaling)
+
+nodeSelectors:
+  enabled: true
+  label: node.kubernetes.io/microk8s-worker
+  value: microk8s-worker
+
+kafka:
+  deploy: false
+
+mongodb:
+  deploy: true
+  nodeSelector:
+    node.kubernetes.io/microk8s-worker: microk8s-worker
+  arbiter:
+    nodeSelector:
+      node.kubernetes.io/microk8s-worker: microk8s-worker
+
+config:
+  sctplb:
+    deploy: true
+  metricfunc:
+    deploy: false
+  upfadapter:
+    deploy: false
+  amf:
+    cfgFiles:
+      amfcfg.yaml:
+        configuration:
+          enableDBStore: true
+  smf:
+    cfgFiles:
+      smfcfg.yaml:
+        configuration:
+          enableDBStore: true

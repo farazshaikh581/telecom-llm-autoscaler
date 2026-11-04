@@ -1,0 +1,12 @@
+{"epoch":1790801348.43,"msg":"host swap used: 6102 MiB, swap in+out over 10 s: 64"}
+{"epoch":1790801348.43,"msg":"waiting for host swap reset: 6102 MiB in use (docs/cluster.md)"}
+{"epoch":1790801439.01,"msg":"host swap now 0 MiB after waiting 90 s"}
+{"epoch":1790801439.61,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 2, 'compression': 3, 'imgrec': 1, 'hotel-frontend': 1, 'hotel-search': 1, 'hotel-reservation': 2, 'hotel-rate': 1}"}
+{"registry_removed":3}
+{"epoch":1790801481.05,"msg":"hotel data reset: 71103 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1790801484.94,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":1}
+{"epoch":1790801515.82,"msg":"run started: hpa:target=70 on data/traces/runs/dev_1.csv.gz, 4500 s"}
+{"registry_removed":1}
+{"epoch":1790805955.61,"msg":"trace finished"}
+{"epoch":1790806015.94,"msg":"recorder stopped"}

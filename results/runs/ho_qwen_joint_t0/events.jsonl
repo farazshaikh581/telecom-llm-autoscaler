@@ -1,0 +1,22 @@
+{"epoch":1793039095.44,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1793039095.67,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793039096.63,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 2, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":3}
+{"epoch":1793039133.5,"msg":"hotel data reset: 18554 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793039137.46,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1793039167.7,"msg":"run started: llm:port=8002,mode=joint,order=newest on data/traces/runs/test_0.csv.gz, 4500 s"}
+{"epoch":1793039350.28,"msg":"k=3 t=183 decide 2.1 s, scaled {'thumbnailer': 4, 'graph-bfs': 3}"}
+{"epoch":1793039410.35,"msg":"k=4 t=243 decide 2.2 s, scaled {'thumbnailer': 5}"}
+{"epoch":1793039470.44,"msg":"k=5 t=303 decide 2.2 s, scaled {'graph-bfs': 4}"}
+{"epoch":1793039530.44,"msg":"k=6 t=363 decide 2.3 s, scaled {'teastore-webui': 3, 'hotel-reservation': 3}"}
+{"epoch":1793039590.52,"msg":"k=7 t=423 decide 2.3 s, scaled {'teastore-webui': 4}"}
+{"epoch":1793039650.51,"msg":"k=8 t=483 decide 2.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1793039710.55,"msg":"k=9 t=543 decide 2.3 s, scaled {'teastore-webui': 8, 'thumbnailer': 6, 'graph-bfs': 5, 'hotel-reservation': 4}"}
+{"epoch":1793039770.56,"msg":"k=10 t=603 decide 2.3 s, scaled {'thumbnailer': 5, 'graph-bfs': 4, 'hotel-reservation': 3}"}
+{"epoch":1793039950.53,"msg":"k=13 t=783 decide 2.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1793041390.44,"msg":"k=37 t=2223 decide 2.3 s, scaled {'graph-bfs': 5}"}
+{"epoch":1793043370.51,"msg":"k=70 t=4203 decide 2.3 s, scaled {'graph-bfs': 4}"}
+{"epoch":1793043610.43,"msg":"trace finished"}
+{"epoch":1793043668.34,"msg":"recorder stopped"}
+{"epoch":1793043668.56,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

@@ -1,0 +1,21 @@
+{
+ "controllers": {
+  "hpa70": "hpa:target=70",
+  "keda": "keda:util=0.8",
+  "phpa": "phpa:target=70,lookahead=60,history=12",
+  "aware": "aware:ckpt=rl/checkpoints/aware_ft.pt",
+  "firm": "firm:ckpt=rl/checkpoints/firm_ft.pt",
+  "ours": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2",
+  "tgpt_joint": "llm:port=8001,mode=joint",
+  "tgpt_perservice": "llm:port=8001,mode=per-service",
+  "tgpt_oracl": "llm:port=8001,mode=oracl",
+  "qwen_joint": "llm:port=8002,mode=joint",
+  "qwen_perservice": "llm:port=8002,mode=per-service",
+  "qwen_oracl": "llm:port=8002,mode=oracl"
+ },
+ "gate": {
+  "pretrained": 0.08889999999999999,
+  "scratch": 0.08886666666666666,
+  "used": "scratch"
+ }
+}

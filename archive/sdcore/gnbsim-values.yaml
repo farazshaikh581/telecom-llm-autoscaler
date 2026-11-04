@@ -1,0 +1,39 @@
+# gNB/UE simulator (chart 5g-ran-sim). Runs on the control node, off the workers under test.
+# Single interface (no Multus in the cluster). Connects to the SCTP load balancer, not to one AMF.
+# The pod idles; runs are started with `kubectl exec` into the pod, then `gnbsim --cfg <config file>`.
+
+nodeSelectors:
+  enabled: true
+  gnbsim:
+    label: node.kubernetes.io/microk8s-controlplane
+    value: microk8s-controlplane
+
+config:
+  gnbsim:
+    singleInterface: true
+    cfgFiles:
+      gnbsimcfg.yaml:
+        configuration:
+          singleInterface: true
+          execInParallel: false
+          gnbs:
+            gnb1:
+              defaultAmf:
+                hostName: sctplb
+            gnb2:
+              defaultAmf:
+                hostName: sctplb
+          profiles:
+            - profileType: register
+              profileName: register10
+              enable: true
+              gnbName: gnb1
+              execInParallel: true
+              stepTrigger: false
+              startImsi: 208930100007500
+              ueCount: 10
+              opc: "981d464c7c52eb6e5036234984ad0bcf"
+              key: "5122250214c33e723a5dd523fc145fc0"
+              plmnId:
+                mcc: 208
+                mnc: 93

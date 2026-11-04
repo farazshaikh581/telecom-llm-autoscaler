@@ -1,0 +1,17 @@
+{"epoch":1790453563.06,"msg":"host swap used: 17 MiB, swap in+out over 10 s: 0"}
+{"epoch":1790453563.63,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 1, 'compression': 4, 'imgrec': 2, 'hotel-frontend': 1, 'hotel-search': 1, 'hotel-reservation': 3, 'hotel-rate': 1}"}
+{"registry_removed":1}
+{"registry_removed":1}
+{"epoch":1790453595.68,"msg":"hotel data reset: 73390 bookings from earlier runs removed, booking cache and reservation restarted"}
+{"registry_removed":2}
+{"epoch":1790453599.5,"msg":"ready after 4 s; settling 30 s"}
+{"epoch":1790453632.16,"msg":"run started: firm:ckpt=rl/checkpoints/firm_ft_dev1.pt,save=rl/checkpoints/firm_ft_dev2.pt on data/traces/runs/dev_2.csv.gz, 4500 s"}
+{"epoch":1790453690.19,"msg":"k=1 t=61 decide 0.0 s, scaled {'teastore-webui': 1, 'imgrec': 1}"}
+{"epoch":1790453930.28,"msg":"k=5 t=301 decide 0.0 s, scaled {'imgrec': 2}"}
+{"epoch":1790453990.26,"msg":"k=6 t=361 decide 0.0 s, scaled {'hotel-rate': 2}"}
+{"epoch":1790454530.28,"msg":"k=15 t=901 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1790454590.27,"msg":"k=16 t=961 decide 0.0 s, scaled {'imgrec': 3}"}
+{"epoch":1790456810.32,"msg":"k=53 t=3181 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1790456990.29,"msg":"k=56 t=3361 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1790458070.23,"msg":"trace finished"}
+{"epoch":1790458134.09,"msg":"recorder stopped"}

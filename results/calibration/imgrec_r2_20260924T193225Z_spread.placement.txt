@@ -1,0 +1,3 @@
+imgrec-6f56b97cd4-nxgd8   worker14
+imgrec-6fdd87856f-5g5jz   worker12
+imgrec-6fdd87856f-64jt6   worker13

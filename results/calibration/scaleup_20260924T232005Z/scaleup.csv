@@ -1,0 +1,4 @@
+service,rep,node,image_pulled,t_scale,created_s,running_s,ready_s,first_req_ms,req2_ms,req5_ms,req15_ms
+teastore-webui,1,worker12,no,1790292005.451330896,0.13,1.12,25.82,2834.5,199.7,56.9,46.3
+teastore-webui,2,worker12,no,1790292066.830118490,0.13,1.12,23.97,2947.1,165.1,46.0,40.5
+teastore-webui,3,worker12,no,1790292125.950438344,0.12,1.1,24.85,2650.4,176.4,36.8,35.0

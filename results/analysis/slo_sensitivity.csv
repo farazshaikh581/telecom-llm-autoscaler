@@ -1,0 +1,13 @@
+controller,viol_k2,viol_k3,viol_k5
+hpa70,3.33,2.46,1.83
+keda,6.25,2.38,1.75
+phpa,3.5,1.83,1.33
+aware,6.79,3.04,2.0
+firm,31.54,16.42,6.21
+ours,8.96,6.25,4.29
+tgpt_joint,6.42,4.08,2.29
+tgpt_perservice,3.33,2.29,1.42
+tgpt_oracl,3.5,2.67,1.83
+qwen_joint,2.79,1.62,0.79
+qwen_perservice,2.96,1.92,0.92
+qwen_oracl,5.71,4.62,3.12

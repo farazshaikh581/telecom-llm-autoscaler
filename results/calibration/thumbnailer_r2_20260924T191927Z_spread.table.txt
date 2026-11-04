@@ -1,0 +1,6 @@
+step  offered  served   err%      avg      p50      p75      p90      p95      p99      max  dropped
+   0    10.00   10.04    0.0     48.5     50.5     63.0     67.3     68.8     72.9     83.7        0
+   1    20.00   20.10    0.0     57.0     50.1     66.2     97.2    127.9    186.0    217.6        0
+   2    25.00   25.12    0.0     68.0     55.2     83.9    130.1    165.6    233.9    271.8        0
+   3    30.00   30.14    0.0    200.8     66.3    213.7    615.5    906.3   1260.0   1383.4        0
+summary: tools/calibration/../../results/calibration/thumbnailer_r2_20260924T191927Z_spread.summary.json

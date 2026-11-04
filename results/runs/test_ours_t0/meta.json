@@ -1,0 +1,143 @@
+{
+ "name": "test_ours_t0",
+ "controller": "ours:ckpt=rl/checkpoints/ours_qrdqn_ft",
+ "controller_info": {
+  "kind": "ours",
+  "params": {
+   "ckpt": "rl/checkpoints/ours_qrdqn_ft"
+  }
+ },
+ "trace": "data/traces/runs/test_0.csv.gz",
+ "trace_meta": {
+  "run": "test_0",
+  "wikipedia_day": "2025-07-14",
+  "huawei_day": "day_013",
+  "huawei_hour": 21,
+  "alibaba_day": 4,
+  "k_copies_per_app_peak": 8.23,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.86,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 86.39,
+   "imgrec": 24.68,
+   "compression": 8.23,
+   "hotel": 1763.06
+  },
+  "load_scale": 0.45,
+  "peak_rps_scaled": {
+   "teastore": 202.5,
+   "thumbnailer": 38.88,
+   "imgrec": 11.11,
+   "compression": 3.7,
+   "hotel": 793.38
+  }
+ },
+ "seed": 1,
+ "duration_s": 4500,
+ "scale": 1.0,
+ "arrivals": "poisson",
+ "start_replicas": {
+  "teastore-webui": 2,
+  "thumbnailer": 2,
+  "compression": 2,
+  "imgrec": 2,
+  "hotel-frontend": 1,
+  "hotel-search": 1,
+  "hotel-reservation": 2,
+  "hotel-rate": 1
+ },
+ "start_epoch": 1790514571.4411578,
+ "git_commit": "360e32d",
+ "harness_uncommitted_changes": false,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "copies_available": 24,
+  "cpu_request_m": 500,
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "compression": {
+    "ns": "sebs",
+    "svc": "compression",
+    "port": 8080
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "svc": "imgrec",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "compression": {
+    "ns": "sebs",
+    "deploy": "compression",
+    "entry": "compression"
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "deploy": "imgrec",
+    "entry": "imgrec"
+   },
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel"
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel"
+   }
+  }
+ }
+}

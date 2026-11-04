@@ -1,0 +1,4 @@
+graph-bfs-bb6845f75-xpvrd      w2     Running
+load-data-q84t4                control   Succeeded
+minio-98b78488-9lcmd           control   Running
+thumbnailer-64c855875c-9rt5q   w1     Running

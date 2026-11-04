@@ -1,0 +1,70 @@
+# Trace scaling parameters, new-service shift (docs/decisions.md 2026-10-28): config/trace_scaling.yaml plus
+# image recognition. Selected with SCALING_CONFIG=config/trace_scaling_imgrec.yaml (harness and tools/traces/add_imgrec.py).
+# Trace scaling parameters, read by the trace preparation step.
+# Sources: docs/calibration.md (one copy, alone) and results/calibration/p2/together_* (second testbed)
+# (all entries loaded at once). Decisions: docs/decisions.md.
+
+slo_k: 3                      # SLO = k x no-queue P95 (measured in the shared cluster); k = 2 and 5 reported offline too
+
+# Load level (docs/decisions.md): every rate is multiplied by load_scale after the per-run
+# scaling below. 2026-10-06, with the burst-free function traces: set so that HPA at its default
+# target (70%) needs exactly the copies available (18 scaled) at the busiest minute of every dev and
+# test trace (13-16 in the median minute). Measured on the HPA pilot at 0.45 (lscale_hpa_dev0_s045):
+# CPU per req/s in unsaturated minutes, TeaStore 9.4, thumbnailer 10.3, graph-bfs 35.6, hotel
+# reservation 1.8 millicores; at 0.45 HPA would need 27-28 copies at the peak. Before: 0.45.
+load_scale: 0.28
+
+# Target (before load_scale): the busiest moment of the combined trace needs 120-130% of
+# the worker CPUs, using the calibrated per-copy capacities.
+cluster:                      # size: config/harness.yaml (workers, worker_vcpus, copies_available)
+  peak_demand_fraction: [1.20, 1.30]
+
+entries:
+  teastore:
+    scaled: [teastore-webui]
+    no_queue_p95_ms: 56.9      # shared base run fp_newdesign_20261001 (4-service design); earlier values in git history
+    no_queue_p95_alone_ms: 13   # alone calibration (2026-09-24), reference only
+    slo_ms: 171              # 3 x shared no-queue P95
+    # Per front-end copy within SLO, all apps running. Estimate: together at 120 req/s
+    # gave P95 23.5 ms (alone 12.1); interpolated.
+    capacity_per_copy_rps: 140   # 4-service design, together (3 runs): P95 29-40 ms at 135 req/s (SLO 171); second testbed, together: P95 41-62 ms at 120 (3 runs), 47-61 at 135 (2 runs) (SLO 195)
+    # Cap (decided 2026-09-25): TeaStore's unscaled persistence service limits the whole
+    # app near 450-500 req/s (1.2 CPU at 3 front-end copies). Above that, adding front-end
+    # copies does not help, and scaling persistence was not chosen. The trace peak for
+    # TeaStore is scaled to this ceiling.
+    peak_cap_rps: 450
+  thumbnailer:
+    scaled: [thumbnailer]
+    # Input: SeBS's 800 px photos (60-240 KB, the image-recognition data) since 2026-10-01, to fit the edge range.
+    no_queue_p95_ms: 35.1      # shared base run fp_newdesign_20261001 (minutes 5-15, even arrivals)
+    no_queue_p95_alone_ms: 12  # one copy, sequential requests, no load (results/functions/), reference only
+    slo_ms: 105              # 3 x shared no-queue P95
+    capacity_per_copy_rps: 60   # together (3 runs): P95 38-54 ms at 48-54 req/s; one copy alone breaks between 70 (49 ms) and 80 (71 ms)
+  graph-bfs:
+    scaled: [graph-bfs]
+    # SeBS 503.graph-bfs, input "small" (10,000 nodes, seed 42), since 2026-10-01.
+    no_queue_p95_ms: 67.5      # shared base run fp_newdesign_20261001 (minutes 5-15, even arrivals)
+    no_queue_p95_alone_ms: 29  # one copy, sequential requests, no load (results/functions/), reference only
+    slo_ms: 203              # 3 x shared no-queue P95
+    capacity_per_copy_rps: 22   # together (3 runs): P95 130-139 ms at 22.4 req/s, 176-189 at 25.2 (SLO 203)
+  hotel:
+    scaled: [reservation]     # frontend, search, rate fixed (config/harness.yaml)
+    # Per-copy capacity of every hotel tier, for sizing hotel's traffic in the traces (all four tiers
+    # count, as in phase 2, so hotel's load stays at the level the fixed tiers were calibrated for):
+    # from their CPU share at the reservation-limited 450 req/s (reservation 0.9 CPU, frontend 0.38,
+    # search 0.30, rate 0.31).
+    tier_capacity_rps: {frontend: 1066, search: 1350, reservation: 450, rate: 1306}
+    no_queue_p95_ms: 18.1      # shared base run fp_newdesign_20261001 (4-service design); earlier values in git history
+    no_queue_p95_alone_ms: 9   # alone calibration (2026-09-24), reference only
+    slo_ms: 54              # 3 x shared no-queue P95
+    capacity_per_copy_rps: 450    # per copy of hotel reservation (the only scaled hotel service since 2026-10-01); 4-service design, together: P95 17 ms at 450 (SLO 54)
+  imgrec:
+    scaled: [imgrec]
+    # New-service shift (2026-10-28): SeBS 411.image-recognition (ResNet-50 on CPU), SeBS's 800 px photos.
+    # Not in any training, tuning or calibration of the controllers. The other entries keep their SLOs; at the same
+    # load image recognition raises their P95 (base fp_imgrec50 vs ref6: TeaStore 87 -> 207 ms, hotel 22 -> 37,
+    # graph-bfs 76 -> 107, thumbnailer 35 -> 45).
+    no_queue_p95_ms: 336.8      # shared base fp_imgrec50_20261028 (drift-reference load + image recognition at 50%, minutes 5-15)
+    slo_ms: 1010             # 3 x shared no-queue P95
+    capacity_per_copy_rps: 3.0   # all five apps together, 2 runs (results/calibration/p2/together_20261028T*): P95 329-428 ms at 3.1-3.2 req/s served, 826 at 4.4; one copy alone: P95 289 ms at 3.3, 447 at 3.8
+    peak_copies: 2.5           # the trace's busiest minute needs 2.5 copies at capacity (tools/traces/add_imgrec.py)

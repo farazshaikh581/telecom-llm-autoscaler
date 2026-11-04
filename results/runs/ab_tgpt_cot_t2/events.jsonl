@@ -1,0 +1,64 @@
+{"epoch":1792270683.26,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792270683.48,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792270684.44,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":1}
+{"epoch":1792270721.27,"msg":"hotel data reset: 82428 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1792270721.73,"msg":"ready after 0 s; settling 30 s"}
+{"epoch":1792270751.96,"msg":"run started: llm:port=8001,mode=joint,ablate=cot on data/traces/runs/test_2.csv.gz, 4500 s"}
+{"registry_removed":2}
+{"epoch":1792271006.85,"msg":"k=4 t=255 decide 14.4 s, scaled {'teastore-webui': 2}"}
+{"epoch":1792271066.36,"msg":"k=5 t=315 decide 13.9 s, scaled {'teastore-webui': 3, 'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1792271129.5,"msg":"k=6 t=378 decide 17.0 s, scaled {'teastore-webui': 4, 'thumbnailer': 4}"}
+{"epoch":1792271193.91,"msg":"k=7 t=442 decide 21.4 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792271251.27,"msg":"k=8 t=500 decide 18.8 s, scaled {'teastore-webui': 5, 'thumbnailer': 6, 'hotel-reservation': 3}"}
+{"epoch":1792271311.5,"msg":"k=9 t=560 decide 19.0 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792271432.27,"msg":"k=11 t=681 decide 19.8 s, scaled {'teastore-webui': 5, 'thumbnailer': 4}"}
+{"epoch":1792271486.57,"msg":"k=12 t=735 decide 14.1 s, scaled {'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1792271546.81,"msg":"k=13 t=795 decide 14.3 s, scaled {'teastore-webui': 6, 'thumbnailer': 5, 'graph-bfs': 3, 'hotel-reservation': 3}"}
+{"epoch":1792271610.81,"msg":"k=14 t=859 decide 18.3 s, scaled {'teastore-webui': 7, 'thumbnailer': 6}"}
+{"epoch":1792271669.03,"msg":"k=15 t=917 decide 16.6 s, scaled {'teastore-webui': 8}"}
+{"epoch":1792271728.31,"msg":"k=16 t=977 decide 15.8 s, scaled {'teastore-webui': 7}"}
+{"epoch":1792271789.92,"msg":"k=17 t=1038 decide 17.4 s, scaled {'teastore-webui': 5, 'thumbnailer': 4}"}
+{"epoch":1792271853.84,"msg":"k=18 t=1102 decide 21.4 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792271909.61,"msg":"k=19 t=1158 decide 17.1 s, scaled {'teastore-webui': 6, 'thumbnailer': 5}"}
+{"epoch":1792271969.99,"msg":"k=20 t=1218 decide 17.5 s, scaled {'graph-bfs': 6}"}
+{"epoch":1792272030.27,"msg":"k=21 t=1279 decide 17.8 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792272089.57,"msg":"k=22 t=1338 decide 17.1 s, scaled {'thumbnailer': 6}"}
+{"epoch":1792272154.83,"msg":"k=23 t=1403 decide 22.4 s, scaled {'teastore-webui': 5, 'thumbnailer': 4}"}
+{"epoch":1792272268.74,"msg":"k=25 t=1517 decide 16.3 s, scaled {'teastore-webui': 6, 'graph-bfs': 4}"}
+{"epoch":1792272328.67,"msg":"k=26 t=1577 decide 16.2 s, scaled {'teastore-webui': 8, 'thumbnailer': 5, 'graph-bfs': 6}"}
+{"epoch":1792272392.15,"msg":"k=27 t=1640 decide 19.7 s, scaled {'teastore-webui': 6, 'thumbnailer': 4}"}
+{"epoch":1792272512.53,"msg":"k=29 t=1761 decide 20.1 s, scaled {'teastore-webui': 5}"}
+{"epoch":1792272574.98,"msg":"k=30 t=1823 decide 22.5 s, scaled {'thumbnailer': 3, 'graph-bfs': 4}"}
+{"epoch":1792272634.23,"msg":"k=31 t=1882 decide 21.8 s, scaled {'teastore-webui': 6, 'thumbnailer': 4}"}
+{"epoch":1792272693.45,"msg":"k=32 t=1942 decide 21.0 s, scaled {'teastore-webui': 8, 'thumbnailer': 3, 'graph-bfs': 6}"}
+{"epoch":1792272752.47,"msg":"k=33 t=2001 decide 20.0 s, scaled {'teastore-webui': 6, 'graph-bfs': 4}"}
+{"epoch":1792272808.8,"msg":"k=34 t=2057 decide 16.3 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792272936.27,"msg":"k=36 t=2185 decide 23.8 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792273058.47,"msg":"k=38 t=2307 decide 26.0 s, scaled {'teastore-webui': 7, 'thumbnailer': 3}"}
+{"epoch":1792273112.77,"msg":"k=39 t=2361 decide 20.3 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792273174.48,"msg":"k=40 t=2423 decide 22.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792273460.34,"msg":"k=45 t=2709 decide 7.8 s, scaled {'teastore-webui': 5, 'thumbnailer': 3}"}
+{"epoch":1792273546.32,"msg":"k=46 t=2795 decide 33.9 s, scaled {'teastore-webui': 7, 'thumbnailer': 5, 'hotel-reservation': 4}"}
+{"epoch":1792273594.79,"msg":"k=47 t=2843 decide 22.3 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792273651.42,"msg":"k=48 t=2900 decide 19.0 s, scaled {'teastore-webui': 8}"}
+{"epoch":1792273708.38,"msg":"k=49 t=2957 decide 15.9 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792273889.34,"msg":"k=52 t=3138 decide 16.8 s, scaled {'teastore-webui': 5}"}
+{"epoch":1792273951.04,"msg":"k=53 t=3199 decide 18.6 s, scaled {'thumbnailer': 5}"}
+{"epoch":1792274018.83,"msg":"k=54 t=3267 decide 26.4 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792274075.98,"msg":"k=55 t=3324 decide 23.5 s, scaled {'teastore-webui': 8, 'thumbnailer': 4}"}
+{"epoch":1792274188.7,"msg":"k=57 t=3437 decide 16.2 s, scaled {'teastore-webui': 5}"}
+{"epoch":1792274247.34,"msg":"k=58 t=3496 decide 14.9 s, scaled {'teastore-webui': 6}"}
+{"epoch":1792274371.34,"msg":"k=60 t=3620 decide 18.9 s, scaled {'teastore-webui': 7}"}
+{"epoch":1792274427.44,"msg":"k=61 t=3676 decide 15.0 s, scaled {'teastore-webui': 8}"}
+{"epoch":1792274615.01,"msg":"k=64 t=3863 decide 22.6 s, scaled {'teastore-webui': 7}"}
+{"epoch":1792274670.49,"msg":"k=65 t=3919 decide 18.0 s, scaled {'teastore-webui': 8}"}
+{"epoch":1792274732.72,"msg":"k=66 t=3981 decide 20.2 s, scaled {'teastore-webui': 7, 'thumbnailer': 5}"}
+{"epoch":1792274792.96,"msg":"k=67 t=4041 decide 20.4 s, scaled {'teastore-webui': 8, 'thumbnailer': 4}"}
+{"epoch":1792274853.2,"msg":"k=68 t=4101 decide 20.7 s, scaled {'teastore-webui': 7, 'thumbnailer': 5, 'hotel-reservation': 4}"}
+{"epoch":1792274913.31,"msg":"k=69 t=4162 decide 20.8 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792275209.88,"msg":"k=74 t=4458 decide 17.4 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792275209.88,"msg":"trace finished"}
+{"epoch":1792275252.63,"msg":"recorder stopped"}
+{"epoch":1792275252.85,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

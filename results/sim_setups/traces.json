@@ -1,0 +1,122 @@
+[
+ {
+  "setup": "all8",
+  "day": "dev_0",
+  "k_copies_per_app_peak": 8.0,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.05,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 75.97,
+   "imgrec": 23.99,
+   "compression": 8.0,
+   "hotel": 1713.52
+  }
+ },
+ {
+  "setup": "all8",
+  "day": "dev_1",
+  "k_copies_per_app_peak": 8.18,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.37,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 77.69,
+   "imgrec": 24.53,
+   "compression": 8.18,
+   "hotel": 1752.42
+  }
+ },
+ {
+  "setup": "all8",
+  "day": "dev_2",
+  "k_copies_per_app_peak": 9.43,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.97,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 89.6,
+   "imgrec": 28.3,
+   "compression": 9.43,
+   "hotel": 2021.11
+  }
+ },
+ {
+  "setup": "no_comp",
+  "day": "dev_0",
+  "k_copies_per_app_peak": 10.7,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 22.18,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 101.65,
+   "imgrec": 32.1,
+   "hotel": 2292.86
+  }
+ },
+ {
+  "setup": "no_comp",
+  "day": "dev_1",
+  "k_copies_per_app_peak": 10.32,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 21.93,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 98.09,
+   "imgrec": 30.97,
+   "hotel": 2212.49
+  }
+ },
+ {
+  "setup": "no_comp",
+  "day": "dev_2",
+  "k_copies_per_app_peak": 11.15,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 22.17,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 105.93,
+   "imgrec": 33.45,
+   "hotel": 2389.36
+  }
+ },
+ {
+  "setup": "four",
+  "day": "dev_0",
+  "k_copies_per_app_peak": 7.76,
+  "combined_peak_copies": 22.5,
+  "cpu_at_combined_peak": 25.01,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 73.69,
+   "imgrec": 23.27,
+   "hotel": 3490.61
+  }
+ },
+ {
+  "setup": "four",
+  "day": "dev_1",
+  "k_copies_per_app_peak": 7.51,
+  "combined_peak_copies": 22.5,
+  "cpu_at_combined_peak": 24.55,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 71.35,
+   "imgrec": 22.53,
+   "hotel": 3379.67
+  }
+ },
+ {
+  "setup": "four",
+  "day": "dev_2",
+  "k_copies_per_app_peak": 8.1,
+  "combined_peak_copies": 22.5,
+  "cpu_at_combined_peak": 25.32,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 76.99,
+   "imgrec": 24.31,
+   "hotel": 3646.84
+  }
+ }
+]

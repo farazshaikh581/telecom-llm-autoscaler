@@ -1,0 +1,26 @@
+{"epoch":1790982237.92,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1790982238.14,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1790982239.14,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 3}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"epoch":1790982279.12,"msg":"hotel data reset: 96077 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"registry_removed":1}
+{"epoch":1790982283.0,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1790982315.52,"msg":"run started: firm:ckpt=rl/checkpoints/firm_ft_dev0.pt,save=rl/checkpoints/firm_ft_dev1.pt on data/traces/runs/dev_1.csv.gz, 4500 s"}
+{"epoch":1790982373.72,"msg":"k=1 t=61 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1790982433.7,"msg":"k=2 t=121 decide 0.0 s, scaled {'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1790982553.72,"msg":"k=4 t=241 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1790982613.74,"msg":"k=5 t=301 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1790982853.73,"msg":"k=9 t=541 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1790982973.73,"msg":"k=11 t=661 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1790983033.69,"msg":"k=12 t=721 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1790983273.73,"msg":"k=16 t=961 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1790983333.79,"msg":"k=17 t=1021 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1790983993.75,"msg":"k=28 t=1681 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1790984173.73,"msg":"k=31 t=1861 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1790984533.71,"msg":"k=37 t=2221 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1790986273.73,"msg":"k=66 t=3961 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1790986393.73,"msg":"k=68 t=4081 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1790986753.67,"msg":"trace finished"}
+{"epoch":1790986817.01,"msg":"recorder stopped"}
+{"epoch":1790986817.24,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

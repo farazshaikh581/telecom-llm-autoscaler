@@ -1,0 +1,151 @@
+{
+ "name": "pilot2b_telecomgpt_dev1",
+ "controller": "llm:port=8001,mode=joint",
+ "controller_info": {
+  "kind": "llm",
+  "params": {
+   "port": "8001",
+   "mode": "joint"
+  },
+  "model": "ukkathva/TelecomGPT-R1-27B-FP8-Dynamic",
+  "system": "You are the autoscaler for a Kubernetes cluster that runs several applications at once.\nEvery 60 seconds you set the replica count of each scaled service.\nCluster: 4 worker nodes, 16 vCPU in total. Each replica requests 0.5 CPU and may use up to 1 CPU.\nReplicas per service: 1 to 12. The sum of all replicas should stay within 24 unless an SLO is at risk.\nGoal: keep every application's P95 latency below its SLO with as few replicas as possible, and avoid oscillation.\nServices of the hotel application share one end-to-end SLO. A new replica takes about 2 s to start; the imgrec service's first request on a new replica takes about 1.2 s longer (model load).\nReply only with the JSON object requested."
+ },
+ "trace": "data/traces/runs/dev_1.csv.gz",
+ "trace_meta": {
+  "run": "dev_1",
+  "wikipedia_day": "2025-08-10",
+  "huawei_day": "day_049",
+  "huawei_hour": 19,
+  "alibaba_day": 8,
+  "k_copies_per_app_peak": 8.18,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 19.37,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 77.69,
+   "imgrec": 24.53,
+   "compression": 8.18,
+   "hotel": 1752.42
+  },
+  "load_scale": 0.45,
+  "peak_rps_scaled": {
+   "teastore": 202.5,
+   "thumbnailer": 34.96,
+   "imgrec": 11.04,
+   "compression": 3.68,
+   "hotel": 788.59
+  }
+ },
+ "seed": 1,
+ "duration_s": 4500,
+ "scale": 1.0,
+ "arrivals": "poisson",
+ "start_replicas": {
+  "teastore-webui": 2,
+  "thumbnailer": 2,
+  "compression": 3,
+  "imgrec": 1,
+  "hotel-frontend": 1,
+  "hotel-search": 1,
+  "hotel-reservation": 2,
+  "hotel-rate": 1
+ },
+ "start_epoch": 1790866349.3886633,
+ "git_commit": "8f55fac",
+ "harness_uncommitted_changes": false,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "workers": 4,
+  "worker_vcpus": 4,
+  "copies_available": 24,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "cpu_request_m": 500,
+  "host_swap_limit_mib": 64,
+  "calibration_dir": "results/calibration/p2",
+  "base_run": "fp_pinned_20260930",
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "compression": {
+    "ns": "sebs",
+    "svc": "compression",
+    "port": 8080
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "svc": "imgrec",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "compression": {
+    "ns": "sebs",
+    "deploy": "compression",
+    "entry": "compression"
+   },
+   "imgrec": {
+    "ns": "sebs",
+    "deploy": "imgrec",
+    "entry": "imgrec"
+   },
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel"
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel"
+   }
+  }
+ }
+}

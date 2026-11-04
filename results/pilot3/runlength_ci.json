@@ -1,0 +1,30 @@
+{
+ "pilot3_hpa_dev0": {
+  "violation_rate": 0.2,
+  "ci95": [
+   0.1375,
+   0.24166666666666667
+  ]
+ },
+ "pilot3_telecomgpt_dev0": {
+  "violation_rate": 0.175,
+  "ci95": [
+   0.125,
+   0.20416666666666666
+  ]
+ },
+ "pilot3_hpa_dev1": {
+  "violation_rate": 0.06666666666666667,
+  "ci95": [
+   0.025,
+   0.1
+  ]
+ },
+ "pilot3_telecomgpt_dev1": {
+  "violation_rate": 0.1,
+  "ci95": [
+   0.016666666666666666,
+   0.18333333333333332
+  ]
+ }
+}

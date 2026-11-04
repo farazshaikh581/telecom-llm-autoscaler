@@ -1,0 +1,56 @@
+{"epoch":1792191822.03,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1792191822.25,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1792191823.25,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 3, 'graph-bfs': 3, 'hotel-reservation': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"epoch":1792191833.17,"msg":"hotel data reset: 75683 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"registry_removed":1}
+{"epoch":1792191837.1,"msg":"ready after 4 s; settling 30 s"}
+{"registry_removed":1}
+{"registry_removed":1}
+{"epoch":1792191869.48,"msg":"run started: firm:ckpt=rl/checkpoints/firm_ft.pt on data/traces/runs/test_0.csv.gz, 4500 s"}
+{"epoch":1792191927.84,"msg":"k=1 t=61 decide 0.0 s, scaled {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 2, 'hotel-reservation': 1}"}
+{"registry_removed":1}
+{"epoch":1792191987.82,"msg":"k=2 t=121 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792192047.82,"msg":"k=3 t=181 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792192107.82,"msg":"k=4 t=241 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792192167.86,"msg":"k=5 t=301 decide 0.0 s, scaled {'teastore-webui': 2, 'thumbnailer': 4, 'graph-bfs': 3}"}
+{"epoch":1792192287.82,"msg":"k=7 t=421 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792192347.84,"msg":"k=8 t=481 decide 0.0 s, scaled {'teastore-webui': 3, 'thumbnailer': 4}"}
+{"epoch":1792192407.83,"msg":"k=9 t=541 decide 0.0 s, scaled {'hotel-reservation': 2}"}
+{"epoch":1792192467.85,"msg":"k=10 t=601 decide 0.0 s, scaled {'hotel-reservation': 3}"}
+{"epoch":1792192527.83,"msg":"k=11 t=661 decide 0.0 s, scaled {'thumbnailer': 3, 'hotel-reservation': 2}"}
+{"registry_removed":1}
+{"epoch":1792192647.84,"msg":"k=13 t=781 decide 0.0 s, scaled {'teastore-webui': 2, 'thumbnailer': 2}"}
+{"epoch":1792192707.89,"msg":"k=14 t=841 decide 0.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 2}"}
+{"epoch":1792192767.82,"msg":"k=15 t=901 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792192887.84,"msg":"k=17 t=1021 decide 0.0 s, scaled {'thumbnailer': 1}"}
+{"epoch":1792193067.81,"msg":"k=20 t=1201 decide 0.0 s, scaled {'graph-bfs': 1}"}
+{"epoch":1792193787.83,"msg":"k=32 t=1921 decide 0.0 s, scaled {'graph-bfs': 2}"}
+{"epoch":1792193967.84,"msg":"k=35 t=2101 decide 0.0 s, scaled {'graph-bfs': 3}"}
+{"epoch":1792194147.8,"msg":"k=38 t=2281 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792194267.83,"msg":"k=40 t=2401 decide 0.0 s, scaled {'graph-bfs': 4}"}
+{"epoch":1792194327.86,"msg":"k=41 t=2461 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792194387.84,"msg":"k=42 t=2521 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792194447.84,"msg":"k=43 t=2581 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792194507.82,"msg":"k=44 t=2641 decide 0.0 s, scaled {'thumbnailer': 2, 'graph-bfs': 3}"}
+{"epoch":1792194567.87,"msg":"k=45 t=2701 decide 0.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 4}"}
+{"epoch":1792194627.85,"msg":"k=46 t=2761 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792194687.84,"msg":"k=47 t=2821 decide 0.0 s, scaled {'thumbnailer': 3, 'graph-bfs': 3}"}
+{"epoch":1792194807.83,"msg":"k=49 t=2941 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792194867.82,"msg":"k=50 t=3001 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792194987.88,"msg":"k=52 t=3121 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792195047.81,"msg":"k=53 t=3181 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792195107.83,"msg":"k=54 t=3241 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792195167.82,"msg":"k=55 t=3301 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792195227.86,"msg":"k=56 t=3361 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792195347.84,"msg":"k=58 t=3481 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792195407.83,"msg":"k=59 t=3541 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792195467.98,"msg":"k=60 t=3601 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792195767.85,"msg":"k=65 t=3901 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792196067.83,"msg":"k=70 t=4201 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792196127.82,"msg":"k=71 t=4261 decide 0.0 s, scaled {'thumbnailer': 4}"}
+{"epoch":1792196187.85,"msg":"k=72 t=4321 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792196247.84,"msg":"k=73 t=4381 decide 0.0 s, scaled {'thumbnailer': 2}"}
+{"epoch":1792196307.81,"msg":"k=74 t=4441 decide 0.0 s, scaled {'thumbnailer': 3}"}
+{"epoch":1792196307.81,"msg":"trace finished"}
+{"epoch":1792196367.98,"msg":"recorder stopped"}
+{"epoch":1792196368.2,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

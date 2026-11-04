@@ -1,0 +1,9 @@
+{"epoch":1790334398.49,"msg":"host swap used: 10 MiB"}
+{"epoch":1790334401.81,"msg":"hotel data reset: 16983 bookings from earlier runs removed, booking cache restarted"}
+{"epoch":1790334401.81,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 2, 'compression': 2, 'imgrec': 2, 'hotel-frontend': 1, 'hotel-search': 1, 'hotel-reservation': 3, 'hotel-rate': 1}"}
+{"epoch":1790334402.34,"msg":"ready after 0 s; settling 30 s"}
+{"epoch":1790334432.61,"msg":"run started: static:teastore-webui=3,thumbnailer=3,compression=3,imgrec=3,hotel-frontend=2,hotel-search=2,hotel-reservation=4,hotel-rate=2 on data/traces/runs/dev_0.csv.gz, 900 s"}
+{"registry_removed":2}
+{"epoch":1790334493.12,"msg":"k=1 t=61 decide 0.0 s, scaled {'teastore-webui': 3, 'thumbnailer': 3, 'compression': 3, 'imgrec': 3, 'hotel-frontend': 2, 'hotel-search': 2, 'hotel-reservation': 4, 'hotel-rate': 2}"}
+{"epoch":1790335273.08,"msg":"trace finished"}
+{"epoch":1790335333.29,"msg":"recorder stopped"}

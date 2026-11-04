@@ -1,0 +1,382 @@
+[
+ {
+  "day": 0,
+  "repeat": 1,
+  "runs": [
+   {
+    "name": "ns_tgpt_joint_t0_r1",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_ours_t0_r1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_keda_t0_r1",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_hpa70_t0_r1",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_qwen_joint_t0_r1",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_phpa_t0_r1",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_aware_t0_r1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_firm_t0_r1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   }
+  ]
+ },
+ {
+  "day": 0,
+  "repeat": 2,
+  "runs": [
+   {
+    "name": "ns_qwen_joint_t0_r2",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_ours_t0_r2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_hpa70_t0_r2",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_phpa_t0_r2",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_firm_t0_r2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_keda_t0_r2",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_aware_t0_r2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_tgpt_joint_t0_r2",
+    "controller": "llm:port=8001,mode=joint"
+   }
+  ]
+ },
+ {
+  "day": 1,
+  "repeat": 1,
+  "runs": [
+   {
+    "name": "ns_qwen_joint_t1_r1",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_ours_t1_r1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_phpa_t1_r1",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_aware_t1_r1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_keda_t1_r1",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_firm_t1_r1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_tgpt_joint_t1_r1",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_hpa70_t1_r1",
+    "controller": "hpa:target=70"
+   }
+  ]
+ },
+ {
+  "day": 1,
+  "repeat": 2,
+  "runs": [
+   {
+    "name": "ns_tgpt_joint_t1_r2",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_phpa_t1_r2",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_hpa70_t1_r2",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_aware_t1_r2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_qwen_joint_t1_r2",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_firm_t1_r2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_keda_t1_r2",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_ours_t1_r2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "repeat": 1,
+  "runs": [
+   {
+    "name": "ns_ours_t2_r1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_qwen_joint_t2_r1",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_firm_t2_r1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_aware_t2_r1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_keda_t2_r1",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_hpa70_t2_r1",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_phpa_t2_r1",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_tgpt_joint_t2_r1",
+    "controller": "llm:port=8001,mode=joint"
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "repeat": 2,
+  "runs": [
+   {
+    "name": "ns_tgpt_joint_t2_r2",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_aware_t2_r2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_keda_t2_r2",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_phpa_t2_r2",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_firm_t2_r2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_hpa70_t2_r2",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_qwen_joint_t2_r2",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_ours_t2_r2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "repeat": 1,
+  "runs": [
+   {
+    "name": "ns_firm_t3_r1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_hpa70_t3_r1",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_ours_t3_r1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_tgpt_joint_t3_r1",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_aware_t3_r1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_qwen_joint_t3_r1",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_keda_t3_r1",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_phpa_t3_r1",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "repeat": 2,
+  "runs": [
+   {
+    "name": "ns_aware_t3_r2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_ours_t3_r2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_firm_t3_r2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_qwen_joint_t3_r2",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_hpa70_t3_r2",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_tgpt_joint_t3_r2",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_phpa_t3_r2",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_keda_t3_r2",
+    "controller": "keda:util=0.8"
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "repeat": 1,
+  "runs": [
+   {
+    "name": "ns_ours_t4_r1",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_phpa_t4_r1",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_qwen_joint_t4_r1",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_firm_t4_r1",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_hpa70_t4_r1",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_tgpt_joint_t4_r1",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_keda_t4_r1",
+    "controller": "keda:util=0.8"
+   },
+   {
+    "name": "ns_aware_t4_r1",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "repeat": 2,
+  "runs": [
+   {
+    "name": "ns_firm_t4_r2",
+    "controller": "firm:ckpt=rl/checkpoints/firm_ft.pt"
+   },
+   {
+    "name": "ns_phpa_t4_r2",
+    "controller": "phpa:target=70,lookahead=60,history=12"
+   },
+   {
+    "name": "ns_qwen_joint_t4_r2",
+    "controller": "llm:port=8002,mode=joint"
+   },
+   {
+    "name": "ns_aware_t4_r2",
+    "controller": "aware:ckpt=rl/checkpoints/aware_ft.pt"
+   },
+   {
+    "name": "ns_ours_t4_r2",
+    "controller": "ours:ckpt=rl/checkpoints/ours_ddqn_s2_scratch_dev2"
+   },
+   {
+    "name": "ns_tgpt_joint_t4_r2",
+    "controller": "llm:port=8001,mode=joint"
+   },
+   {
+    "name": "ns_hpa70_t4_r2",
+    "controller": "hpa:target=70"
+   },
+   {
+    "name": "ns_keda_t4_r2",
+    "controller": "keda:util=0.8"
+   }
+  ]
+ }
+]

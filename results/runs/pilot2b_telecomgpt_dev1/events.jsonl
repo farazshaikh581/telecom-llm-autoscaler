@@ -1,0 +1,30 @@
+{"epoch":1790866308.8,"msg":"host swap used: 0 MiB, swap in+out over 10 s: 0"}
+{"epoch":1790866309.02,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1790866309.63,"msg":"reset to start sizes {'teastore-webui': 2, 'thumbnailer': 2, 'compression': 3, 'imgrec': 1, 'hotel-frontend': 1, 'hotel-search': 1, 'hotel-reservation': 2, 'hotel-rate': 1}"}
+{"registry_removed":1}
+{"epoch":1790866315.48,"msg":"hotel data reset: 5311 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1790866319.39,"msg":"ready after 4 s; settling 30 s"}
+{"epoch":1790866349.72,"msg":"run started: llm:port=8001,mode=joint on data/traces/runs/dev_1.csv.gz, 4500 s"}
+{"registry_removed":1}
+{"epoch":1790866654.12,"msg":"k=5 t=305 decide 4.0 s, scaled {'teastore-webui': 3, 'hotel-reservation': 3}"}
+{"epoch":1790866714.2,"msg":"k=6 t=365 decide 4.1 s, scaled {'teastore-webui': 4, 'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"epoch":1790867014.21,"msg":"k=11 t=665 decide 4.1 s, scaled {'teastore-webui': 6, 'thumbnailer': 4, 'compression': 4, 'imgrec': 2}"}
+{"epoch":1790867074.2,"msg":"k=12 t=725 decide 4.1 s, scaled {'thumbnailer': 2, 'imgrec': 1}"}
+{"epoch":1790867134.18,"msg":"k=13 t=785 decide 4.1 s, scaled {'compression': 3}"}
+{"epoch":1790867374.2,"msg":"k=17 t=1025 decide 4.1 s, scaled {'teastore-webui': 7, 'thumbnailer': 3, 'compression': 4, 'imgrec': 2}"}
+{"epoch":1790867434.22,"msg":"k=18 t=1085 decide 4.1 s, scaled {'thumbnailer': 2}"}
+{"epoch":1790867494.31,"msg":"k=19 t=1145 decide 4.1 s, scaled {'teastore-webui': 6, 'thumbnailer': 3}"}
+{"epoch":1790867613.37,"msg":"k=21 t=1264 decide 3.2 s, scaled {'imgrec': 3}"}
+{"epoch":1790867674.18,"msg":"k=22 t=1325 decide 4.1 s, scaled {'imgrec': 2}"}
+{"epoch":1790867734.25,"msg":"k=23 t=1385 decide 4.1 s, scaled {'thumbnailer': 4, 'imgrec': 3}"}
+{"epoch":1790867794.25,"msg":"k=24 t=1445 decide 4.1 s, scaled {'imgrec': 2}"}
+{"epoch":1790867974.2,"msg":"k=27 t=1625 decide 4.1 s, scaled {'thumbnailer': 3}"}
+{"epoch":1790868094.18,"msg":"k=29 t=1745 decide 4.1 s, scaled {'compression': 5}"}
+{"epoch":1790868154.22,"msg":"k=30 t=1805 decide 4.1 s, scaled {'compression': 4}"}
+{"epoch":1790868634.17,"msg":"k=38 t=2285 decide 4.1 s, scaled {'thumbnailer': 4}"}
+{"epoch":1790868694.22,"msg":"k=39 t=2345 decide 4.1 s, scaled {'thumbnailer': 3}"}
+{"epoch":1790869654.23,"msg":"k=55 t=3305 decide 4.1 s, scaled {'compression': 5}"}
+{"epoch":1790869714.19,"msg":"k=56 t=3365 decide 4.1 s, scaled {'compression': 4}"}
+{"epoch":1790870794.1,"msg":"trace finished"}
+{"epoch":1790870850.43,"msg":"recorder stopped"}
+{"epoch":1790870850.65,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

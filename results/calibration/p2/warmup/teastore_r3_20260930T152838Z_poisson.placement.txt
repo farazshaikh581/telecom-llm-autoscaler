@@ -1,0 +1,9 @@
+teastore-auth-5cdd48c67d-lkgd2          w3   Running
+teastore-db-7fdcf8ddfb-n5rf5            w1   Running
+teastore-image-85fc5f4bbc-55gdb         w1   Running
+teastore-persistence-9c7c795b5-jhjzh    w0   Running
+teastore-recommender-56bd4b5dd9-ptwpk   w3   Running
+teastore-registry-79d7cdc698-7x9qx      w3   Running
+teastore-webui-59df4775f8-5vthq         w2   Running
+teastore-webui-59df4775f8-5xfpz         w1   Running
+teastore-webui-59df4775f8-xpf8n         w3   Running

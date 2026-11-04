@@ -1,0 +1,11 @@
+/runs/
+.venv/
+__pycache__/
+harness/loadgen/loadgen
+rl/checkpoints/
+results/failed/
+
+# Raw per-request logs (about 45 MB per run) stay on the testbed, not in git (2026-10-08);
+# the runs committed before keep theirs.
+results/runs/*/requests.csv.gz
+results/runs/failed_*/

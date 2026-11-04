@@ -1,0 +1,146 @@
+{
+ "name": "pa_qwen_joint_t1",
+ "controller": "llm:port=8002,mode=joint,prompt=alt",
+ "controller_info": {
+  "kind": "llm",
+  "params": {
+   "port": "8002",
+   "mode": "joint",
+   "prompt": "alt"
+  },
+  "model": "Qwen/Qwen3.5-27B-FP8",
+  "system": "Role: horizontal autoscaler for a shared Kubernetes cluster that hosts several applications.\nObjectives, in order: (1) each application's 95th-percentile latency stays under its SLO; (2) with the fewest replicas that achieve it; (3) without moving replica counts up and down repeatedly.\nOnce a minute, choose how many replicas each scaled service runs, from 1 to 12.\nCapacity: 16 vCPU over 4 worker nodes. A replica reserves 0.5 CPU and can use at most 1 CPU.\nBudget: the scaled services together should use at most 18 replicas, and more only to protect an SLO; 6 replicas of the applications' other services always run besides them.\nStart-up: a new teastore-webui replica serves after about 25 s and stays slow for about a minute while its Java code warms up; other services' replicas are ready in about 2 s.\nThe hotel application scales only hotel-reservation; the hotel SLO applies to the application's end-to-end latency.\nAnswer with the requested JSON object and nothing else."
+ },
+ "trace": "data/traces/runs/test_1.csv.gz",
+ "trace_meta": {
+  "run": "test_1",
+  "wikipedia_day": "2025-07-29",
+  "huawei_day": "day_127",
+  "huawei_window": "previous day's last 6 h + the day, 24x",
+  "alibaba_day": 6,
+  "k_copies_per_app_peak": 10.33,
+  "combined_peak_copies": 30.0,
+  "cpu_at_combined_peak": 23.49,
+  "peak_rps": {
+   "teastore": 450.0,
+   "thumbnailer": 620.07,
+   "graph-bfs": 227.36,
+   "hotel": 2214.5
+  },
+  "load_scale": 0.28,
+  "peak_rps_scaled": {
+   "teastore": 126.0,
+   "thumbnailer": 173.62,
+   "graph-bfs": 63.66,
+   "hotel": 620.06
+  }
+ },
+ "seed": 1,
+ "duration_s": 4500,
+ "scale": 1.0,
+ "arrivals": "poisson",
+ "start_replicas": {
+  "teastore-webui": 1,
+  "thumbnailer": 2,
+  "graph-bfs": 2,
+  "hotel-reservation": 2
+ },
+ "fixed_replicas": {
+  "hotel-frontend": 2,
+  "hotel-search": 2,
+  "hotel-rate": 2
+ },
+ "start_epoch": 1792484082.2560315,
+ "git_commit": "7267a39",
+ "harness_uncommitted_changes": true,
+ "config": {
+  "interval_s": 60,
+  "warmup_s": 900,
+  "scored_s": 3600,
+  "workers": 4,
+  "worker_vcpus": 4,
+  "copies_available": 24,
+  "min_replicas": 1,
+  "max_replicas": 12,
+  "cpu_request_m": 500,
+  "host_swap_limit_mib": 64,
+  "calibration_dir": "results/calibration/p2",
+  "base_run": "fp_newdesign_20261001",
+  "loadgen": {
+   "listen": "127.0.0.1:9901",
+   "max_inflight": 3000,
+   "seed": 1,
+   "ramp_s": 300
+  },
+  "recorder": {
+   "fast_s": 5,
+   "metrics_s": 15,
+   "gpu_ms": 1000,
+   "host_power_s": 5
+  },
+  "entries": {
+   "teastore": {
+    "ns": "teastore",
+    "svc": "teastore-webui",
+    "port": 8080
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "svc": "thumbnailer",
+    "port": 8080
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "svc": "graph-bfs",
+    "port": 8080
+   },
+   "hotel": {
+    "ns": "hotel",
+    "svc": "frontend",
+    "port": 5000
+   }
+  },
+  "services": {
+   "teastore-webui": {
+    "ns": "teastore",
+    "deploy": "teastore-webui",
+    "entry": "teastore"
+   },
+   "thumbnailer": {
+    "ns": "sebs",
+    "deploy": "thumbnailer",
+    "entry": "thumbnailer"
+   },
+   "graph-bfs": {
+    "ns": "sebs",
+    "deploy": "graph-bfs",
+    "entry": "graph-bfs"
+   },
+   "hotel-reservation": {
+    "ns": "hotel",
+    "deploy": "reservation",
+    "entry": "hotel"
+   }
+  },
+  "fixed": {
+   "hotel-frontend": {
+    "ns": "hotel",
+    "deploy": "frontend",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-search": {
+    "ns": "hotel",
+    "deploy": "search",
+    "entry": "hotel",
+    "copies": 2
+   },
+   "hotel-rate": {
+    "ns": "hotel",
+    "deploy": "rate",
+    "entry": "hotel",
+    "copies": 2
+   }
+  }
+ }
+}

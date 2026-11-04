@@ -1,0 +1,1869 @@
+{
+ "target_combined_peak_copies": 30.0,
+ "copies_available": 24,
+ "runs": [
+  {
+   "run": "train_1",
+   "wikipedia_day": "2025-07-02",
+   "huawei_day": "day_002",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.51,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.26,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 630.37,
+    "graph-bfs": 231.13,
+    "hotel": 2251.27
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 176.5,
+    "graph-bfs": 64.72,
+    "hotel": 630.36
+   }
+  },
+  {
+   "run": "train_2",
+   "wikipedia_day": "2025-07-03",
+   "huawei_day": "day_003",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.33,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.27,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 619.68,
+    "graph-bfs": 227.22,
+    "hotel": 2213.1
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 173.51,
+    "graph-bfs": 63.62,
+    "hotel": 619.67
+   }
+  },
+  {
+   "run": "train_3",
+   "wikipedia_day": "2025-07-04",
+   "huawei_day": "day_004",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.73,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 644.08,
+    "graph-bfs": 236.16,
+    "hotel": 2300.24
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 180.34,
+    "graph-bfs": 66.13,
+    "hotel": 644.07
+   }
+  },
+  {
+   "run": "train_4",
+   "wikipedia_day": "2025-07-05",
+   "huawei_day": "day_005",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.49,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.31,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 629.15,
+    "graph-bfs": 230.69,
+    "hotel": 2246.92
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 176.16,
+    "graph-bfs": 64.59,
+    "hotel": 629.14
+   }
+  },
+  {
+   "run": "train_5",
+   "wikipedia_day": "2025-07-06",
+   "huawei_day": "day_006",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.49,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.28,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 629.58,
+    "graph-bfs": 230.84,
+    "hotel": 2248.44
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 176.28,
+    "graph-bfs": 64.64,
+    "hotel": 629.56
+   }
+  },
+  {
+   "run": "train_6",
+   "wikipedia_day": "2025-07-07",
+   "huawei_day": "day_007",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.86,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.48,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 651.36,
+    "graph-bfs": 238.83,
+    "hotel": 2326.26
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.38,
+    "graph-bfs": 66.87,
+    "hotel": 651.35
+   }
+  },
+  {
+   "run": "train_7",
+   "wikipedia_day": "2025-07-08",
+   "huawei_day": "day_008",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.88,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.39,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 652.92,
+    "graph-bfs": 239.41,
+    "hotel": 2331.83
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.82,
+    "graph-bfs": 67.03,
+    "hotel": 652.91
+   }
+  },
+  {
+   "run": "train_8",
+   "wikipedia_day": "2025-07-09",
+   "huawei_day": "day_009",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.88,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.42,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 652.81,
+    "graph-bfs": 239.36,
+    "hotel": 2331.42
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.79,
+    "graph-bfs": 67.02,
+    "hotel": 652.8
+   }
+  },
+  {
+   "run": "train_9",
+   "wikipedia_day": "2025-07-10",
+   "huawei_day": "day_010",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.69,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 641.49,
+    "graph-bfs": 235.21,
+    "hotel": 2290.99
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 179.62,
+    "graph-bfs": 65.86,
+    "hotel": 641.48
+   }
+  },
+  {
+   "run": "train_10",
+   "wikipedia_day": "2025-07-11",
+   "huawei_day": "day_011",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.64,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 638.49,
+    "graph-bfs": 234.11,
+    "hotel": 2280.28
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 178.78,
+    "graph-bfs": 65.55,
+    "hotel": 638.48
+   }
+  },
+  {
+   "run": "train_11",
+   "wikipedia_day": "2025-07-12",
+   "huawei_day": "day_012",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.72,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.38,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 643.28,
+    "graph-bfs": 235.87,
+    "hotel": 2297.38
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 180.12,
+    "graph-bfs": 66.04,
+    "hotel": 643.27
+   }
+  },
+  {
+   "run": "train_12",
+   "wikipedia_day": "2025-07-13",
+   "huawei_day": "day_013",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.82,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.28,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 649.41,
+    "graph-bfs": 238.12,
+    "hotel": 2319.27
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 181.83,
+    "graph-bfs": 66.67,
+    "hotel": 649.4
+   }
+  },
+  {
+   "run": "train_13",
+   "wikipedia_day": "2025-07-15",
+   "huawei_day": "day_014",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.92,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.4,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 655.41,
+    "graph-bfs": 240.32,
+    "hotel": 2340.7
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 183.51,
+    "graph-bfs": 67.29,
+    "hotel": 655.4
+   }
+  },
+  {
+   "run": "train_14",
+   "wikipedia_day": "2025-07-17",
+   "huawei_day": "day_015",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.76,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.45,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 645.44,
+    "graph-bfs": 236.66,
+    "hotel": 2305.12
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 180.72,
+    "graph-bfs": 66.27,
+    "hotel": 645.43
+   }
+  },
+  {
+   "run": "train_15",
+   "wikipedia_day": "2025-07-18",
+   "huawei_day": "day_016",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.58,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.36,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 634.9,
+    "graph-bfs": 232.8,
+    "hotel": 2267.46
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 177.77,
+    "graph-bfs": 65.18,
+    "hotel": 634.89
+   }
+  },
+  {
+   "run": "train_16",
+   "wikipedia_day": "2025-07-19",
+   "huawei_day": "day_029",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.07,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.52,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 664.06,
+    "graph-bfs": 243.49,
+    "hotel": 2371.59
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 185.94,
+    "graph-bfs": 68.18,
+    "hotel": 664.05
+   }
+  },
+  {
+   "run": "train_17",
+   "wikipedia_day": "2025-07-20",
+   "huawei_day": "day_030",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.92,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.45,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 655.26,
+    "graph-bfs": 240.26,
+    "hotel": 2340.18
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 183.47,
+    "graph-bfs": 67.27,
+    "hotel": 655.25
+   }
+  },
+  {
+   "run": "train_18",
+   "wikipedia_day": "2025-07-21",
+   "huawei_day": "day_031",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.89,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.37,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 653.14,
+    "graph-bfs": 239.49,
+    "hotel": 2332.61
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.88,
+    "graph-bfs": 67.06,
+    "hotel": 653.13
+   }
+  },
+  {
+   "run": "train_19",
+   "wikipedia_day": "2025-07-22",
+   "huawei_day": "day_032",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.07,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.3,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 664.26,
+    "graph-bfs": 243.56,
+    "hotel": 2372.3
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 185.99,
+    "graph-bfs": 68.2,
+    "hotel": 664.24
+   }
+  },
+  {
+   "run": "train_20",
+   "wikipedia_day": "2025-07-23",
+   "huawei_day": "day_033",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.01,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.46,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 660.58,
+    "graph-bfs": 242.21,
+    "hotel": 2359.19
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 184.96,
+    "graph-bfs": 67.82,
+    "hotel": 660.57
+   }
+  },
+  {
+   "run": "train_21",
+   "wikipedia_day": "2025-07-24",
+   "huawei_day": "day_034",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.1,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 665.76,
+    "graph-bfs": 244.11,
+    "hotel": 2377.68
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 186.41,
+    "graph-bfs": 68.35,
+    "hotel": 665.75
+   }
+  },
+  {
+   "run": "train_22",
+   "wikipedia_day": "2025-07-25",
+   "huawei_day": "day_035",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.1,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.52,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 666.08,
+    "graph-bfs": 244.23,
+    "hotel": 2378.83
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 186.5,
+    "graph-bfs": 68.38,
+    "hotel": 666.07
+   }
+  },
+  {
+   "run": "train_23",
+   "wikipedia_day": "2025-07-26",
+   "huawei_day": "day_036",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.82,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.41,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 649.14,
+    "graph-bfs": 238.02,
+    "hotel": 2318.31
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 181.76,
+    "graph-bfs": 66.64,
+    "hotel": 649.13
+   }
+  },
+  {
+   "run": "train_24",
+   "wikipedia_day": "2025-07-27",
+   "huawei_day": "day_037",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.92,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 655.14,
+    "graph-bfs": 240.22,
+    "hotel": 2339.76
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 183.44,
+    "graph-bfs": 67.26,
+    "hotel": 655.13
+   }
+  },
+  {
+   "run": "train_25",
+   "wikipedia_day": "2025-07-28",
+   "huawei_day": "day_038",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.89,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.39,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 653.2,
+    "graph-bfs": 239.51,
+    "hotel": 2332.82
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.9,
+    "graph-bfs": 67.06,
+    "hotel": 653.19
+   }
+  },
+  {
+   "run": "train_26",
+   "wikipedia_day": "2025-07-30",
+   "huawei_day": "day_040",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.98,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.46,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 658.78,
+    "graph-bfs": 241.55,
+    "hotel": 2352.76
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 184.46,
+    "graph-bfs": 67.64,
+    "hotel": 658.77
+   }
+  },
+  {
+   "run": "train_27",
+   "wikipedia_day": "2025-07-31",
+   "huawei_day": "day_041",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.71,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.34,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 642.64,
+    "graph-bfs": 235.64,
+    "hotel": 2295.11
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 179.94,
+    "graph-bfs": 65.98,
+    "hotel": 642.63
+   }
+  },
+  {
+   "run": "train_28",
+   "wikipedia_day": "2025-08-01",
+   "huawei_day": "day_042",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.97,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.48,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 658.17,
+    "graph-bfs": 241.33,
+    "hotel": 2350.58
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 184.29,
+    "graph-bfs": 67.57,
+    "hotel": 658.16
+   }
+  },
+  {
+   "run": "train_29",
+   "wikipedia_day": "2025-08-02",
+   "huawei_day": "day_044",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.77,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.38,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 646.19,
+    "graph-bfs": 236.94,
+    "hotel": 2307.77
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 180.93,
+    "graph-bfs": 66.34,
+    "hotel": 646.18
+   }
+  },
+  {
+   "run": "train_30",
+   "wikipedia_day": "2025-08-03",
+   "huawei_day": "day_045",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.58,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.38,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 634.74,
+    "graph-bfs": 232.74,
+    "hotel": 2266.89
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 177.73,
+    "graph-bfs": 65.17,
+    "hotel": 634.73
+   }
+  },
+  {
+   "run": "train_31",
+   "wikipedia_day": "2025-08-04",
+   "huawei_day": "day_046",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.71,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.31,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 642.36,
+    "graph-bfs": 235.53,
+    "hotel": 2294.09
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 179.86,
+    "graph-bfs": 65.95,
+    "hotel": 642.35
+   }
+  },
+  {
+   "run": "train_32",
+   "wikipedia_day": "2025-08-05",
+   "huawei_day": "day_047",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.0,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.41,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 660.24,
+    "graph-bfs": 242.09,
+    "hotel": 2357.96
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 184.87,
+    "graph-bfs": 67.78,
+    "hotel": 660.23
+   }
+  },
+  {
+   "run": "train_33",
+   "wikipedia_day": "2025-08-06",
+   "huawei_day": "day_048",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.57,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.29,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 634.11,
+    "graph-bfs": 232.51,
+    "hotel": 2264.63
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 177.55,
+    "graph-bfs": 65.1,
+    "hotel": 634.1
+   }
+  },
+  {
+   "run": "train_34",
+   "wikipedia_day": "2025-08-07",
+   "huawei_day": "day_049",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.8,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.21,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 647.88,
+    "graph-bfs": 237.55,
+    "hotel": 2313.8
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 181.41,
+    "graph-bfs": 66.52,
+    "hotel": 647.86
+   }
+  },
+  {
+   "run": "train_35",
+   "wikipedia_day": "2025-08-08",
+   "huawei_day": "day_050",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.83,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.38,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 650.09,
+    "graph-bfs": 238.37,
+    "hotel": 2321.71
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.02,
+    "graph-bfs": 66.74,
+    "hotel": 650.08
+   }
+  },
+  {
+   "run": "train_36",
+   "wikipedia_day": "2025-08-09",
+   "huawei_day": "day_051",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.7,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.39,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 641.83,
+    "graph-bfs": 235.34,
+    "hotel": 2292.22
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 179.71,
+    "graph-bfs": 65.89,
+    "hotel": 641.82
+   }
+  },
+  {
+   "run": "train_37",
+   "wikipedia_day": "2025-08-11",
+   "huawei_day": "day_052",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.54,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.29,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 632.16,
+    "graph-bfs": 231.79,
+    "hotel": 2257.68
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 177.01,
+    "graph-bfs": 64.9,
+    "hotel": 632.15
+   }
+  },
+  {
+   "run": "train_38",
+   "wikipedia_day": "2025-08-12",
+   "huawei_day": "day_053",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.44,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.25,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 626.16,
+    "graph-bfs": 229.59,
+    "hotel": 2236.24
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 175.32,
+    "graph-bfs": 64.29,
+    "hotel": 626.15
+   }
+  },
+  {
+   "run": "train_39",
+   "wikipedia_day": "2025-08-14",
+   "huawei_day": "day_054",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.4,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.25,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 624.04,
+    "graph-bfs": 228.82,
+    "hotel": 2228.68
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 174.73,
+    "graph-bfs": 64.07,
+    "hotel": 624.03
+   }
+  },
+  {
+   "run": "train_40",
+   "wikipedia_day": "2025-08-15",
+   "huawei_day": "day_055",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.31,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.24,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 618.39,
+    "graph-bfs": 226.74,
+    "hotel": 2208.48
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 173.15,
+    "graph-bfs": 63.49,
+    "hotel": 618.38
+   }
+  },
+  {
+   "run": "train_41",
+   "wikipedia_day": "2025-08-16",
+   "huawei_day": "day_056",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.13,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.17,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 607.8,
+    "graph-bfs": 222.86,
+    "hotel": 2170.68
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 170.18,
+    "graph-bfs": 62.4,
+    "hotel": 607.79
+   }
+  },
+  {
+   "run": "train_42",
+   "wikipedia_day": "2025-08-17",
+   "huawei_day": "day_057",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 9.94,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.09,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 596.67,
+    "graph-bfs": 218.78,
+    "hotel": 2130.93
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 167.07,
+    "graph-bfs": 61.26,
+    "hotel": 596.66
+   }
+  },
+  {
+   "run": "train_43",
+   "wikipedia_day": "2025-08-18",
+   "huawei_day": "day_058",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.07,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.09,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 604.17,
+    "graph-bfs": 221.53,
+    "hotel": 2157.7
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 169.17,
+    "graph-bfs": 62.03,
+    "hotel": 604.16
+   }
+  },
+  {
+   "run": "train_44",
+   "wikipedia_day": "2025-08-19",
+   "huawei_day": "day_059",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.3,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.19,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 617.79,
+    "graph-bfs": 226.52,
+    "hotel": 2206.37
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 172.98,
+    "graph-bfs": 63.43,
+    "hotel": 617.78
+   }
+  },
+  {
+   "run": "train_45",
+   "wikipedia_day": "2025-08-20",
+   "huawei_day": "day_060",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.29,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.21,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 617.43,
+    "graph-bfs": 226.39,
+    "hotel": 2205.07
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 172.88,
+    "graph-bfs": 63.39,
+    "hotel": 617.42
+   }
+  },
+  {
+   "run": "train_46",
+   "wikipedia_day": "2025-08-21",
+   "huawei_day": "day_118",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.24,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.17,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 614.63,
+    "graph-bfs": 225.36,
+    "hotel": 2195.06
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 172.1,
+    "graph-bfs": 63.1,
+    "hotel": 614.62
+   }
+  },
+  {
+   "run": "train_47",
+   "wikipedia_day": "2025-08-22",
+   "huawei_day": "day_119",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.4,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.12,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 624.04,
+    "graph-bfs": 228.82,
+    "hotel": 2228.69
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 174.73,
+    "graph-bfs": 64.07,
+    "hotel": 624.03
+   }
+  },
+  {
+   "run": "train_48",
+   "wikipedia_day": "2025-08-23",
+   "huawei_day": "day_120",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.11,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.02,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 606.81,
+    "graph-bfs": 222.5,
+    "hotel": 2167.15
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 169.91,
+    "graph-bfs": 62.3,
+    "hotel": 606.8
+   }
+  },
+  {
+   "run": "train_49",
+   "wikipedia_day": "2025-08-24",
+   "huawei_day": "day_121",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.38,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.25,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 622.65,
+    "graph-bfs": 228.3,
+    "hotel": 2223.7
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 174.34,
+    "graph-bfs": 63.93,
+    "hotel": 622.64
+   }
+  },
+  {
+   "run": "train_50",
+   "wikipedia_day": "2025-08-25",
+   "huawei_day": "day_122",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.18,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.18,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 610.53,
+    "graph-bfs": 223.86,
+    "hotel": 2180.42
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 170.95,
+    "graph-bfs": 62.68,
+    "hotel": 610.52
+   }
+  },
+  {
+   "run": "train_51",
+   "wikipedia_day": "2025-08-26",
+   "huawei_day": "day_123",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 9.84,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 22.86,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 590.19,
+    "graph-bfs": 216.4,
+    "hotel": 2107.77
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 165.25,
+    "graph-bfs": 60.59,
+    "hotel": 590.18
+   }
+  },
+  {
+   "run": "train_52",
+   "wikipedia_day": "2025-08-27",
+   "huawei_day": "day_124",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 9.82,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.01,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 589.0,
+    "graph-bfs": 215.97,
+    "hotel": 2103.53
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 164.92,
+    "graph-bfs": 60.47,
+    "hotel": 588.99
+   }
+  },
+  {
+   "run": "train_53",
+   "wikipedia_day": "2025-08-28",
+   "huawei_day": "day_125",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 9.52,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 22.91,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 571.49,
+    "graph-bfs": 209.55,
+    "hotel": 2040.99
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 160.02,
+    "graph-bfs": 58.67,
+    "hotel": 571.48
+   }
+  },
+  {
+   "run": "train_54",
+   "wikipedia_day": "2025-08-29",
+   "huawei_day": "day_126",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 9.58,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.01,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 574.68,
+    "graph-bfs": 210.72,
+    "hotel": 2052.38
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 160.91,
+    "graph-bfs": 59.0,
+    "hotel": 574.67
+   }
+  },
+  {
+   "run": "train_55",
+   "wikipedia_day": "2025-08-30",
+   "huawei_day": "day_128",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 10.23,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.17,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 613.9,
+    "graph-bfs": 225.1,
+    "hotel": 2192.46
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 171.89,
+    "graph-bfs": 63.03,
+    "hotel": 613.89
+   }
+  },
+  {
+   "run": "train_56",
+   "wikipedia_day": "2025-08-31",
+   "huawei_day": "day_132",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.16,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.48,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 669.73,
+    "graph-bfs": 245.57,
+    "hotel": 2391.86
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 187.52,
+    "graph-bfs": 68.76,
+    "hotel": 669.72
+   }
+  },
+  {
+   "run": "train_57",
+   "wikipedia_day": "2025-09-01",
+   "huawei_day": "day_133",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.24,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.46,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 674.58,
+    "graph-bfs": 247.35,
+    "hotel": 2409.18
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 188.88,
+    "graph-bfs": 69.26,
+    "hotel": 674.57
+   }
+  },
+  {
+   "run": "train_58",
+   "wikipedia_day": "2025-09-02",
+   "huawei_day": "day_134",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.29,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.46,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 677.18,
+    "graph-bfs": 248.3,
+    "hotel": 2418.46
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 189.61,
+    "graph-bfs": 69.52,
+    "hotel": 677.17
+   }
+  },
+  {
+   "run": "train_59",
+   "wikipedia_day": "2025-09-03",
+   "huawei_day": "day_135",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.61,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.61,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 696.34,
+    "graph-bfs": 255.32,
+    "hotel": 2486.89
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 194.98,
+    "graph-bfs": 71.49,
+    "hotel": 696.33
+   }
+  },
+  {
+   "run": "train_60",
+   "wikipedia_day": "2025-09-06",
+   "huawei_day": "day_136",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.25,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.42,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 674.95,
+    "graph-bfs": 247.48,
+    "hotel": 2410.48
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 188.98,
+    "graph-bfs": 69.29,
+    "hotel": 674.93
+   }
+  },
+  {
+   "run": "train_61",
+   "wikipedia_day": "2025-09-07",
+   "huawei_day": "day_137",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.5,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.62,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 690.18,
+    "graph-bfs": 253.06,
+    "hotel": 2464.87
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 193.25,
+    "graph-bfs": 70.86,
+    "hotel": 690.16
+   }
+  },
+  {
+   "run": "train_62",
+   "wikipedia_day": "2025-09-08",
+   "huawei_day": "day_138",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 12.08,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.77,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 724.67,
+    "graph-bfs": 265.71,
+    "hotel": 2588.06
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 202.91,
+    "graph-bfs": 74.4,
+    "hotel": 724.66
+   }
+  },
+  {
+   "run": "train_63",
+   "wikipedia_day": "2025-09-09",
+   "huawei_day": "day_148",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.66,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.58,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 699.48,
+    "graph-bfs": 256.48,
+    "hotel": 2498.1
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 195.85,
+    "graph-bfs": 71.81,
+    "hotel": 699.47
+   }
+  },
+  {
+   "run": "train_64",
+   "wikipedia_day": "2025-09-11",
+   "huawei_day": "day_149",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.57,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.42,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 694.17,
+    "graph-bfs": 254.53,
+    "hotel": 2479.15
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 194.37,
+    "graph-bfs": 71.27,
+    "hotel": 694.16
+   }
+  },
+  {
+   "run": "train_65",
+   "wikipedia_day": "2025-09-12",
+   "huawei_day": "day_150",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.48,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.49,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 688.6,
+    "graph-bfs": 252.49,
+    "hotel": 2459.23
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 192.81,
+    "graph-bfs": 70.7,
+    "hotel": 688.58
+   }
+  },
+  {
+   "run": "train_66",
+   "wikipedia_day": "2025-09-13",
+   "huawei_day": "day_151",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.54,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.47,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 692.5,
+    "graph-bfs": 253.92,
+    "hotel": 2473.19
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 193.9,
+    "graph-bfs": 71.1,
+    "hotel": 692.49
+   }
+  },
+  {
+   "run": "train_67",
+   "wikipedia_day": "2025-09-14",
+   "huawei_day": "day_152",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.57,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.22,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 694.27,
+    "graph-bfs": 254.57,
+    "hotel": 2479.5
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 194.4,
+    "graph-bfs": 71.28,
+    "hotel": 694.26
+   }
+  },
+  {
+   "run": "train_68",
+   "wikipedia_day": "2025-09-15",
+   "huawei_day": "day_153",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.67,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.49,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 700.04,
+    "graph-bfs": 256.68,
+    "hotel": 2500.11
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 196.01,
+    "graph-bfs": 71.87,
+    "hotel": 700.03
+   }
+  },
+  {
+   "run": "train_69",
+   "wikipedia_day": "2025-09-16",
+   "huawei_day": "day_154",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.39,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.48,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 683.14,
+    "graph-bfs": 250.48,
+    "hotel": 2439.75
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 191.28,
+    "graph-bfs": 70.14,
+    "hotel": 683.13
+   }
+  },
+  {
+   "run": "train_70",
+   "wikipedia_day": "2025-09-18",
+   "huawei_day": "day_155",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.8,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.65,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 707.97,
+    "graph-bfs": 259.59,
+    "hotel": 2528.44
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 198.23,
+    "graph-bfs": 72.69,
+    "hotel": 707.96
+   }
+  },
+  {
+   "run": "train_71",
+   "wikipedia_day": "2025-09-19",
+   "huawei_day": "day_156",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.45,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.39,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 687.04,
+    "graph-bfs": 251.91,
+    "hotel": 2453.67
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 192.37,
+    "graph-bfs": 70.54,
+    "hotel": 687.03
+   }
+  },
+  {
+   "run": "train_72",
+   "wikipedia_day": "2025-09-20",
+   "huawei_day": "day_157",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.36,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.42,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 681.48,
+    "graph-bfs": 249.87,
+    "hotel": 2433.81
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 190.81,
+    "graph-bfs": 69.96,
+    "hotel": 681.47
+   }
+  },
+  {
+   "run": "train_73",
+   "wikipedia_day": "2025-09-21",
+   "huawei_day": "day_158",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.77,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.49,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 706.07,
+    "graph-bfs": 258.89,
+    "hotel": 2521.64
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 197.7,
+    "graph-bfs": 72.49,
+    "hotel": 706.06
+   }
+  },
+  {
+   "run": "train_74",
+   "wikipedia_day": "2025-09-22",
+   "huawei_day": "day_159",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.47,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.56,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 688.26,
+    "graph-bfs": 252.36,
+    "hotel": 2458.05
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 192.71,
+    "graph-bfs": 70.66,
+    "hotel": 688.25
+   }
+  },
+  {
+   "run": "train_75",
+   "wikipedia_day": "2025-09-24",
+   "huawei_day": "day_160",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 12.28,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.87,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 736.66,
+    "graph-bfs": 270.11,
+    "hotel": 2630.89
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 206.27,
+    "graph-bfs": 75.63,
+    "hotel": 736.65
+   }
+  },
+  {
+   "run": "train_76",
+   "wikipedia_day": "2025-09-25",
+   "huawei_day": "day_161",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 10.48,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.14,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 628.69,
+    "graph-bfs": 230.52,
+    "hotel": 2245.28
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 176.03,
+    "graph-bfs": 64.55,
+    "hotel": 628.68
+   }
+  },
+  {
+   "run": "train_77",
+   "wikipedia_day": "2025-09-26",
+   "huawei_day": "day_162",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 11.8,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.66,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 707.74,
+    "graph-bfs": 259.51,
+    "hotel": 2527.61
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 198.17,
+    "graph-bfs": 72.66,
+    "hotel": 707.73
+   }
+  },
+  {
+   "run": "train_78",
+   "wikipedia_day": "2025-09-27",
+   "huawei_day": "day_164",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 11.93,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.58,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 715.75,
+    "graph-bfs": 262.44,
+    "hotel": 2556.21
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 200.41,
+    "graph-bfs": 73.48,
+    "hotel": 715.74
+   }
+  },
+  {
+   "run": "train_79",
+   "wikipedia_day": "2025-09-28",
+   "huawei_day": "day_165",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 12.3,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.81,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 738.16,
+    "graph-bfs": 270.66,
+    "hotel": 2636.24
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 206.68,
+    "graph-bfs": 75.78,
+    "hotel": 738.15
+   }
+  },
+  {
+   "run": "train_80",
+   "wikipedia_day": "2025-09-29",
+   "huawei_day": "day_169",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 2,
+   "k_copies_per_app_peak": 12.15,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.93,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 729.12,
+    "graph-bfs": 267.35,
+    "hotel": 2603.97
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 204.15,
+    "graph-bfs": 74.86,
+    "hotel": 729.11
+   }
+  },
+  {
+   "run": "train_81",
+   "wikipedia_day": "2025-09-30",
+   "huawei_day": "day_170",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 9,
+   "k_copies_per_app_peak": 12.17,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.86,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 730.18,
+    "graph-bfs": 267.73,
+    "hotel": 2607.74
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 204.45,
+    "graph-bfs": 74.97,
+    "hotel": 730.17
+   }
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{"epoch":1790330687.57,"msg":"host swap used: 4 MiB"}
+{"epoch":1790330687.78,"msg":"reset to start sizes {'teastore-webui': 4, 'thumbnailer': 3, 'compression': 3, 'imgrec': 3, 'hotel-frontend': 2, 'hotel-search': 2, 'hotel-reservation': 4, 'hotel-rate': 2}"}
+{"epoch":1790330688.32,"msg":"ready after 0 s; settling 30 s"}
+{"epoch":1790330718.59,"msg":"run started: static on data/traces/runs/dev_0.csv.gz, 900 s"}
+{"epoch":1790331559.05,"msg":"trace finished"}
+{"epoch":1790331634.93,"msg":"recorder stopped"}

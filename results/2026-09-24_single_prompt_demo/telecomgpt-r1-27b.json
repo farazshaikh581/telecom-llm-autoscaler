@@ -1,0 +1,85 @@
+{
+  "model": "ukkathva/TelecomGPT-R1-27B-FP8-Dynamic",
+  "system": "You are the autoscaler for one Kubernetes deployment.\nCluster: 4 worker nodes, each 4 vCPU and 16 GiB (16 vCPU total).\nEach replica requests 500m CPU. Allowed replicas: 1 to 20.\nSLO: P95 latency below 200 ms.\nGoal: meet the SLO with as few replicas as possible, and avoid oscillation.\nReply only with JSON: {\"replicas\": <int>, \"reason\": \"<one sentence>\"}",
+  "user": "Deployment: open5gs-amf (5G core Access and Mobility Management Function; handles UE registration and handover signaling).\nLast 5 intervals, 30 s each (oldest first):\nt      req/s  P95_ms  CPU_util%  replicas\n-120s  120    60      45         3\n-90s   150    75      56         3\n-60s   190    110     70         3\n-30s   240    165     85         3\nnow    300    240     96         3\nChoose the replica count for the next interval.",
+  "runs": {
+    "thinking_off": {
+      "request": {
+        "model": "ukkathva/TelecomGPT-R1-27B-FP8-Dynamic",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the autoscaler for one Kubernetes deployment.\nCluster: 4 worker nodes, each 4 vCPU and 16 GiB (16 vCPU total).\nEach replica requests 500m CPU. Allowed replicas: 1 to 20.\nSLO: P95 latency below 200 ms.\nGoal: meet the SLO with as few replicas as possible, and avoid oscillation.\nReply only with JSON: {\"replicas\": <int>, \"reason\": \"<one sentence>\"}"
+          },
+          {
+            "role": "user",
+            "content": "Deployment: open5gs-amf (5G core Access and Mobility Management Function; handles UE registration and handover signaling).\nLast 5 intervals, 30 s each (oldest first):\nt      req/s  P95_ms  CPU_util%  replicas\n-120s  120    60      45         3\n-90s   150    75      56         3\n-60s   190    110     70         3\n-30s   240    165     85         3\nnow    300    240     96         3\nChoose the replica count for the next interval."
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 512,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "decision",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "replicas": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20
+                },
+                "reason": {
+                  "type": "string",
+                  "maxLength": 300
+                }
+              },
+              "required": [
+                "replicas",
+                "reason"
+              ]
+            }
+          }
+        }
+      },
+      "seconds": 5.02,
+      "finish_reason": "stop",
+      "prompt_tokens": 302,
+      "completion_tokens": 54,
+      "tok_per_s": 10.8,
+      "reasoning_field": null,
+      "content": "{\"replicas\": 5, \"reason\": \"The P95 latency has exceeded the 200 ms SLO and CPU utilization is at 96%, so increasing replicas to 5 is necessary to reduce load and meet the latency target.\"}"
+    },
+    "thinking_on": {
+      "request": {
+        "model": "ukkathva/TelecomGPT-R1-27B-FP8-Dynamic",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the autoscaler for one Kubernetes deployment.\nCluster: 4 worker nodes, each 4 vCPU and 16 GiB (16 vCPU total).\nEach replica requests 500m CPU. Allowed replicas: 1 to 20.\nSLO: P95 latency below 200 ms.\nGoal: meet the SLO with as few replicas as possible, and avoid oscillation.\nReply only with JSON: {\"replicas\": <int>, \"reason\": \"<one sentence>\"}"
+          },
+          {
+            "role": "user",
+            "content": "Deployment: open5gs-amf (5G core Access and Mobility Management Function; handles UE registration and handover signaling).\nLast 5 intervals, 30 s each (oldest first):\nt      req/s  P95_ms  CPU_util%  replicas\n-120s  120    60      45         3\n-90s   150    75      56         3\n-60s   190    110     70         3\n-30s   240    165     85         3\nnow    300    240     96         3\nChoose the replica count for the next interval."
+          }
+        ],
+        "temperature": 0,
+        "max_tokens": 6144,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "seconds": 13.42,
+      "finish_reason": "stop",
+      "prompt_tokens": 300,
+      "completion_tokens": 288,
+      "tok_per_s": 21.5,
+      "reasoning_field": null,
+      "content": "The current deployment has 3 replicas, each requesting 500m CPU, totaling 1.5 vCPU. The cluster has 16 vCPU total. The latest interval shows 300 req/s, P95 latency of 240 ms (exceeding the 200 ms SLO), and CPU utilization at 96%. The latency has been increasing steadily from 60 ms to 240 ms over the last 5 intervals, and CPU utilization has risen from 45% to 96%. This indicates the current replica count is insufficient to handle the load. To meet the SLO, I need to increase replicas. Since each replica handles roughly 100 req/s at current efficiency (300 req/s / 3 replicas), adding 2 more replicas (total 5) should reduce latency below 200 ms while keeping CPU utilization in a safe range. This avoids oscillation by making a moderate increase rather than a large jump.\n</think>\n\n{\"replicas\": 5, \"reason\": \"The P95 latency of 240 ms exceeds the 200 ms SLO and CPU utilization is at 96%, indicating the current 3 replicas are overloaded; increasing to 5 replicas will distribute the 300 req/s load to bring latency back under the SLO threshold.\"}"
+    }
+  }
+}

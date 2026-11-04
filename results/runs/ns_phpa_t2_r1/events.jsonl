@@ -1,0 +1,21 @@
+{"epoch":1793379896.55,"msg":"host swap used: 1256 MiB, swap in+out over 10 s: 1780"}
+{"epoch":1793379896.55,"msg":"waiting for host swap reset: 1256 MiB in use (docs/cluster.md)"}
+{"epoch":1793380500.47,"msg":"waiting for host swap reset: 1238 MiB in use (docs/cluster.md)"}
+{"epoch":1793381104.32,"msg":"waiting for host swap reset: 1236 MiB in use (docs/cluster.md)"}
+{"epoch":1793381708.16,"msg":"waiting for host swap reset: 1234 MiB in use (docs/cluster.md)"}
+{"epoch":1793382312.0,"msg":"waiting for host swap reset: 1231 MiB in use (docs/cluster.md)"}
+{"epoch":1793382915.92,"msg":"waiting for host swap reset: 1231 MiB in use (docs/cluster.md)"}
+{"epoch":1793383519.77,"msg":"waiting for host swap reset: 1231 MiB in use (docs/cluster.md)"}
+{"epoch":1793383912.3,"msg":"host swap now 0 MiB after waiting 3990 s"}
+{"epoch":1793383912.53,"msg":"VM swap at start (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}
+{"epoch":1793383913.62,"msg":"reset to start sizes {'teastore-webui': 1, 'thumbnailer': 2, 'graph-bfs': 1, 'hotel-reservation': 2, 'image-recognition': 2}; fixed services {'hotel-frontend': 2, 'hotel-search': 2, 'hotel-rate': 2}"}
+{"registry_removed":3}
+{"epoch":1793383952.91,"msg":"hotel data reset: 39319 bookings from earlier runs removed, booking cache, reservation and frontend restarted"}
+{"epoch":1793383956.02,"msg":"ready after 0 s; settling 30 s"}
+{"registry_removed":2}
+{"epoch":1793383987.03,"msg":"run started: phpa:target=70,lookahead=60,history=12 on data/traces/runs_imgrec/test_2.csv.gz, 4500 s"}
+{"registry_removed":1}
+{"registry_removed":1}
+{"epoch":1793388426.91,"msg":"trace finished"}
+{"epoch":1793388487.55,"msg":"recorder stopped"}
+{"epoch":1793388487.76,"msg":"VM swap at end (MiB): {'control': 0, 'w0': 0, 'w1': 0, 'w2': 0, 'w3': 0}"}

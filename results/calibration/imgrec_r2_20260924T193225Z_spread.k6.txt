@@ -1,0 +1,23 @@
+time="2026-09-24T19:32:35Z" level=warning msg="Request Failed" error="Post \"http://<ip>/\": dial tcp <ip>: connect: connection refused"
+
+
+  █ TOTAL RESULTS 
+
+    HTTP
+    http_req_duration..............: avg=282.37ms p(50)=166.08ms p(95)=960.77ms p(99)=1.3s
+      { expected_response:true }...: avg=282.45ms p(50)=166.09ms p(95)=961.05ms p(99)=1.3s
+    http_req_failed................: 0.03%  1 out of 3264
+    http_reqs......................: 3264   7.75057/s
+
+    EXECUTION
+    iteration_duration.............: avg=283.26ms p(50)=167.15ms p(95)=961.76ms p(99)=1.3s
+    iterations.....................: 3264   7.75057/s
+    vus............................: 2      min=0         max=14 
+    vus_max........................: 150    min=150       max=150
+
+    NETWORK
+    data_received..................: 1.6 MB 3.7 kB/s
+    data_sent......................: 1.1 MB 2.6 kB/s
+
+
+

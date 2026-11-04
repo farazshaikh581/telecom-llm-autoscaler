@@ -1,0 +1,24 @@
+time="2026-09-24T22:04:39Z" level=warning msg="Request Failed" error="Get \"http://<ip>/tools.descartes.teastore.webui/product?id=51\": dial tcp <ip>: connect: connection refused"
+time="2026-09-24T22:04:40Z" level=warning msg="Request Failed" error="Get \"http://<ip>/tools.descartes.teastore.webui/category?category=3&page=5\": dial tcp <ip>: connect: connection refused"
+
+
+  █ TOTAL RESULTS 
+
+    HTTP
+    http_req_duration..............: avg=131.56ms p(50)=14.67ms p(95)=418.17ms p(99)=1.19s   
+      { expected_response:true }...: avg=130.98ms p(50)=14.67ms p(95)=418.1ms  p(99)=1.18s   
+    http_req_failed................: 0.00%  5 out of 86876
+    http_reqs......................: 86876  206.768694/s
+
+    EXECUTION
+    iteration_duration.............: avg=13.17ms  p(50)=23.85µs p(95)=14.77ms  p(99)=231.69ms
+    iterations.....................: 870030 2070.709596/s
+    vus............................: 38     min=0          max=274 
+    vus_max........................: 1000   min=1000       max=1000
+
+    NETWORK
+    data_received..................: 7.9 GB 19 MB/s
+    data_sent......................: 11 MB  25 kB/s
+
+
+

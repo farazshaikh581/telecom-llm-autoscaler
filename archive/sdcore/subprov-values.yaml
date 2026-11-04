@@ -1,0 +1,6 @@
+# Subscriber provisioning (chart omec-sub-provision). Chart defaults for subscribers,
+# device group, and slice; only placement changes.
+nodeSelectors:
+  enabled: true
+  label: node.kubernetes.io/microk8s-worker
+  value: microk8s-worker

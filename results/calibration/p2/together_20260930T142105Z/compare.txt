@@ -1,0 +1,25 @@
+== teastore (rates 45.0,90.0,120.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0  45.00       13.4        0.0          21.7           0.0
+      1  90.00       13.5        0.0          29.6           0.0
+      2 120.00       14.5        0.0          62.3           0.0
+== thumbnailer (rates 3.75,7.5,10.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0   3.75       82.1        0.0         118.9           0.0
+      1   7.50      128.8        0.0         136.4           0.0
+      2  10.00      113.0        0.0         618.5           0.0
+== compression (rates 0.33,0.66,0.88 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0   0.33      432.7        0.0         792.3           0.0
+      1   0.66      547.1        0.0         865.4           0.0
+      2   0.88      733.3        0.0        1910.3           0.0
+== imgrec (rates 1.35,2.7,3.6 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0   1.35      171.2        0.0         180.3           0.0
+      1   2.70      257.2        0.0         440.1           0.0
+      2   3.60      231.0        0.0         780.6           0.0
+== hotel (rates 150.0,300.0,400.0 req/s)
+   step  rate   P95_alone  err_alone  P95_together  err_together
+      0 150.00        9.7        0.0          11.4           0.0
+      1 300.00       11.2        0.0          16.0           0.0
+      2 400.00       12.3        0.0          25.9           0.0

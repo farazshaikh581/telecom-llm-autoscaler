@@ -1,0 +1,204 @@
+{
+ "target_combined_peak_copies": 30.0,
+ "copies_available": 24,
+ "runs": [
+  {
+   "run": "dev_0",
+   "wikipedia_day": "2025-07-16",
+   "huawei_day": "day_043",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 3,
+   "k_copies_per_app_peak": 10.82,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.19,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 649.29,
+    "graph-bfs": 238.07,
+    "hotel": 2318.85
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 181.8,
+    "graph-bfs": 66.66,
+    "hotel": 649.28,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "dev_1",
+   "wikipedia_day": "2025-08-10",
+   "huawei_day": "day_163",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 8,
+   "k_copies_per_app_peak": 11.42,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.47,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 685.04,
+    "graph-bfs": 251.18,
+    "hotel": 2446.53
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 191.81,
+    "graph-bfs": 70.33,
+    "hotel": 685.03,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "dev_2",
+   "wikipedia_day": "2025-09-04",
+   "huawei_day": "day_233",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 12,
+   "k_copies_per_app_peak": 11.65,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.58,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 698.92,
+    "graph-bfs": 256.27,
+    "hotel": 2496.09
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 195.7,
+    "graph-bfs": 71.76,
+    "hotel": 698.9,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "test_0",
+   "wikipedia_day": "2025-07-14",
+   "huawei_day": "day_039",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 4,
+   "k_copies_per_app_peak": 10.89,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.47,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 653.15,
+    "graph-bfs": 239.49,
+    "hotel": 2332.62
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 182.88,
+    "graph-bfs": 67.06,
+    "hotel": 653.13,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "test_1",
+   "wikipedia_day": "2025-07-29",
+   "huawei_day": "day_127",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 6,
+   "k_copies_per_app_peak": 10.33,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.49,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 620.07,
+    "graph-bfs": 227.36,
+    "hotel": 2214.5
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 173.62,
+    "graph-bfs": 63.66,
+    "hotel": 620.06,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "test_2",
+   "wikipedia_day": "2025-09-05",
+   "huawei_day": "day_205",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 7,
+   "k_copies_per_app_peak": 11.82,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.75,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 709.46,
+    "graph-bfs": 260.13,
+    "hotel": 2533.73
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 198.65,
+    "graph-bfs": 72.84,
+    "hotel": 709.44,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "test_3",
+   "wikipedia_day": "2025-09-17",
+   "huawei_day": "day_214",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 10,
+   "k_copies_per_app_peak": 11.71,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.66,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 702.5,
+    "graph-bfs": 257.58,
+    "hotel": 2508.87
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 196.7,
+    "graph-bfs": 72.12,
+    "hotel": 702.48,
+    "imgrec": 7.5
+   }
+  },
+  {
+   "run": "test_4",
+   "wikipedia_day": "2025-09-23",
+   "huawei_day": "day_230",
+   "huawei_window": "previous day's last 6 h + the day, 24x",
+   "alibaba_day": 11,
+   "k_copies_per_app_peak": 11.8,
+   "combined_peak_copies": 30.0,
+   "cpu_at_combined_peak": 23.66,
+   "peak_rps": {
+    "teastore": 450.0,
+    "thumbnailer": 707.85,
+    "graph-bfs": 259.55,
+    "hotel": 2528.0
+   },
+   "load_scale": 0.28,
+   "peak_rps_scaled": {
+    "teastore": 126.0,
+    "thumbnailer": 198.2,
+    "graph-bfs": 72.67,
+    "hotel": 707.84,
+    "imgrec": 7.5
+   }
+  }
+ ],
+ "imgrec": {
+  "huawei_function": "132",
+  "peak_copies": 2.5,
+  "capacity_per_copy_rps": 3.0,
+  "peak_rps": 7.5
+ }
+}
