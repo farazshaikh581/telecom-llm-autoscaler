@@ -9,3 +9,10 @@ results/failed/
 # the runs committed before keep theirs.
 results/runs/*/requests.csv.gz
 results/runs/failed_*/
+
+# Figures are drawn by the scripts in paper/figures/ and not kept in git
+paper/figures/*.pdf
+paper/figures/*.png
+paper/figures/*.svg
+paper/figures/*.drawio
+paper/figures/assets/

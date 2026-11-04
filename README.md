@@ -18,7 +18,7 @@ Two frozen 27B LLMs (TelecomGPT-R1 and its base model Qwen3.5-27B, each in three
 | `tools/` | Trace preparation, statistics, faithfulness checks, number and figure generation |
 | `results/runs/` | One folder per run (below) |
 | `results/analysis/` | Tables the paper reports, produced by `tools/` |
-| `paper/figures/` | Figure scripts and the figures of the paper |
+| `paper/figures/` | Scripts that draw the figures of the paper |
 | `docs/` | Dated design log (`decisions.md`), analysis plan, calibration, testbed and traces |
 
 ## Runs
@@ -47,7 +47,7 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 sh tools/reproduce.sh
 ```
 
-The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py`. Outputs go to `results/analysis/` and `paper/figures/`, and the script lists any that differ from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
+The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py`. Tables go to `results/analysis/` and figures to `paper/figures/`, and the script lists any table that differs from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
 
 ## Not used in the paper
 
