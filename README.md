@@ -49,6 +49,15 @@ sh tools/reproduce.sh
 
 The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py`. Outputs go to `results/analysis/` and `paper/figures/`, and the script lists any that differ from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
 
+## Not used in the paper
+
+Kept for the record of how the study was built:
+
+- `archive/sdcore/`: a 5G core scenario, dropped before any run.
+- `docs/testbed_4w.md`: notes of the first testbed, replaced before the runs of the paper.
+- `docs/insights.md`, `results/2026-09-24_single_prompt_demo/`: first serving checks of the models.
+- Runs named `smoke*`, `pilot*` and `test_` (without the 2): harness checks, pilots and an earlier test matrix that was redone. Runs named `ref*` are the drift-reference runs of each block, which the paper does use.
+
 ## Testbed
 
 MicroK8s 1.30 on virtual machines of one server (two Intel Xeon Silver 4416+). Four workers with 4 vCPUs and 16 GB each run the applications; a control machine runs the harness and the two LLMs, each on its own NVIDIA L40S. Rerunning the experiments needs a similar cluster; `docs/cluster.md` and `docs/calibration.md` describe the setup and how the SLOs were measured.
