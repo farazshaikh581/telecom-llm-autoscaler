@@ -1,6 +1,6 @@
 # telecom-llm-autoscaler
 
-Code and data for the paper "Can Operators Trust LLM Autoscalers? Robustness to Shift and Faithfulness of Reasoning Compared with RL and Rule-Based Controllers" (F. Shaikh, G. Reali, M. Femminella, University of Perugia).
+Code and data for the paper "Can Operators Trust LLM Autoscalers? Robustness and Reasoning on a Shared Kubernetes Cluster" (F. Shaikh, G. Reali, M. Femminella, University of Perugia).
 
 Two frozen 27B LLMs (TelecomGPT-R1 and its base model Qwen3.5-27B, each in three prompt modes) scale four services on a shared Kubernetes cluster, against three rule-based autoscalers (HPA, KEDA, predictive HPA) and three RL agents (AWARE, FIRM, LSTM-DDQN). The study tests them on held-out days of production traces, under 25% more load and with a service no controller had seen, and checks the written reasoning of the LLMs against the prompt of each call.
 
@@ -65,6 +65,10 @@ MicroK8s 1.30 on virtual machines of one server (two Intel Xeon Silver 4416+). F
 - English Wikipedia page views, Wikimedia Foundation (CC0).
 - Huawei Cloud 2023 serverless traces, Joosen et al., SoCC 2023 (CC BY 4.0).
 - Alibaba 2022 microservice traces, Luo et al., SoCC 2022 (released for research use).
+
+## Citation
+
+Please cite the paper when you use this code or data. `CITATION.cff` gives the citation of the repository itself.
 
 ## License
 

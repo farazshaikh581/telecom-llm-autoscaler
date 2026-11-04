@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Can Operators Trust LLM Autoscalers? Robustness and Reasoning on a Shared Kubernetes Cluster: Code, traces and run data"
+authors:
+  - family-names: Shaikh
+    given-names: Faraz
+    affiliation: "University of Perugia"
+  - family-names: Reali
+    given-names: Gianluca
+    affiliation: "University of Perugia"
+  - family-names: Femminella
+    given-names: Mauro
+    affiliation: "University of Perugia"
+repository-code: "https://github.com/farazshaikh581/telecom-llm-autoscaler"
+license: MIT
+keywords:
+  - autoscaling
+  - Kubernetes
+  - large language models
+  - reinforcement learning
+  - microservices
+  - serverless computing
+  - faithfulness
