@@ -40,19 +40,14 @@ Run names give the test: `test2_` main matrix, `hl_` 25% more load, `ns_` unseen
 
 ## Reproducing the tables and figures
 
-The analysis needs only the run folders, not a cluster.
+The analysis needs only the run folders, not a cluster. It takes about a minute.
 
 ```
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/python tools/analyze.py           # main matrix, +25% load, robustness
-.venv/bin/python tools/new_service.py       # unseen service
-.venv/bin/python tools/faithfulness.py      # checks of the written reasoning
-.venv/bin/python tools/history_order.py     # history order (after faithfulness.py)
-.venv/bin/python tools/slo_sensitivity.py   # SLO factor 2, 3, 5
-.venv/bin/python paper/figures/make_results_figs.py
+sh tools/reproduce.sh
 ```
 
-Outputs go to `results/analysis/` and `paper/figures/`. `docs/analysis_plan.md` gives the tests and corrections.
+The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py`. Outputs go to `results/analysis/` and `paper/figures/`, and the script lists any that differ from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
 
 ## Testbed
 
