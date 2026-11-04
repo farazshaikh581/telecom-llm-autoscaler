@@ -10,5 +10,8 @@ results/failed/
 results/runs/*/requests.csv.gz
 results/runs/failed_*/
 
-# The paper and its figures are not kept in git
-paper/
+# The paper and its figures are not kept in git; only the script for Figs. 2 to 4 is
+paper/*
+!paper/figures/
+paper/figures/*
+!paper/figures/make_results_figs.py
