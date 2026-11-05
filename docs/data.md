@@ -11,10 +11,10 @@ Each folder in `results/runs/` is one 75-minute run. Minutes 15 to 74 are scored
 | `entries.<app>.latency_ms` | Latency percentiles over the scored hour (ms) |
 | `entries.<app>.slo_ms` | SLO: 3 times the no-queue P95 of the application |
 | `entries.<app>.violation_rate.k2/k3/k5` | Share of scored minutes whose P95 exceeds 2, 3 or 5 times the no-queue P95 |
-| `overall.violation_rate_k3` | Mean of the four applications' `violation_rate.k3`: the violation rate of the paper |
+| `overall.violation_rate_k3` | Mean of `violation_rate.k3` over the four applications: the violation rate of the paper |
 | `cost.mean_ready_total` | Mean ready copies of the scaled services: the copies of the paper |
 | `cost.share_time_pending` | Share of scored time with at least one copy pending |
-| `stability.scaling_actions_per_hour`, `reversals_per_hour` | Changes of a service's copy count, and changes in the opposite direction of its previous change |
+| `stability.scaling_actions_per_hour`, `reversals_per_hour` | Changes in the copy count of a service, and changes in the opposite direction of its previous change |
 | `energy.gpu_wh`, `host_pkg_total_wh` | GPU energy (sum of both GPUs) and host CPU package energy over the run (Wh) |
 | `health` | Control-node stalls during the run; a stall of 2 s or more makes the run invalid |
 | `decisions` | Decision count, decision time (mean, P95, max in s), late ticks, invalid replies, LLM calls |
