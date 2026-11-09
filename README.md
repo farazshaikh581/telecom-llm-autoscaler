@@ -47,7 +47,7 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 sh tools/reproduce.sh
 ```
 
-The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5) and `paper/figures/make_results_figs.py` (Figs. 2 to 4). Tables go to `results/analysis/` and figures to `paper/figures/`, and the script lists any table that differs from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
+The script runs, in order, `tools/analyze.py` (main matrix, +25% load, robustness), `tools/new_service.py` (unseen service), `tools/faithfulness.py` (checks of the written reasoning), `tools/history_order.py` (history order), `tools/slo_sensitivity.py` (SLO factor 2, 3, 5), `tools/layout_replay.py check` (prompt-layout replay, from the saved replies) and `paper/figures/make_results_figs.py` (Figs. 2 to 4). Tables go to `results/analysis/` and figures to `paper/figures/`, and the script lists any table that differs from the committed files. `docs/analysis_plan.md` gives the tests and corrections.
 
 ## Not used in the paper
 

@@ -10,6 +10,7 @@ $PY tools/new_service.py
 $PY tools/faithfulness.py
 $PY tools/history_order.py
 $PY tools/slo_sensitivity.py
+$PY tools/layout_replay.py check tgpt qwen gemma mistral
 $PY paper/figures/make_results_figs.py
 echo "Tables that differ from the committed ones:"
 git status --short --untracked-files=no results/analysis
