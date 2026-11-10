@@ -1,0 +1,268 @@
+{
+ "fixed_pods": {
+  "hotel/consul": [
+   "w2"
+  ],
+  "hotel/geo": [
+   "w2"
+  ],
+  "hotel/jaeger": [
+   "w1"
+  ],
+  "hotel/memcached-profile": [
+   "w2"
+  ],
+  "hotel/memcached-rate": [
+   "w1"
+  ],
+  "hotel/memcached-reserve": [
+   "w3"
+  ],
+  "hotel/mongodb-geo": [
+   "w0"
+  ],
+  "hotel/mongodb-profile": [
+   "w1"
+  ],
+  "hotel/mongodb-rate": [
+   "w0"
+  ],
+  "hotel/mongodb-recommendation": [
+   "w1"
+  ],
+  "hotel/mongodb-reservation": [
+   "w0"
+  ],
+  "hotel/mongodb-user": [
+   "w0"
+  ],
+  "hotel/profile": [
+   "w2"
+  ],
+  "hotel/recommendation": [
+   "w3"
+  ],
+  "hotel/user": [
+   "w3"
+  ],
+  "sebs/load": [
+   "control"
+  ],
+  "sebs/minio": [
+   "control"
+  ],
+  "teastore/teastore-auth": [
+   "w3"
+  ],
+  "teastore/teastore-db": [
+   "w1"
+  ],
+  "teastore/teastore-image": [
+   "w1"
+  ],
+  "teastore/teastore-persistence": [
+   "w0"
+  ],
+  "teastore/teastore-recommender": [
+   "w3"
+  ],
+  "teastore/teastore-registry": [
+   "w3"
+  ],
+  "teastore/teastore-webui": [
+   "w1"
+  ]
+ },
+ "host": {
+  "cpu_model": "Intel(R) Xeon(R) Silver 4416+\nIntel(R) Xeon(R) Silver 4416+",
+  "cpus": "80",
+  "kernel": "4.18.0-553.53.1.el8_10.x86_64",
+  "memory_total_mib": "257613",
+  "swap_total_mib": "15999",
+  "swappiness": "1",
+  "vms": {
+   "control": {
+    "dominfo": "State: running | CPU(s): 56 | Max memory: 167772160 KiB",
+    "emulatorpin": "16-19,56-59",
+    "vcpupin": "0 40 1 41 2 42 3 43 4 44 5 45 6 46 7 47 20 60 21 61 22 62 23 63 24 64 25 65 26 66 27 67 28 68 29 69 30 70 31 71 32 72 33 73 34 74 35 75 36 76 37 77 38 78 39 79"
+   },
+   "w0": {
+    "dominfo": "State: running | CPU(s): 4 | Max memory: 16777216 KiB",
+    "emulatorpin": "16-19,56-59",
+    "vcpupin": "8 48 9 49"
+   },
+   "w1": {
+    "dominfo": "State: running | CPU(s): 4 | Max memory: 16777216 KiB",
+    "emulatorpin": "16-19,56-59",
+    "vcpupin": "10 50 11 51"
+   },
+   "w2": {
+    "dominfo": "State: running | CPU(s): 4 | Max memory: 16777216 KiB",
+    "emulatorpin": "16-19,56-59",
+    "vcpupin": "12 52 13 53"
+   },
+   "w3": {
+    "dominfo": "State: running | CPU(s): 4 | Max memory: 16777216 KiB",
+    "emulatorpin": "16-19,56-59",
+    "vcpupin": "14 54 15 55"
+   }
+  }
+ },
+ "images": {
+  "hotel/consul/consul": "sha256:259fd02f2544fe1aa03fa49efd3b105c8dd67106d710a72f5e898110266356f7",
+  "hotel/geo/hotel-reserv-geo": "sha256:5b433bdde6259a2b715345d4a61d1778f5efe7d7180314b6a2e1867d89fdc8df",
+  "hotel/jaeger/hotel-reserv-jaeger": "sha256:ab6f1a1f0fb49ea08bcd19f6b84f6081d0d44b364b6de148e1798eb5816bacac",
+  "hotel/memcached-profile/hotel-reserv-profile-mmc": "sha256:a395a1bcf5e0e2b0fa4a0142e12b4e24a2320ba4b7c6ffa8655a1a86e8f29dee",
+  "hotel/memcached-rate/hotel-reserv-rate-mmc": "sha256:a395a1bcf5e0e2b0fa4a0142e12b4e24a2320ba4b7c6ffa8655a1a86e8f29dee",
+  "hotel/memcached-reserve/hotel-reserv-reservation-mmc": "sha256:a395a1bcf5e0e2b0fa4a0142e12b4e24a2320ba4b7c6ffa8655a1a86e8f29dee",
+  "hotel/mongodb-geo/hotel-reserv-geo-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/mongodb-profile/hotel-reserv-profile-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/mongodb-rate/hotel-reserv-rate-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/mongodb-recommendation/hotel-reserv-recommendation-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/mongodb-reservation/hotel-reserv-reservation-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/mongodb-user/hotel-reserv-user-mongo": "sha256:6efa052039903e731e4a5550c68a13c4869ddc93742c716332883fd9c77eb79b",
+  "hotel/profile/hotel-reserv-profile": "sha256:5b433bdde6259a2b715345d4a61d1778f5efe7d7180314b6a2e1867d89fdc8df",
+  "hotel/recommendation/hotel-reserv-recommendation": "sha256:5b433bdde6259a2b715345d4a61d1778f5efe7d7180314b6a2e1867d89fdc8df",
+  "hotel/user/hotel-reserv-user": "sha256:5b433bdde6259a2b715345d4a61d1778f5efe7d7180314b6a2e1867d89fdc8df",
+  "sebs/load/load": "sha256:1664f3ab08d1d0339925f68340eecb805cb7010176342af1803c18a3d4cdf4e0",
+  "sebs/minio/minio": "sha256:6dabb4a2088c9a79908de3bc05f4586c23ad2182c8908e7e3acbf61c1467fb20",
+  "sebs/minio/output-cleaner": "sha256:73bd39f7899a0cef12b8dd5df13aa93a3ed1aaa44236542442e9ac76819ac158",
+  "teastore/teastore-auth/teastore-auth": "sha256:1babe5ca10bda103daa03f52db3e2357e0d3ec32a9ed549c4b2e2020152b0dac",
+  "teastore/teastore-db/teastore-db": "sha256:7a22000cc6b5fa7bfa99f7c8ccca68651ddd44684f5a571341723c839722b60c",
+  "teastore/teastore-image/teastore-image": "sha256:8f339e6b8ee7d7b2c3efd173b1a23c7ffda03ab9d0bc5b8904beb6a1f2e2bd98",
+  "teastore/teastore-persistence/teastore-persistence": "sha256:ac6b0fe9aeca04ee31fea20caed0b49af2ddf709c28a2cf1f4b9b041af05279b",
+  "teastore/teastore-recommender/teastore-recommender": "sha256:8cd0cc779929f9a03ac5990d09637f95e24bb333cbcc0b8df139c4c16df93d50",
+  "teastore/teastore-registry/teastore-registry": "sha256:25000aa7fb7c1798febd464805d363a402cfe4a26877eb4d50874689efcc3e2f",
+  "teastore/teastore-webui/teastore-webui": "sha256:d0e490bd025167fefaf84d43f978c3c6d14fad9bf3cba9bc49ef902a0d106078"
+ },
+ "kubernetes": {
+  "server": "v1.30.14"
+ },
+ "nodes": {
+  "control": {
+   "allocatable": {
+    "cpu": "56",
+    "ephemeral-storage": "8451850000Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "164716504Ki",
+    "pods": "110"
+   },
+   "capacity": {
+    "cpu": "56",
+    "ephemeral-storage": "8452898576Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "164818904Ki",
+    "pods": "110"
+   },
+   "kernel": "6.8.0-147-generic",
+   "kubelet": "v1.30.14",
+   "os": "Ubuntu 24.04.3 LTS",
+   "ready": true,
+   "runtime": "containerd://1.6.28",
+   "taints": [
+    {
+     "effect": "NoSchedule",
+     "key": "node-role.kubernetes.io/control-plane"
+    }
+   ]
+  },
+  "w0": {
+   "allocatable": {
+    "cpu": "4",
+    "ephemeral-storage": "203115920Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16273604Ki",
+    "pods": "110"
+   },
+   "capacity": {
+    "cpu": "4",
+    "ephemeral-storage": "204164496Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16376004Ki",
+    "pods": "110"
+   },
+   "kernel": "6.8.0-147-generic",
+   "kubelet": "v1.30.14",
+   "os": "Ubuntu 24.04.3 LTS",
+   "ready": true,
+   "runtime": "containerd://1.6.28",
+   "taints": []
+  },
+  "w1": {
+   "allocatable": {
+    "cpu": "4",
+    "ephemeral-storage": "203115920Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16273616Ki",
+    "pods": "110"
+   },
+   "capacity": {
+    "cpu": "4",
+    "ephemeral-storage": "204164496Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16376016Ki",
+    "pods": "110"
+   },
+   "kernel": "6.8.0-147-generic",
+   "kubelet": "v1.30.14",
+   "os": "Ubuntu 24.04.3 LTS",
+   "ready": true,
+   "runtime": "containerd://1.6.28",
+   "taints": []
+  },
+  "w2": {
+   "allocatable": {
+    "cpu": "4",
+    "ephemeral-storage": "203115920Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16273612Ki",
+    "pods": "110"
+   },
+   "capacity": {
+    "cpu": "4",
+    "ephemeral-storage": "204164496Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16376012Ki",
+    "pods": "110"
+   },
+   "kernel": "6.8.0-147-generic",
+   "kubelet": "v1.30.14",
+   "os": "Ubuntu 24.04.3 LTS",
+   "ready": true,
+   "runtime": "containerd://1.6.28",
+   "taints": []
+  },
+  "w3": {
+   "allocatable": {
+    "cpu": "4",
+    "ephemeral-storage": "203115920Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16273616Ki",
+    "pods": "110"
+   },
+   "capacity": {
+    "cpu": "4",
+    "ephemeral-storage": "204164496Ki",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "16376016Ki",
+    "pods": "110"
+   },
+   "kernel": "6.8.0-147-generic",
+   "kubelet": "v1.30.14",
+   "os": "Ubuntu 24.04.3 LTS",
+   "ready": true,
+   "runtime": "containerd://1.6.28",
+   "taints": []
+  }
+ }
+}
